@@ -1,0 +1,8 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Introduzione}{2}{section*.2}%
+\contentsline {section}{\numberline {1}Esempi}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Esempio di tabella}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Esempio di codice}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {A}Appendice}{7}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Sottosezione dell'appendice}{7}{subsection.Alph1.1}%
