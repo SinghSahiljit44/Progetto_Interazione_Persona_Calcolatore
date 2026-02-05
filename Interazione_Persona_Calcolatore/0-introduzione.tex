@@ -1,5 +1,74 @@
-\section*{Introduzione}
-\addcontentsline{toc}{section}{Introduzione}
+\section{Descrizione del Sistema}
 
-Testo di introduzione senza numero.
+L'applicazione presa in esame in questo progetto è una \textbf{web application bancaria} che fornisce funzionalità di home banking e gestione dei servizi bancari di base. L'applicazione si propone di coprire tre principali aree di utilizzo, ciascuna destinata a una specifica categoria di utenti:
 
+\subsection{Categorie di Utenti}
+
+\subsubsection{Clienti}
+I clienti della banca possono accedere a un'interfaccia intuitiva per gestire le principali operazioni bancarie online, come:
+\begin{itemize}
+	\item Visualizzazione del saldo e della lista movimenti;
+	\item Bonifici e trasferimenti di denaro;
+	\item Gestione dei propri dati anagrafici.
+\end{itemize}
+
+\subsubsection{Employee}
+I dipendenti della banca possono accedere a un pannello dedicato che consente di:
+\begin{itemize}
+	\item Visualizzare e modificare i dati dei clienti;
+	\item Gestire operazioni richieste dai clienti in filiale;
+	\item Gestire le credenziali per l'accesso dei clienti.
+\end{itemize}
+
+\subsubsection{Admin}
+Gli admin hanno accesso completo alla gestione dell'utenza e delle funzionalità del sistema, con la possibilità di:
+\begin{itemize}
+	\item Creare, modificare e cancellare account (clienti e employee);
+	\item Gestire le assegnazioni fra clienti e employee;
+	\item Monitorare le attività del sistema.
+\end{itemize}
+
+\newpage 
+
+\subsection{Principali Schermate dell'Applicazione}
+\subsubsection{Schermate utente ancora non autenticato}
+
+La Homepage presenta un bottone in alto a sinistra che permette all'utente di accedere. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{schermata_principale}
+	\caption{Homepage}
+	\label{fig:schermata_principale}
+\end{figure}
+
+Una volta cliccato il bottone di login, l'utente vedrà due opzioni:
+\begin{itemize}
+	\item Accesso come cliente;
+	\item Accesso come lavoratore (ovvero come employee oppure admin);
+\end{itemize} 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{selezione_tipologia_accesso}
+	\caption{Schermata per selezionare la tipologia di accesso}
+	\label{fig:selezione_tipologia_accesso}
+\end{figure}
+
+\clearpage
+
+Nella pagina di login l'utente potrà inserire username e password. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{login_cliente}
+	\caption{Schermata login}
+	\label{fig:login_cliente}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{login_compilato_cliente}
+	\caption{Schermata login compilata}
+	\label{fig:login_compilato_cliente}
+\end{figure}
