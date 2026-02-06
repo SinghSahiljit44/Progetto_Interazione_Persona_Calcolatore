@@ -7,8 +7,10 @@
 \contentsline {subsubsection}{\numberline {1.1.3}Admin}{2}{subsubsection.1.1.3}%
 \contentsline {subsection}{\numberline {1.2}Principali Schermate dell'Applicazione}{3}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Schermate utente ancora non autenticato}{3}{subsubsection.1.2.1}%
-\contentsline {section}{\numberline {2}Esempi}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Esempio di tabella}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Esempio di codice}{5}{subsection.2.2}%
-\contentsline {section}{\numberline {A}Appendice}{9}{appendix.Alph1}%
-\contentsline {subsection}{\numberline {A.1}Sottosezione dell'appendice}{9}{subsection.Alph1.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Schermate cliente}{5}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Schermate Employee}{8}{subsubsection.1.2.3}%
+\contentsline {section}{\numberline {2}Esempi}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Esempio di tabella}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Esempio di codice}{9}{subsection.2.2}%
+\contentsline {section}{\numberline {A}Appendice}{13}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Sottosezione dell'appendice}{13}{subsection.Alph1.1}%
