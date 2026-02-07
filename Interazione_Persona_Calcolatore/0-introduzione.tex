@@ -1,26 +1,25 @@
+\section*{Capitolo 1}
 \section{Descrizione del Sistema}
 
 L'applicazione presa in esame in questo progetto è una \textbf{web application bancaria} che fornisce funzionalità di home banking e gestione dei servizi bancari di base. L'applicazione si propone di coprire tre principali aree di utilizzo, ciascuna destinata a una specifica categoria di utenti:
 
 \subsection{Categorie di Utenti}
 
-\subsubsection{Clienti}
+\textbf{Clienti}\\
 I clienti della banca possono accedere a un'interfaccia intuitiva per gestire le principali operazioni bancarie online, come:
 \begin{itemize}
 	\item Visualizzazione del saldo e della lista movimenti;
 	\item Bonifici e trasferimenti di denaro;
 	\item Gestione dei propri dati anagrafici.
 \end{itemize}
-
-\subsubsection{Employee}
+\textbf{Employee}\\
 I dipendenti della banca possono accedere a un pannello dedicato che consente di:
 \begin{itemize}
 	\item Visualizzare e modificare i dati dei clienti;
 	\item Gestire operazioni richieste dai clienti in filiale;
 	\item Gestire le credenziali per l'accesso dei clienti.
 \end{itemize}
-
-\subsubsection{Admin}
+\textbf{Admin}\\
 Gli admin hanno accesso completo alla gestione dell'utenza e delle funzionalità del sistema, con la possibilità di:
 \begin{itemize}
 	\item Creare, modificare e cancellare account (clienti e employee);
@@ -31,7 +30,7 @@ Gli admin hanno accesso completo alla gestione dell'utenza e delle funzionalità
 \newpage 
 
 \subsection{Principali Schermate dell'Applicazione}
-\subsubsection{Schermate utente ancora non autenticato}
+\subsubsection{Schermate Utente ancora non autenticato}
 
 La Homepage presenta un bottone in alto a sinistra che permette all'utente di accedere. 
 
@@ -75,7 +74,7 @@ Nella pagina di login l'utente potrà inserire username e password.
 
 \clearpage
 
-\subsubsection{Schermate cliente}
+\subsubsection{Schermate Cliente}
 Nella dashboard dell'utente sono presenti:
 \begin{itemize}
 	\item Una sezione con informazioni sul conto;
@@ -142,7 +141,76 @@ La dashboard degli employee presenta 4 operazioni principali:
 \end{itemize}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{dashboard_employee}
+	\includegraphics[width=0.9\textwidth]{dashboard_employee}
 	\caption{Dashboard employee}
 	\label{fig:dashboard_employee}
+\end{figure}
+\clearpage
+Nella sezione "I miei Clienti" per ogni cliente è presente una riga con:
+\begin{itemize}
+	\item Alcune informazioni sul cliente
+	\item Numero di conto e saldo del cliente 
+	\item Stato del conto e data di attivazione
+	\item 4 shortcuts:
+		\begin{itemize}
+			\item Visualizza: Presenta una schermata con tutti i dettagli del cliente e tutte le operazioni che si possono effettuare sul cliente  
+			\item Modifica: Permette di modificare le informazioni personali del cliente
+			\item Deposito: Per effettuare un deposito in filiale
+			\item Bonifico: Per effettuare un bonifico tramite l'addetto in banca 
+		\end{itemize}
+\end{itemize}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{clienti_assegnati_employee}
+	\caption{Clienti assegnati}
+	\label{fig:clienti_assegnati_employee}
+		\includegraphics[width=0.7\textwidth]{dettaglio_cliente_employee}
+	\caption{Schermata di dettaglio di un singolo cliente con tutte le operazioni possibili}
+	\label{fig:dettaglio_cliente_employee}
+\end{figure}
+\clearpage
+\subsubsection{Schermate Admin}
+La dashboard admin contiene 6 sezioni principali:
+\begin{itemize}
+	\item Gestione utenti: Vedi dopo
+	\item Transazioni: Sezione con le transazioni di tutti i clienti della banca 
+	\item Assegnazioni: Sezione per gestire le assegnazioni tra cliente e employee 
+	\item Recupero credenziali: Sezione per resettare username e password per ogni cliente 
+	\item Report: Sezione con report e statistiche 
+	\item Conti: Lista di tutti i clienti e i loro conti con la possibilità di bloccare/sbloccare il conto
+\end{itemize}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{dashboard_admin}
+	\caption{Dashboard admin}
+	\label{fig:dashboard_admin}
+\end{figure}
+\clearpage
+\noindent
+Nella sezione gestione utenti per ogni utente della banca abbiamo al più 4 shortcut:
+\begin{itemize}
+	\item Se l'utente è un admin:
+	\begin{itemize}
+		\item Si può visualizzare le informazioni personali 
+	\end{itemize}
+	\item Se l'utente è un employee:
+	\begin{itemize}
+		\item Si può visualizzare le informazioni personali 
+		\item Si può modificare le informazioni personali 
+		\item Si può eliminare l'employee
+	\end{itemize}
+	\item Se l'utente è un cliente:
+	\begin{itemize}
+		\item Si può visualizzare le informazioni personali
+		\item Si può modificare le informazioni personali 
+		\item Si può eliminare il cliente
+		\item Si può attivare il conto di un cliente se non ancora attivo 
+		\item Si può Bloccare/Sbloccare un contoa
+	\end{itemize}
+\end{itemize}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{gestione_utenti_admin}
+	\caption{Lista utenti}
+	\label{fig:gestione_utenti_admin}
 \end{figure}
