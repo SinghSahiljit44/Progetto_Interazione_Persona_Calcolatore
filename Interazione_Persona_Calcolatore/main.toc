@@ -8,6 +8,9 @@
 \contentsline {subsubsection}{\numberline {1.2.3}Schermate Employee}{8}{subsubsection.1.2.3}%
 \contentsline {subsubsection}{\numberline {1.2.4}Schermate Admin}{10}{subsubsection.1.2.4}%
 \contentsline {section}{\numberline {2}Profili utente e Personas}{12}{section.2}%
-\contentsline {section}{\numberline {3}Esempi}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Esempio di tabella}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Esempio di codice}{13}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Valutazione Euristica}{13}{section.3}%
+\contentsline {section}{\numberline {4}Walkthrough Cognitivo}{14}{section.4}%
+\contentsline {section}{\numberline {5}Riprogettazione}{15}{section.5}%
+\contentsline {section}{\numberline {6}Esperimento con gli Utenti}{16}{section.6}%
+\contentsline {section}{\numberline {7}Analisi dei risultati}{17}{section.7}%
+\contentsline {section}{\numberline {8}Sviluppi Futuri}{18}{section.8}%
