@@ -8,9 +8,28 @@
 \contentsline {subsubsection}{\numberline {1.2.3}Schermate Employee}{8}{subsubsection.1.2.3}%
 \contentsline {subsubsection}{\numberline {1.2.4}Schermate Admin}{10}{subsubsection.1.2.4}%
 \contentsline {section}{\numberline {2}Profili utente e Personas}{12}{section.2}%
-\contentsline {section}{\numberline {3}Valutazione Euristica}{13}{section.3}%
-\contentsline {section}{\numberline {4}Walkthrough Cognitivo}{14}{section.4}%
-\contentsline {section}{\numberline {5}Riprogettazione}{15}{section.5}%
-\contentsline {section}{\numberline {6}Esperimento con gli Utenti}{16}{section.6}%
-\contentsline {section}{\numberline {7}Analisi dei risultati}{17}{section.7}%
-\contentsline {section}{\numberline {8}Sviluppi Futuri}{18}{section.8}%
+\contentsline {subsection}{\numberline {2.1}Admin}{12}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Caratteristiche psicologiche}{12}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Caratteristiche di conoscenza}{12}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Caratteristiche di esperienza}{13}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Caratteristiche fisiche}{13}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Caratteristiche del lavoro e dei compiti}{13}{subsubsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.2}Employee}{14}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Caratteristiche psicologiche}{14}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Caratteristiche di conoscenza}{14}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Caratteristiche di esperienza}{14}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Caratteristiche fisiche}{15}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Caratteristiche del lavoro e dei compiti}{15}{subsubsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.3}Cliente}{16}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Caratteristiche psicologiche}{16}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Caratteristiche di conoscenza}{16}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Caratteristiche di esperienza}{16}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Caratteristiche fisiche}{17}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Caratteristiche del lavoro e dei compiti}{17}{subsubsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.4}Personas}{18}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Valutazione Euristica}{19}{section.3}%
+\contentsline {section}{\numberline {4}Walkthrough Cognitivo}{20}{section.4}%
+\contentsline {section}{\numberline {5}Riprogettazione}{21}{section.5}%
+\contentsline {section}{\numberline {6}Esperimento con gli Utenti}{22}{section.6}%
+\contentsline {section}{\numberline {7}Analisi dei risultati}{23}{section.7}%
+\contentsline {section}{\numberline {8}Sviluppi Futuri}{24}{section.8}%

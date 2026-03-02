@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.5)  7 FEB 2026 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.5)  26 FEB 2026 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1192,7 +1192,7 @@ Package biblatex Info: Reference segment=0 on input line 4.
 
 
 (./title.tex
-<figures/frontespizio.png, id=63, 205.9695pt x 85.41pt>
+<figures/frontespizio.png, id=139, 205.9695pt x 85.41pt>
 File: figures/frontespizio.png Graphic file (type png)
 <use figures/frontespizio.png>
 Package pdftex.def Info: figures/frontespizio.png  used on input line 4.
@@ -1241,13 +1241,13 @@ l.10 \include{0-introduzione}
  (./0-introduzione.tex [2
 
 ]
-<figures/schermata_principale.png, id=99, 1388.18625pt x 655.69969pt>
+<figures/schermata_principale.png, id=195, 1388.18625pt x 655.69969pt>
 File: figures/schermata_principale.png Graphic file (type png)
 <use figures/schermata_principale.png>
 Package pdftex.def Info: figures/schermata_principale.png  used on input line 3
 9.
 (pdftex.def)             Requested size: 360.00137pt x 170.03767pt.
-<figures/selezione_tipologia_accesso.png, id=100, 1387.43344pt x 597.73312pt>
+<figures/selezione_tipologia_accesso.png, id=196, 1387.43344pt x 597.73312pt>
 File: figures/selezione_tipologia_accesso.png Graphic file (type png)
 <use figures/selezione_tipologia_accesso.png>
 Package pdftex.def Info: figures/selezione_tipologia_accesso.png  used on input
@@ -1255,12 +1255,12 @@ Package pdftex.def Info: figures/selezione_tipologia_accesso.png  used on input
 (pdftex.def)             Requested size: 360.00137pt x 155.09683pt.
  [3 <./figures/schermata_principale.png> <./figures/selezione_tipologia_accesso
 .png>]
-<figures/login_cliente.png, id=109, 1391.95032pt x 612.03656pt>
+<figures/login_cliente.png, id=205, 1391.95032pt x 612.03656pt>
 File: figures/login_cliente.png Graphic file (type png)
 <use figures/login_cliente.png>
 Package pdftex.def Info: figures/login_cliente.png  used on input line 63.
 (pdftex.def)             Requested size: 360.00137pt x 158.28525pt.
-<figures/login_compilato_cliente.png, id=110, 431.36156pt x 394.47375pt>
+<figures/login_compilato_cliente.png, id=206, 431.36156pt x 394.47375pt>
 File: figures/login_compilato_cliente.png Graphic file (type png)
 <use figures/login_compilato_cliente.png>
 Package pdftex.def Info: figures/login_compilato_cliente.png  used on input lin
@@ -1269,7 +1269,7 @@ e 70.
  [4
 
  <./figures/login_cliente.png> <./figures/login_compilato_cliente.png>]
-<figures/dashboard_cliente.png, id=119, 1403.99532pt x 645.91313pt>
+<figures/dashboard_cliente.png, id=215, 1403.99532pt x 645.91313pt>
 File: figures/dashboard_cliente.png Graphic file (type png)
 <use figures/dashboard_cliente.png>
 Package pdftex.def Info: figures/dashboard_cliente.png  used on input line 86.
@@ -1277,12 +1277,12 @@ Package pdftex.def Info: figures/dashboard_cliente.png  used on input line 86.
  [5
 
  <./figures/dashboard_cliente.png>]
-<figures/profilo_cliente.png, id=126, 660.21657pt x 579.66562pt>
+<figures/profilo_cliente.png, id=222, 660.21657pt x 579.66562pt>
 File: figures/profilo_cliente.png Graphic file (type png)
 <use figures/profilo_cliente.png>
 Package pdftex.def Info: figures/profilo_cliente.png  used on input line 114.
 (pdftex.def)             Requested size: 360.00137pt x 316.08397pt.
-<figures/reimposta_password_cliente.png, id=127, 680.5425pt x 548.0475pt>
+<figures/reimposta_password_cliente.png, id=223, 680.5425pt x 548.0475pt>
 File: figures/reimposta_password_cliente.png Graphic file (type png)
 <use figures/reimposta_password_cliente.png>
 Package pdftex.def Info: figures/reimposta_password_cliente.png  used on input 
@@ -1292,12 +1292,12 @@ line 118.
 
 LaTeX Warning: Float too large for page by 3.73752pt on input line 121.
 
-<figures/bonifico_cliente.png, id=128, 524.71031pt x 520.94624pt>
+<figures/bonifico_cliente.png, id=224, 524.71031pt x 520.94624pt>
 File: figures/bonifico_cliente.png Graphic file (type png)
 <use figures/bonifico_cliente.png>
 Package pdftex.def Info: figures/bonifico_cliente.png  used on input line 124.
 (pdftex.def)             Requested size: 314.99863pt x 312.74504pt.
-<figures/il_mio_conto_cliente.png, id=129, 998.9822pt x 544.28343pt>
+<figures/il_mio_conto_cliente.png, id=225, 998.9822pt x 544.28343pt>
 File: figures/il_mio_conto_cliente.png Graphic file (type png)
 <use figures/il_mio_conto_cliente.png>
 Package pdftex.def Info: figures/il_mio_conto_cliente.png  used on input line 1
@@ -1305,7 +1305,7 @@ Package pdftex.def Info: figures/il_mio_conto_cliente.png  used on input line 1
 (pdftex.def)             Requested size: 360.00137pt x 196.1412pt.
 [6 <./figures/profilo_cliente.png> <./figures/reimposta_password_cliente.png>]
 [7 <./figures/bonifico_cliente.png> <./figures/il_mio_conto_cliente.png>]
-<figures/dashboard_employee.png, id=145, 1372.37718pt x 537.50812pt>
+<figures/dashboard_employee.png, id=241, 1372.37718pt x 537.50812pt>
 File: figures/dashboard_employee.png Graphic file (type png)
 <use figures/dashboard_employee.png>
 Package pdftex.def Info: figures/dashboard_employee.png  used on input line 144
@@ -1316,13 +1316,13 @@ Package pdftex.def Info: figures/dashboard_employee.png  used on input line 144
 
 
  <./figures/dashboard_employee.png>]
-<figures/clienti_assegnati_employee.png, id=152, 1300.1072pt x 461.47406pt>
+<figures/clienti_assegnati_employee.png, id=248, 1300.1072pt x 461.47406pt>
 File: figures/clienti_assegnati_employee.png Graphic file (type png)
 <use figures/clienti_assegnati_employee.png>
 Package pdftex.def Info: figures/clienti_assegnati_employee.png  used on input 
 line 164.
 (pdftex.def)             Requested size: 314.99863pt x 111.8052pt.
-<figures/dettaglio_cliente_employee.png, id=153, 998.9822pt x 567.62062pt>
+<figures/dettaglio_cliente_employee.png, id=249, 998.9822pt x 567.62062pt>
 File: figures/dettaglio_cliente_employee.png Graphic file (type png)
 <use figures/dettaglio_cliente_employee.png>
 Package pdftex.def Info: figures/dettaglio_cliente_employee.png  used on input 
@@ -1332,7 +1332,7 @@ line 167.
 
  <./figures/clienti_assegnati_employee.png> <./figures/dettaglio_cliente_employ
 ee.png>]
-<figures/dashboard_admin.png, id=161, 989.19562pt x 533.74406pt>
+<figures/dashboard_admin.png, id=257, 989.19562pt x 533.74406pt>
 File: figures/dashboard_admin.png Graphic file (type png)
 <use figures/dashboard_admin.png>
 Package pdftex.def Info: figures/dashboard_admin.png  used on input line 184.
@@ -1340,7 +1340,7 @@ Package pdftex.def Info: figures/dashboard_admin.png  used on input line 184.
  [10
 
  <./figures/dashboard_admin.png>]
-<figures/gestione_utenti_admin.png, id=168, 1003.49907pt x 566.115pt>
+<figures/gestione_utenti_admin.png, id=264, 1003.49907pt x 566.115pt>
 File: figures/gestione_utenti_admin.png Graphic file (type png)
 <use figures/gestione_utenti_admin.png>
 Package pdftex.def Info: figures/gestione_utenti_admin.png  used on input line 
@@ -1352,29 +1352,46 @@ Package pdftex.def Info: figures/gestione_utenti_admin.png  used on input line
 \openout2 = `1-profili-utente-e-personas.aux'.
 
 
-(./1-profili-utente-e-personas.tex) [12
+(./1-profili-utente-e-personas.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--6
+
+ []
+
+[12
 
 
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+]) [18
 
 ]
 \openout2 = `2-Valutazione-Euristica.aux'.
 
- (./2-Valutazione-Euristica.tex)
-[13
+ (./2-Valutazione-Euristica.tex) [19
 
 
 
 ]
 \openout2 = `3-Walkthrough-Cognitivo.aux'.
 
- (./3-Walkthrough-Cognitivo.tex) [14
+
+(./3-Walkthrough-Cognitivo.tex) [20
 
 
 
 ]
 \openout2 = `4-Riprogettazione.aux'.
 
- (./4-Riprogettazione.tex) [15
+ (./4-Riprogettazione.tex) [21
 
 
 
@@ -1382,7 +1399,7 @@ Package pdftex.def Info: figures/gestione_utenti_admin.png  used on input line
 \openout2 = `5-Esperimento-con-gli-Utenti.aux'.
 
 
-(./5-Esperimento-con-gli-Utenti.tex) [16
+(./5-Esperimento-con-gli-Utenti.tex) [22
 
 
 
@@ -1390,14 +1407,14 @@ Package pdftex.def Info: figures/gestione_utenti_admin.png  used on input line
 \openout2 = `6-Analisi-dei-risultati.aux'.
 
  (./6-Analisi-dei-risultati.tex)
-[17
+[23
 
 
 
 ]
 \openout2 = `7-Sviluppi-Futuri.aux'.
 
- (./7-Sviluppi-Futuri.tex) [18
+ (./7-Sviluppi-Futuri.tex) [24
 
 
 
@@ -1409,19 +1426,14 @@ Package pdftex.def Info: figures/gestione_utenti_admin.png  used on input line
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- (./main.lol)
-\tf@lol=\write9
-\openout9 = `main.lol'.
+ [25
 
 
-[19
-
-
-] (./main.aux (./title.aux) (./0-introduzione.aux)
-(./1-profili-utente-e-personas.aux) (./2-Valutazione-Euristica.aux)
-(./3-Walkthrough-Cognitivo.aux) (./4-Riprogettazione.aux)
-(./5-Esperimento-con-gli-Utenti.aux) (./6-Analisi-dei-risultati.aux)
-(./7-Sviluppi-Futuri.aux))
+] (./main.aux
+(./title.aux) (./0-introduzione.aux) (./1-profili-utente-e-personas.aux)
+(./2-Valutazione-Euristica.aux) (./3-Walkthrough-Cognitivo.aux)
+(./4-Riprogettazione.aux) (./5-Esperimento-con-gli-Utenti.aux)
+(./6-Analisi-dei-risultati.aux) (./7-Sviluppi-Futuri.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1431,7 +1443,7 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9F2BF917193E8ED6A184188FC92CA806;2354.
+(rerunfilecheck)             Checksum: 58ED33D64764D2DC01F90196D4AB7863;6061.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -1442,22 +1454,22 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34677 strings out of 469462
- 653079 string characters out of 5468867
- 1528980 words of memory out of 5000000
- 62692 multiletter control sequences out of 15000+600000
+ 34736 strings out of 469462
+ 654157 string characters out of 5468867
+ 1535002 words of memory out of 5000000
+ 62715 multiletter control sequences out of 15000+600000
  636477 words of font info for 73 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 107i,6n,110p,1181b,1827s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,9n,110p,1181b,1827s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/sahil/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.
 600pk><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:
 /texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive
 /2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (20 pages, 2727328 bytes).
+Output written on main.pdf (26 pages, 2741052 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 
