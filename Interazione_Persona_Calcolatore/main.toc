@@ -27,9 +27,9 @@
 \contentsline {subsubsection}{\numberline {2.3.4}Caratteristiche fisiche}{17}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}Caratteristiche del lavoro e dei compiti}{17}{subsubsection.2.3.5}%
 \contentsline {subsection}{\numberline {2.4}Personas}{18}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Valutazione Euristica}{19}{section.3}%
-\contentsline {section}{\numberline {4}Walkthrough Cognitivo}{20}{section.4}%
-\contentsline {section}{\numberline {5}Riprogettazione}{21}{section.5}%
-\contentsline {section}{\numberline {6}Esperimento con gli Utenti}{22}{section.6}%
-\contentsline {section}{\numberline {7}Analisi dei risultati}{23}{section.7}%
-\contentsline {section}{\numberline {8}Sviluppi Futuri}{24}{section.8}%
+\contentsline {section}{\numberline {3}Valutazione Euristica}{21}{section.3}%
+\contentsline {section}{\numberline {4}Walkthrough Cognitivo}{22}{section.4}%
+\contentsline {section}{\numberline {5}Riprogettazione}{23}{section.5}%
+\contentsline {section}{\numberline {6}Esperimento con gli Utenti}{24}{section.6}%
+\contentsline {section}{\numberline {7}Analisi dei risultati}{25}{section.7}%
+\contentsline {section}{\numberline {8}Sviluppi Futuri}{26}{section.8}%
