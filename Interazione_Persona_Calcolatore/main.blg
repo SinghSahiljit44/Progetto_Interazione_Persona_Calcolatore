@@ -3,15 +3,19 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: title.aux
 A level-1 auxiliary file: 0-introduzione.aux
-A level-1 auxiliary file: 1-sezione-esempio.aux
-A level-1 auxiliary file: A-appendice.aux
-A level-1 auxiliary file: ringraziamenti.aux
+A level-1 auxiliary file: 1-profili-utente-e-personas.aux
+A level-1 auxiliary file: 2-Valutazione-Euristica.aux
+A level-1 auxiliary file: 3-Walkthrough-Cognitivo.aux
+A level-1 auxiliary file: 4-Riprogettazione.aux
+A level-1 auxiliary file: 5-Esperimento-con-gli-Utenti.aux
+A level-1 auxiliary file: 6-Analisi-dei-risultati.aux
+A level-1 auxiliary file: 7-Sviluppi-Futuri.aux
 I found no \citation commands---while reading file main.aux
 I found no \bibdata command---while reading file main.aux
 I found no \bibstyle command---while reading file main.aux
 You've used 0 entries,
             0 wiz_defined-function locations,
-            88 strings with 563 characters,
+            92 strings with 695 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
