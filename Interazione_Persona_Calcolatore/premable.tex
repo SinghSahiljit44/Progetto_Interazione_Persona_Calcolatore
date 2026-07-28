@@ -78,3 +78,30 @@ pdfauthor=Riccardo Valtorta
 }
 
 \graphicspath{{figures/}}
+
+\newcommand{\tabellaValutazioneEuristica}[6]{
+	\noindent
+	\begin{tabularx}{\textwidth}{|X|}
+		\hline
+		\begin{minipage}[t]{\linewidth}\raggedright
+			\vspace{4pt}
+			\textbf{Problema N\textsuperscript{o}:} #1 \hfill \textbf{Grado di Severità:} #5\\[4pt]
+			\textbf{Posizione:} #2\\[6pt]
+			\textbf{Descrizione:} \par
+			#3\\[6pt]
+			\textbf{Principi Violati:} \par
+			#4
+			\vspace{6pt}
+		\end{minipage} \\ \hline
+		
+		\begin{minipage}[t]{\linewidth}\centering
+			\vspace{4pt}
+			\textbf{Screenshot:}
+			\vspace{0.6em}
+			
+			#6
+			\vspace{6pt}
+		\end{minipage} \\ \hline
+	\end{tabularx}
+	\vspace{1em}
+}
