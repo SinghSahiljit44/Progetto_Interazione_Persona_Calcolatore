@@ -1,19 +1,647 @@
 \section{Valutazione Euristica}
 
 \subsection{Fase preliminare}
+Strutturata in seguito ad una breve riunione di gruppo, tre punti:
+\begin{enumerate}
+	\item Pianificazione temporale delle attività
+	\item Stabiliti i principi su cui basare la valutazione
+	\item Definizione delle condizioni sperimentali
+\end{enumerate}
 \subsubsection{Progettazione temporale}
-Si è deciso di effettuare una sola valutazione euristica di usabilità della durata di circa 2h rispetto all'esecuzione di 2 sessioni da un'ora ciascuna
-\subsubsection{Progettazione documento di analisi}
-Il documento di analisi è stato deciso essere una tabella come la seguente:
+Per valutatore, si sono scelte due sessioni di valutazione del sistema, una dedicata al cliente e all'employee e un'altra dedicata all'admin, entrambe da una o due ore.
 
 \subsubsection{Condizioni sperimentali}
-\subsubsection{Principi utilizzati}
+Ogni osservatore esegue la valutazione, in modo indipendente dall'altro, visitando il sito web mediante il proprio computer. Bisogna considerare tutte le pagine (specifiche alla sessione di valutazione), cercando di imitare il comportamento dei profili utente definiti.
 
-\subsection{Fase di esecuzione dell'analisi}
-Inserire descrizione 
+L'ambiente in cui eseguire tale valutazione non è stato specificato, in quanto non vincolante in base al profilo utente.
+
+Per ogni sessione, il valutatore riporta la durata e la lista di problemi, specificando per ognuno di essi: numero di problema, descrizione, screenshot, principi violati. Per riportarli, viene utilizzata la tabella seguente:
+\\
+\tabellaValutazioneEuristica{1}{Sezione gestione x}{Descrizione del problema...}{1,2}{1}{}
+
+\subsubsection{Principi utilizzati}
+Si è deciso di utilizzare i principi di usabilità di Nielsen, rielaborati da P. Mussio, per identificare i problemi di usabilità. 
 
 \subsection{Fase di Debriefing}
 \subsubsection{Problemi di usabilità riscontrati}
+\tabellaValutazioneEuristica
+{1}
+{Home page}
+{Bottone "Home" ridondante rispetto al logo già cliccabile}
+{4}
+{\textbf{1}}
+{\includegraphics[width=0.75\linewidth]{problema_1}}
+
+\tabellaValutazioneEuristica
+{2}
+{Home page}
+{L'utente si trova davanti a un muro di testo e non sa cosa fare, inoltre il bottone accedi è piccolo in alto a dx (Legge di Fitts)}
+{6,7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_2}}
+
+\tabellaValutazioneEuristica
+{3}
+{Home page}
+{Pseudopulsanti con animazione hover non cliccabili nella home page.}
+{4,5}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_bottoni_home.png}}
+
+\tabellaValutazioneEuristica
+{4}
+{Home page}
+{Accesso rallentato per chi accede da mobile, deve cliccare hamburger poi accedi. Il colore scelto per questo menù è nero su verde, non si vede.}
+{6,7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{menuhamburger.png}}
+
+\tabellaValutazioneEuristica
+{5}
+{Tutto il sito}
+{Contrasto cromatico non sufficiente, scarsa leggibilità, faticoso da leggere.}
+{5,7}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_1.png}}
+
+\tabellaValutazioneEuristica
+{6}
+{Login}
+{Inconsistenza con i colori, verde acqua per cliente mentre blu per dipendente. Box di testo del login per dipendente mantiene il verde acqua del cliente.}
+{4,7,8}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{sezionelogin.png}}
+
+	\tabellaValutazioneEuristica
+{7}
+{Dashboard cliente}
+{L'utente fa fatica a leggere vari importi in quanto si usa un colore verde su un colore verde}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_3}}
+
+\tabellaValutazioneEuristica
+{8}
+{Dashboard cliente}
+{L'interfaccia è in italiano però ci sono parole in inglese}
+{2}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_4}}
+
+\tabellaValutazioneEuristica
+{9}
+{Dashboard cliente}
+{Box in basso a sx nella pagina con il riepilogo delle informazioni del cliente è inutile in quanto abbiamo già la sezione "il mio profilo"}
+{7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_5}}
+
+\tabellaValutazioneEuristica
+{10}
+{Dashboard cliente}
+{Box in basso a dx completamente inutile e poco informativo con informazioni confusionarie sulla banca, meglio mettere queste informazioni sulla Home page dell'applicazione}
+{7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_6}}
+
+\tabellaValutazioneEuristica
+{11}
+{Sezione bonifico cliente}
+{Di nuovo è difficile leggere il saldo in quanto su sfondo nero}
+{6,7}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_7}}
+
+\tabellaValutazioneEuristica
+{12}
+{Sezione bonifico cliente}
+{Se si inserisce un importo superiore rispetto al saldo viene mostrata una schermata non consistente con il resto del layout e con testo non nel linguaggio del utente (indirizzo ip:porta)}
+{2,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_8}}
+
+\tabellaValutazioneEuristica
+{13}
+{Sezione estratto conto cliente}
+{Di nuovo il problema del testo poco leggibili perché verde su verde}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_9}}
+
+\tabellaValutazioneEuristica
+{14}
+{Sezione estratto conto cliente}
+{In mezzo ai filtri c'è l'opzione estrai csv, quindi non parla il linguaggio utente e poi il posizionamento è logicamente sbagliato, inoltre manca un help in linea}
+{2,5,7,10}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_10}}	
+
+\tabellaValutazioneEuristica
+{15}
+{Sezione il mio profilo cliente}
+{All'utente viene mostrato il suo ruolo che non ha senso}
+{2,7}
+{\textbf{1}}
+{\includegraphics[width=0.75\linewidth]{problema_11}}
+
+\tabellaValutazioneEuristica
+{16}
+{Sezione il mio profilo cliente}
+{Di nuovo il problema del testo poco leggibili perché verde su verde}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_12}}
+
+\tabellaValutazioneEuristica
+{17}
+{Sezione il mio profilo cliente}
+{Il modifica in alto non è chiaro a cosa si riferisca: password, domanda di sicurezza o informazioni profilo?}
+{3,5}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_13}}
+
+\tabellaValutazioneEuristica
+{18}
+{Sezione il mio profilo cliente}
+{Più bottoni per fare la stessa cosa nella stessa pagina che mandano in confusione}
+{3,4,7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_14}}
+
+\tabellaValutazioneEuristica
+{19}
+{Sezione il mio profilo cliente}
+{Cosa significa domanda di sicurezza? Il bottone in basso a dx ha solo scritto "sicurezza", sono la stessa cosa? cambia anche l'icona!}
+{2,3,4,5,7,10}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_15}}
+
+\tabellaValutazioneEuristica
+{20}
+{Sezione domanda di sicurezza cliente}
+{Ognuno dei 3 bottoni se si sbaglia a digitare bisogna ricompilare da capo}
+{6,8}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_16}}
+
+\tabellaValutazioneEuristica
+{21}
+{Pagine cliente}
+{Manca l'help, il cliente non è un esperto del nostro sistema.}
+{10}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{nohelpcliente}}
+
+\tabellaValutazioneEuristica
+{22}
+{Pagine cliente}
+{Colori inconsistenti.}
+{4,7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{coloriclientewhat.png}}
+
+\tabellaValutazioneEuristica
+{23}
+{Pagine cliente}
+{Manca feedback per la posizione corrente dell'utente.}
+{1}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{posizionedovecliente.png}}
+
+\tabellaValutazioneEuristica
+{24}
+{Sezioni per ogni utente (qualsiasi ruolo)}
+{In tutte le sezioni il menù a tendina sovrasta un altro testo (può essere il tasto per tornare alla dashboard dell'admin o anche il logout per il cliente).}
+{7,8}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{testisovrapposti.png}}
+
+\tabellaValutazioneEuristica
+{25}
+{Sezione bonifico cliente}
+{Messaggio di attenzione mostrato ancor prima di aver inserito I dati per il bonifico.}
+{7,8}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{attenzioneclientebonifico.png}}
+
+\tabellaValutazioneEuristica
+{26}
+{Sezione bonifico cliente}
+{Placeholder IBAN confusionario, un cliente potrebbe pensare che sia già stato inserito per lui (box di testo pieno, conteggio caratteri zero).}
+{1,7}
+{\textbf{1}}
+{\includegraphics[width=0.75\linewidth]{attenzioneclientebonifico.png}}
+
+\tabellaValutazioneEuristica
+{27}
+{Sezione bonifico cliente}
+{Font troppo piccolo e poco visibile.}
+{7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{conteggiocarattereiban.png}}
+
+\tabellaValutazioneEuristica
+{28}
+{Sezione bonifico cliente}
+{Riepilogo bonifico veramente fuori luogo, non ha senso un riepilogo per un qualcosa che già vedi. Colori non consistenti con il resto del sito.}
+{4,7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{riepilogobonificoinutile.png}}
+
+\tabellaValutazioneEuristica
+{29}
+{Sezione bonifico cliente: importo}
+{Usa la virgola sotto, non posso nell’input, non si corregge una volta messo un valore intero.}
+{4,7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{virgolaimporto.png}}
+
+\tabellaValutazioneEuristica
+{30}
+{Sezione bonifico: conferma bonifico avvenuto}
+{Abuso di elementi visivi, troppe conferme di successo.}
+{7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{troppeconferme.png}}
+
+\tabellaValutazioneEuristica
+{31}
+{Sezione bonifico: conferma bonifico avvenuto}
+{Nella causale compaiono tutte le informazioni relative, rendendolo difficile da leggere.}
+{7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{troppeconferme.png}}
+
+\tabellaValutazioneEuristica
+{32}
+{Cambio password utente}
+{Torna al profilo e annulla fanno la stessa cosa.}
+{4, 7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{reimposta_password_cliente.png}}
+
+\tabellaValutazioneEuristica
+{33}
+{Modifica profilo utente}
+{Non comprensibile quali sono i dati che posso effettivamente modificare, ridondanza con le uscite.}
+{1,4,7,8}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{modificaprofiloutente.png}}
+
+\tabellaValutazioneEuristica
+{34}
+{Il mio conto corrente utente: filtro}
+{Formato statunitense invece che italiano, importo non ha unità di misura, manca valore default/esempio, sezione di prelievi che non ritrova riscontro.}
+{2,4,8}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{modificaprofiloutente.png}}
+
+\tabellaValutazioneEuristica
+{35}
+{Bonifico utente: filtro}
+{Errore in lingua straniera, non gestito (stesso se < 0.01).}
+{2,4,9}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{erroreinglesevaloreimporto.png}}
+
+	\tabellaValutazioneEuristica
+{36}
+{Dashboard employee}
+{Testo poco leggibile per l'ennesima volta, specialmente il numero di conti assegnati. Colori inadeguati.}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_17}}
+
+\tabellaValutazioneEuristica
+{37}
+{Dashboard employee}
+{Inutile scritta gigante dashboard employee che non parla la lingua dell'utente}
+{2,7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_18}}
+
+\tabellaValutazioneEuristica
+{38}
+{Dashboard employee}
+{Doppio menù a tendina con due funzionalità differenti (una mostra il profilo, l'altra la dashboard). L'accesso al profilo risulta complicato in quanto nascosto dietro uno dei due menù a tendina.}
+{4,5,6,8}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_19}}
+
+\tabellaValutazioneEuristica
+{39}
+{Sezione il mio profilo employee}
+{Il modifica in alto non è chiaro a cosa si riferisca: password o informazioni profilo?}
+{3,5}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_20}}
+
+\tabellaValutazioneEuristica
+{40}
+{Sezione il mio profilo employee}
+{Più bottoni per fare la stessa cosa nella stessa pagina che mandano in confusione}
+{3,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_21}}
+
+\tabellaValutazioneEuristica
+{41}
+{Sezione il mio profilo employee}
+{Le statistiche sono presenti nella dashboard e qui sono fuori luogo e ridondanti}
+{7}
+{\textbf{1}}
+{\includegraphics[width=0.75\linewidth]{problema_22}}
+
+\tabellaValutazioneEuristica
+{42}
+{Sezione il mio profilo employee}
+{All'untente viene mostrato il suo ruolo che non ha senso, per lo più in inglese.}
+{2,7}
+{\textbf{1}}
+{\includegraphics[width=0.75\linewidth]{problema_23}}
+
+\tabellaValutazioneEuristica
+{43}
+{Sezione "I miei clienti" employee}
+{Di nuovo leggibilità bassa e icone poco comprensibili}
+{1,6,7}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_24}}
+
+\tabellaValutazioneEuristica
+{44}
+{Dashboard "I miei clienti" employee}
+{La creazione di nuovi utenti non facilmente trovabile perché nascosta dentro a una sezione dedicata alla gestione di clienti già esistenti}
+{5,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_25}}
+
+\tabellaValutazioneEuristica
+{45}
+{Dashboard "I miei clienti" employee}
+{Se si utilizza il bottone per il bonifico in questa sezione non c'è alcun feedback se si inserisce un importo superiore rispetto al saldo del conto e se si sbaglia a schiacciare fuori dalla finestra pop-up ciò che si era digitato va perso (succede anche col bottone deposito)}
+{1,3,6,8,9}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_26}}
+
+\tabellaValutazioneEuristica
+{46}
+{Sezione "dettagli cliente" employee}
+{Di nuovo leggibilità bassa e icone poco comprensibili}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_27}}
+
+\tabellaValutazioneEuristica
+{47}
+{Sezione "dettagli cliente" employee}
+{Ognuna delle azioni rapide perde tutte le informazioni inserite se il cliente sbaglia e clicca da qualche parte sullo schermo, il bonifico è ancora peggio perchè non da feedback se si supera il saldo conto. Colori fuori luogo.}
+{1,3,6,8,9}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_28}}
+
+\tabellaValutazioneEuristica
+{48}
+{Sezione "dettagli cliente" employee}
+{Se si vuole sospendere il cliente viene mostrata una schermata non consistente con il resto del layout e con testo non nel linguaggio del utente (indirizzo ip:porta)}
+{2,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_29}}
+
+\tabellaValutazioneEuristica
+{49}
+{Sezione "operazioni su tutti i clienti" employee}
+{Di nuovo leggibilità bassa e icone poco comprensibili}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_30}}
+
+\tabellaValutazioneEuristica
+{50}
+{Sezione "operazioni su tutti i clienti" employee}
+{Sia per il deposito che per il prelievo se l'utente schiaccia per sbaglio da qualche parte perde tutti i dati immessi, però c'è la gestione dei errori (es valore più alto per prelievo rispetto al saldo)}
+{3,6,8}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_31}}
+
+\tabellaValutazioneEuristica
+{51}
+{Sezione "Transazioni" employee}
+{Di nuovo leggibilità bassa e poi la rotellina rivela solo un sola opzione quella del dettaglio transazione con un ulteriore icona}
+{1,4,5,6,7}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_32}}
+
+\tabellaValutazioneEuristica
+{52}
+{Dashboard employee}
+{Tasti accedi con significato ambiguo, rappresentano un tasto di login?}
+{4}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{accediemployee.png}}
+
+\tabellaValutazioneEuristica
+{53}
+{Dashboard Admin}
+{Doppio menù a tendina, profilo difficilmente raggiungibile.}
+{4,5,6,7}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_33}}
+
+\tabellaValutazioneEuristica
+{54}
+{Dashboard Admin}
+{Di nuovo leggibilità bassa e icone poco comprensibili}
+{1,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_34}}
+
+\tabellaValutazioneEuristica
+{55}
+{Sezione gestione clienti admin}
+{Testo in inglese che non parla la lingua dell'utente}
+{2}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_35}}
+
+\tabellaValutazioneEuristica
+{56}
+{Sezione registra nuovo cliente admin}
+{In basso c'è un messaggio criptico: "Attenzione: Verifica attentamente tutti i dati prima di procedere. Se non imposti una password personalizzata, ne verrà generata una automaticamente che dovrai comunicare all'utente". Non è possibile immettere una password personalizzata perché può essere generata solo in automatico}
+{3,7}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_36}}
+
+\tabellaValutazioneEuristica
+{57}
+{Sezione bonifico per cliente admin}
+{Non parla la lingua dell'utente il banner rosso, cosa sono i log? Inoltre non previene errori (mi permette di inserire importi più alti del saldo disponibil), anche se poi permette di correggerli}
+{2,4,8}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_37_b}
+	\includegraphics[width=0.75\linewidth]{problema_37_a}}
+
+\tabellaValutazioneEuristica
+{58}
+{Sezione dettagli cliente admin}
+{Allineamento sgradevole e leggibilità bassa}
+{1,4,6}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{problema_38}}
+
+
+\tabellaValutazioneEuristica
+{59}
+{Sezione "dettagli cliente" admin}
+{Se si vuole disattivare il cliente viene mostrata una schermata non consistente con il resto del layout e con testo non nel linguaggio del utente (indirizzo ip:porta)}
+{2,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_39}}
+
+\tabellaValutazioneEuristica
+{60}
+{Sezione il mio profilo admin}
+{Il modifica in alto non è chiaro a cosa si riferisca: password o informazioni profilo?}
+{3,5}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_40}}
+
+\tabellaValutazioneEuristica
+{61}
+{Sezione il mio profilo admin}
+{Più bottoni per fare la stessa cosa nella stessa pagina che mandano in confusione}
+{3,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_41}}
+
+\tabellaValutazioneEuristica
+{62}
+{Sezione recupero credenziali admin}
+{Statistica sbagliata quella dei dipendenti}
+{1,4}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{problema_42}}
+
+\tabellaValutazioneEuristica
+{63}
+{Sezione recupero credenziali admin}
+{Se si vuole bloccare il conto viene mostrata una schermata non consistente con il resto del layout e con testo non nel linguaggio del utente (indirizzo ip:porta)}
+{1,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_43}}
+
+\tabellaValutazioneEuristica
+{64}
+{Sezione bonifico admin}
+{Se si vuole confermare un bonifico viene mostrata una schermata non consistente con il resto del layout e con testo non nel linguaggio del utente (indirizzo ip:porta)}
+{1,4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{problema_44}}
+
+\tabellaValutazioneEuristica
+{65}
+{Login}
+{Sezione login admin in comune con lavoratore, confusionario in quanto non differenzia i tipo di utenti.}
+{7,8}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{sezionelogin.png}}
+
+\tabellaValutazioneEuristica
+{66}
+{Admin}
+{Mancanza di feedback costante sulla posizione nella pagina.}
+{4}
+{\textbf{1, 5}}
+{}
+
+\tabellaValutazioneEuristica
+{67}
+{Modifica profilo Admin}
+{Non comprensibile quali dati posso modificare e quali no a colpo d'occhio (eccesso di informazioni), colori non consistenti, Admin è inglese non va bene. Tasto Annulla e Dashboard fanno la stessa cosa.}
+{2,4,7,8}
+{\textbf{4}}
+
+\tabellaValutazioneEuristica
+{68}
+{Gestione utenti: lingua}
+{Lingua confusa per i ruoli.}
+{4}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{linguaconfusa.png}}
+
+\tabellaValutazioneEuristica
+{69}
+{Dettagli transazione}
+{Colori inconsistenti, utilizzo di emoji che potrebbero creare problemi di visualizzazione}
+{7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{dettaglitransazione.png}}
+
+\tabellaValutazioneEuristica
+{70}
+{Dettagli transazione: no undo corretto}
+{Se visualizzo un mittente/destinatario (solo interni, giustamente), non posso ritornare alla transazione/lista delle transazioni facilmente.}
+{3, 6}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{gestioneconti.png}}
+
+\tabellaValutazioneEuristica
+{71}
+{Gestione assegnazioni: assegnazione multipla}
+{Se tutti gli utenti sono già assegnati, non compare nessun utente nella lista e posso comunque usare la macro di assegnazione multipla.}
+{8}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{selezionemultiplaassegnazione.png}}
+
+\tabellaValutazioneEuristica
+{72}
+{Gestione assegnazioni: primo errore in inglese}
+{In relazione al 19, se faccio l'assegnazione multipla senza clienti esce un messaggio di errore in inglese.}
+{2,9}
+{\textbf{4}}
+{\includegraphics[width=0.75\linewidth]{erroreassegnazionemultipla2.png}}
+
+\tabellaValutazioneEuristica
+{73}
+{Gestione password: reset multiplo}
+{Tralasciando i colori, tasti di selezione e deselzione tutti sono troppo vicini, testi piccoli per selezione utente, inglese e italiano.}
+{7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{resetmultiplo.png}}
+
+\tabellaValutazioneEuristica
+{74}
+{Report transazioni: filtro}
+{Standard USA per data, non italiano.}
+{2,8}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{filtrireporttransazioniusd.png}}
+
+\tabellaValutazioneEuristica
+{75}
+{Report transazioni}
+{Sezione quadrate simili a pulsanti.}
+{2,4}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{falsipulsantitransazioni.png}}
+
+\tabellaValutazioneEuristica
+{76}
+{Report e statistiche}
+{Troppi dati a video, alcuni inutili, ancora falsi pulsanti.}
+{4,7}
+{\textbf{3}}
+{\includegraphics[width=0.75\linewidth]{reportestatistiche.png}}
+
+\tabellaValutazioneEuristica
+{77}
+{Report utenti}
+{Ruoli tradotti.}
+{4}
+{\textbf{2}}
+{\includegraphics[width=0.75\linewidth]{linguafiltroreportutenti.png}}
+
+
 \subsubsection{Classificazione dei problemi}
 \subsubsection{Confronto dei problemi trovati dai valutatori}
 \subsubsection{Stima del numero totale dei problemi di usabilità}
