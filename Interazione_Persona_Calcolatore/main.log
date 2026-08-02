@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.7.22)  31 JUL 2026 18:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.7.22)  2 AUG 2026 03:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,7 +1231,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 ...tistica dei dati}{71}{subsubsection.3.2.6}
+l.41 ...tistica dei dati}{79}{subsubsection.3.2.6}
                                                   % [1
 
 
@@ -1537,11 +1537,10 @@ ine 225.
 (pdftex.def)             Requested size: 327.90001pt x 39.25044pt.
  [39 <./figures/testisovrapposti.png> <./figures/attenzioneclientebonifico.png>
 ]
-File: figures/attenzioneclientebonifico.png Graphic file (type png)
-<use figures/attenzioneclientebonifico.png>
-Package pdftex.def Info: figures/attenzioneclientebonifico.png  used on input l
-ine 233.
-(pdftex.def)             Requested size: 327.90001pt x 39.25044pt.
+File: figures/ibaninserito.png Graphic file (type png)
+<use figures/ibaninserito.png>
+Package pdftex.def Info: figures/ibaninserito.png  used on input line 233.
+(pdftex.def)             Requested size: 327.90001pt x 92.38403pt.
 File: figures/conteggiocarattereiban.png Graphic file (type png)
 <use figures/conteggiocarattereiban.png>
 Package pdftex.def Info: figures/conteggiocarattereiban.png  used on input line
@@ -1552,7 +1551,7 @@ File: figures/riepilogobonificoinutile.png Graphic file (type png)
 Package pdftex.def Info: figures/riepilogobonificoinutile.png  used on input li
 ne 249.
 (pdftex.def)             Requested size: 327.90001pt x 49.10521pt.
- [40 <./figures/conteggiocarattereiban.png>]
+ [40 <./figures/ibaninserito.png> <./figures/conteggiocarattereiban.png>]
 File: figures/virgolaimporto.png Graphic file (type png)
 <use figures/virgolaimporto.png>
 Package pdftex.def Info: figures/virgolaimporto.png  used on input line 257.
@@ -1566,7 +1565,7 @@ File: figures/troppeconferme.png Graphic file (type png)
 <use figures/troppeconferme.png>
 Package pdftex.def Info: figures/troppeconferme.png  used on input line 273.
 (pdftex.def)             Requested size: 327.90001pt x 159.57378pt.
- [42 <./figures/troppeconferme.png>]
+[42 <./figures/troppeconferme.png>]
 File: figures/reimposta_password_cliente.png Graphic file (type png)
 <use figures/reimposta_password_cliente.png>
 Package pdftex.def Info: figures/reimposta_password_cliente.png  used on input 
@@ -1579,11 +1578,11 @@ Package pdftex.def Info: figures/modificaprofiloutente.png  used on input line
 289.
 (pdftex.def)             Requested size: 327.90001pt x 267.57278pt.
  [44]
-File: figures/modificaprofiloutente.png Graphic file (type png)
-<use figures/modificaprofiloutente.png>
-Package pdftex.def Info: figures/modificaprofiloutente.png  used on input line 
-297.
-(pdftex.def)             Requested size: 327.90001pt x 267.57278pt.
+File: figures/il_mio_conto_cliente.png Graphic file (type png)
+<use figures/il_mio_conto_cliente.png>
+Package pdftex.def Info: figures/il_mio_conto_cliente.png  used on input line 2
+97.
+(pdftex.def)             Requested size: 327.90001pt x 178.6507pt.
  [45 <./figures/modificaprofiloutente.png>]
 File: figures/erroreinglesevaloreimporto.png Graphic file (type png)
 <use figures/erroreinglesevaloreimporto.png>
@@ -1613,7 +1612,8 @@ File: figures/problema_21.png Graphic file (type png)
 <use figures/problema_21.png>
 Package pdftex.def Info: figures/problema_21.png  used on input line 345.
 (pdftex.def)             Requested size: 327.90001pt x 141.87549pt.
- [49 <./figures/problema_20.png> <./figures/problema_21.png>]
+
+[49 <./figures/problema_20.png> <./figures/problema_21.png>]
 File: figures/problema_22.png Graphic file (type png)
 <use figures/problema_22.png>
 Package pdftex.def Info: figures/problema_22.png  used on input line 353.
@@ -1660,13 +1660,13 @@ File: figures/problema_31.png Graphic file (type png)
 <use figures/problema_31.png>
 Package pdftex.def Info: figures/problema_31.png  used on input line 425.
 (pdftex.def)             Requested size: 327.90001pt x 369.88417pt.
- [56 <./figures/problema_30.png>]
+
+[56 <./figures/problema_30.png>]
 File: figures/problema_32.png Graphic file (type png)
 <use figures/problema_32.png>
 Package pdftex.def Info: figures/problema_32.png  used on input line 433.
 (pdftex.def)             Requested size: 327.90001pt x 68.46535pt.
-
-[57 <./figures/problema_31.png>]
+ [57 <./figures/problema_31.png>]
 File: figures/accediemployee.png Graphic file (type png)
 <use figures/accediemployee.png>
 Package pdftex.def Info: figures/accediemployee.png  used on input line 441.
@@ -1689,8 +1689,7 @@ File: figures/problema_36.png Graphic file (type png)
 <use figures/problema_36.png>
 Package pdftex.def Info: figures/problema_36.png  used on input line 473.
 (pdftex.def)             Requested size: 327.90001pt x 414.92087pt.
-
-[60 <./figures/problema_35.png>]
+ [60 <./figures/problema_35.png>]
 Overfull \vbox (17.94048pt too high) has occurred while \output is active []
 
 
@@ -1704,7 +1703,7 @@ File: figures/problema_37_a.png Graphic file (type png)
 Package pdftex.def Info: figures/problema_37_a.png  used on input line 482.
 (pdftex.def)             Requested size: 327.90001pt x 345.51077pt.
  [62]
-Overfull \vbox (36.4783pt too high) has occurred while \output is active []
+Overfull \vbox (21.9783pt too high) has occurred while \output is active []
 
 
 [63 <./figures/problema_37_b.png> <./figures/problema_37_a.png>]
@@ -1714,71 +1713,77 @@ Package pdftex.def Info: figures/problema_38.png  used on input line 490.
 (pdftex.def)             Requested size: 327.90001pt x 232.40787pt.
 File: figures/problema_39.png Graphic file (type png)
 <use figures/problema_39.png>
-Package pdftex.def Info: figures/problema_39.png  used on input line 499.
+Package pdftex.def Info: figures/problema_39.png  used on input line 498.
 (pdftex.def)             Requested size: 327.90001pt x 135.44318pt.
  [64 <./figures/problema_38.png>]
 File: figures/problema_40.png Graphic file (type png)
 <use figures/problema_40.png>
-Package pdftex.def Info: figures/problema_40.png  used on input line 507.
+Package pdftex.def Info: figures/problema_40.png  used on input line 506.
 (pdftex.def)             Requested size: 327.90001pt x 171.16637pt.
  [65 <./figures/problema_39.png>]
 File: figures/problema_41.png Graphic file (type png)
 <use figures/problema_41.png>
-Package pdftex.def Info: figures/problema_41.png  used on input line 515.
+Package pdftex.def Info: figures/problema_41.png  used on input line 514.
 (pdftex.def)             Requested size: 327.90001pt x 277.02602pt.
  [66 <./figures/problema_40.png>]
 File: figures/problema_42.png Graphic file (type png)
 <use figures/problema_42.png>
-Package pdftex.def Info: figures/problema_42.png  used on input line 523.
+Package pdftex.def Info: figures/problema_42.png  used on input line 522.
 (pdftex.def)             Requested size: 327.90001pt x 82.73409pt.
  [67 <./figures/problema_41.png>]
 File: figures/problema_43.png Graphic file (type png)
 <use figures/problema_43.png>
-Package pdftex.def Info: figures/problema_43.png  used on input line 531.
+Package pdftex.def Info: figures/problema_43.png  used on input line 530.
 (pdftex.def)             Requested size: 327.90001pt x 84.35458pt.
 File: figures/problema_44.png Graphic file (type png)
 <use figures/problema_44.png>
-Package pdftex.def Info: figures/problema_44.png  used on input line 539.
+Package pdftex.def Info: figures/problema_44.png  used on input line 538.
 (pdftex.def)             Requested size: 327.90001pt x 216.36635pt.
  [68 <./figures/problema_42.png> <./figures/problema_43.png>]
 File: figures/sezionelogin.png Graphic file (type png)
 <use figures/sezionelogin.png>
-Package pdftex.def Info: figures/sezionelogin.png  used on input line 547.
+Package pdftex.def Info: figures/sezionelogin.png  used on input line 546.
 (pdftex.def)             Requested size: 327.90001pt x 163.46614pt.
  [69 <./figures/problema_44.png>]
+File: figures/modificaprofilo.png Graphic file (type png)
+<use figures/modificaprofilo.png>
+Package pdftex.def Info: figures/modificaprofilo.png  used on input line 562.
+(pdftex.def)             Requested size: 327.90001pt x 264.83974pt.
+ [70]
 File: figures/linguaconfusa.png Graphic file (type png)
 <use figures/linguaconfusa.png>
 Package pdftex.def Info: figures/linguaconfusa.png  used on input line 570.
 (pdftex.def)             Requested size: 327.90001pt x 262.31519pt.
- [70] [71]
+ [71 <./figures/modificaprofilo.png>]
 File: figures/dettaglitransazione.png Graphic file (type png)
 <use figures/dettaglitransazione.png>
 Package pdftex.def Info: figures/dettaglitransazione.png  used on input line 57
 8.
 (pdftex.def)             Requested size: 327.90001pt x 290.1285pt.
  [72 <./figures/linguaconfusa.png>]
-File: figures/gestioneconti.png Graphic file (type png)
-<use figures/gestioneconti.png>
-Package pdftex.def Info: figures/gestioneconti.png  used on input line 586.
-(pdftex.def)             Requested size: 327.90001pt x 151.1287pt.
+File: figures/dettaglitransazione.png Graphic file (type png)
+<use figures/dettaglitransazione.png>
+Package pdftex.def Info: figures/dettaglitransazione.png  used on input line 58
+6.
+(pdftex.def)             Requested size: 327.90001pt x 290.1285pt.
  [73 <./figures/dettaglitransazione.png>]
 File: figures/selezionemultiplaassegnazione.png Graphic file (type png)
 <use figures/selezionemultiplaassegnazione.png>
 Package pdftex.def Info: figures/selezionemultiplaassegnazione.png  used on inp
 ut line 594.
 (pdftex.def)             Requested size: 327.90001pt x 70.13287pt.
+ [74]
 File: figures/erroreassegnazionemultipla2.png Graphic file (type png)
 <use figures/erroreassegnazionemultipla2.png>
 Package pdftex.def Info: figures/erroreassegnazionemultipla2.png  used on input
  line 602.
 (pdftex.def)             Requested size: 327.90001pt x 103.31204pt.
- [74 <./figures/gestioneconti.png> <./figures/selezionemultiplaassegnazione.png
->]
 File: figures/resetmultiplo.png Graphic file (type png)
 <use figures/resetmultiplo.png>
 Package pdftex.def Info: figures/resetmultiplo.png  used on input line 610.
 (pdftex.def)             Requested size: 327.90001pt x 157.38263pt.
- [75 <./figures/erroreassegnazionemultipla2.png>]
+ [75 <./figures/selezionemultiplaassegnazione.png> <./figures/erroreassegnazion
+emultipla2.png>]
 File: figures/filtrireporttransazioniusd.png Graphic file (type png)
 <use figures/filtrireporttransazioniusd.png>
 Package pdftex.def Info: figures/filtrireporttransazioniusd.png  used on input 
@@ -1811,15 +1816,15 @@ ne 642.
 ]
 \openout2 = `4-Riprogettazione.aux'.
 
- (./4-Riprogettazione.tex) [81
+ (./4-Riprogettazione.tex)
+[81
 
 
 
 ]
 \openout2 = `5-Esperimento-con-gli-Utenti.aux'.
 
-
-(./5-Esperimento-con-gli-Utenti.tex) [82
+ (./5-Esperimento-con-gli-Utenti.tex) [82
 
 
 
@@ -1874,10 +1879,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35452 strings out of 476171
- 676197 string characters out of 5795119
+ 35463 strings out of 476171
+ 676507 string characters out of 5795119
  1939975 words of memory out of 5000000
- 56695 multiletter control sequences out of 15000+600000
+ 56706 multiletter control sequences out of 15000+600000
  567134 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  107i,15n,110p,1129b,1666s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1885,12 +1890,13 @@ Here is how much of TeX's memory you used:
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (86 pages, 17585156 bytes).
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (86 pages, 17325401 bytes).
 PDF statistics:
- 1283 PDF objects out of 1440 (max. 8388607)
- 894 compressed objects within 9 object streams
+ 1289 PDF objects out of 1440 (max. 8388607)
+ 897 compressed objects within 9 object streams
  163 named destinations out of 1000 (max. 500000)
- 805 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 810 words of extra memory for PDF output out of 10000 (max. 10000000)
 
