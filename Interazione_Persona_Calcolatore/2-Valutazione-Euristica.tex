@@ -641,9 +641,143 @@ Si è deciso di utilizzare i principi di usabilità di Nielsen, rielaborati da P
 {\textbf{2}}
 {\includegraphics[width=0.75\linewidth]{linguafiltroreportutenti.png}}
 
+\clearpage
+\subsubsection{Confronto dei problemi riscontrati dai valutatori}
+La \autoref{fig:matrice_problemi_usabilità} mostra una matrice di confronto in cui l'asse delle ascisse (x) elenca tutti i problemi di usabilità individuati, mentre l'asse delle ordinate (y) rappresenta i singoli valutatori. Una casella è colorata di nero se il rispettivo problema è stato rilevato dal valutatore, altrimenti rimane bianca.
 
-\subsubsection{Classificazione dei problemi}
-\subsubsection{Confronto dei problemi trovati dai valutatori}
-\subsubsection{Stima del numero totale dei problemi di usabilità}
+\noindent
+Dall'analisi dei dati emerge una disparità nel numero di criticità individuate: il primo valutatore ha riscontrato un numero inferiore di problemi. Questo comportamento è riconducibile principalmente al fatto che lo stesso valutatore coincide con lo sviluppatore dell'applicazione; possiede pertanto un modello mentale dell'interfaccia fortemente influenzato dalla progettazione sottostante e quindi possiede una polarizzazione che riduce l'oggettività nella ricerca dei problemi di usabilità. Al contrario, il secondo valutatore, non avendo preso parte allo sviluppo, ha strutturato il proprio modello mentale esclusivamente attraverso l'interazione diretta con il sistema, quindi possiede un occhio più critico che ha permesso di trovare più problematiche.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{black_white_graphic}
+	\caption{Matrice dei problemi di usabilità}
+	\label{fig:matrice_problemi_usabilità}
+\end{figure}
+
+\clearpage
 \subsubsection{Confronto con la curva di Nielsen}
-\subsubsection{Analisi statistica dei dati}
+Osservando la Curva di Nielsen si evince che circa il 50\% dei problemi di usabilità si trovano con due valutatori: 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{nielsen_curve}
+	\caption{Curva di Nielsen}
+	\label{fig:nielsen_curve}
+\end{figure}
+\newline
+Basandoci sulla curva di Nielsen si può stimare il numero totale di problemi di usabilità con la seguente formula:
+\begin{equation}
+	77 : 51\% = \text{problemi\_totali} : 100\%
+\end{equation}
+Troviamo che il numero di problemi di usabilità totali dovrebbero essere 154.
+\subsubsection{Analisi dei dati raccolti}
+L'analisi dei dati raccolti ed elaborati evidenzia come la maggior parte dei problemi di usabilità si concentri nelle categorie relative alla \textbf{Cognizione} e alla \textbf{Percezione} (Tabella \autoref{tab:tipologia_problemi}). In particolare, i problemi cognitivi registrano un'incidenza quasi doppia rispetto a quelli percettivi, confermando un pattern già emerso durante la fase di valutazione euristica. 
+
+\noindent
+Per quanto riguarda la concentrazione dei problemi rispetto al grado di severità abbiamo praticamente una distribuzione uniforme fra i \textbf{gradi 2,3 e 4}, mentre per il \textbf{grado di severità 1} si nota un numero molto minore di occorrenze rispetto agli altri (vedi \autoref{tab:grado_severità}).
+
+\noindent
+Infine, l'analisi delle violazioni dei principi di usabilità di Nielsen (Tabella \autoref{tab:principi_violati}) permette di individuare i seguenti trend:
+\begin{itemize}
+	\item Si riscontrano frequenze simili per i \textbf{principi 1, 2, 6 e 8}, così come per le coppie \textbf{3-5} e \textbf{9-10}.
+	\item I valori massimi di violazione (\textbf{picchi}) si concentrano invece in corrispondenza dei \textbf{principi 4 e 7}.
+\end{itemize}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Grado di Severità} & \textbf{Numero di occorrenze} \\
+		\hline
+		1 & 5 \\
+		2 & 23 \\
+		3 & 29 \\
+		4 & 20 \\
+		\hline
+		\textbf{Totale} & \textbf{77} \\
+		\hline
+	\end{tabular}
+	\caption{Conteggio dei problemi per Grado di Severità}
+	\label{tab:grado_severità}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Principio} & \textbf{Frequenza di violazione} \\
+		\hline
+		1 & 20 \\
+		2 & 17 \\
+		3 & 10 \\
+		4 & 30 \\
+		5 & 12 \\
+		6 & 21 \\
+		7 & 45 \\
+		8 & 18 \\
+		9 & 4 \\
+		10 & 3 \\
+		\hline
+	\end{tabular}
+	\caption{Frequenza di violazione per ogni Principio}
+	\label{tab:principi_violati}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|c|}
+		\hline
+		\textbf{Tipologia} & \textbf{Frequenza} \\
+		\hline
+		Percezione & 47 \\
+		Cognizione & 108 \\
+		Errori & 25 \\
+		\hline
+	\end{tabular}
+	\caption{Classificazione dei problemi per Tipologia}
+	\label{tab:tipologia_problemi}
+\end{table}
+
+\clearpage
+\subsubsection{Visualizzazione dei dati raccolti}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{frequenze_per_categoria}
+	\caption{Frequenza per categoria di problema}
+	\label{fig:Frequenze_per_categoria}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{istogramma_grado_severità}
+	\caption{Frequenza per grado di severità}
+	\label{fig:istogramma_grado_severità}
+\end{figure}
+
+\clearpage
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{frequenze_violazione_principi}
+	\caption{Frequenza per principio di Nielsen violato}
+	\label{fig:frequenza_violazione_principi}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{torta_categorie}
+	\caption{Diagramma a torta per categoria di problemi}
+	\label{fig:torta_categorie}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{torta_severità}
+	\caption{Diagramma a torta per grado di severità}
+	\label{fig:torta_severità}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{torta_nielsen}
+	\caption{Diagramma a torta per principio di Nielsen violato}
+	\label{fig:torta_nielsen}
+\end{figure}
