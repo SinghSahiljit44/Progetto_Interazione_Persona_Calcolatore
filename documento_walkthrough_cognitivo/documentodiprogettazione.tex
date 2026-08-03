@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\definecolor{negativeRed}{RGB}{180, 40, 40}
+
+\newcommand{\cognitivetable}[4]{%
+	\begin{center}
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabularx}{\linewidth}{|X|X|}
+			\hline 
+			\textbf{Domanda} & \textbf{Osservazioni}
+			\\ \hline
+			\textbf{1. L'utente sa cosa deve ottenere con l'azione?} (sa cosa deve fare?) & #1 \\ \hline
+			\textbf{2. L'utente può individuare lo strumento di interazione?} & #2 \\ \hline
+			\textbf{3. L'utente può anche capire che quello è lo strumento giusto per fare ciò che vuol fare?} & #3 \\ \hline
+			\textbf{4. Dopo che l'azione è eseguita, l'utente capisce la risposta che ottiene?} & #4 \\ \hline
+		\end{tabularx}
+	\end{center}
+}
+
+\begin{document}
+	
+	\section*{Documento di Analisi}
+	
+	\noindent
+	\textbf{Documento di valutazione}\\[0.5em]
+	\textbf{Codice di valutazione:} 1 \\
+	\textbf{Valutatore:} Lublanis \\
+	\textbf{Data di valutazione:} 03/08/2026 \\
+	\textbf{Sistema da valutare:} Sito web Home Banking \\
+	\textbf{Scopo:} Analizzare le difficoltà dell'utente \\
+	\textbf{Compito:} \\
+	\textbf{Stato iniziale:} \\
+	\textbf{Azioni:} 
+	
+	\vspace{1em}
+	
+	\subsection*{Valutazione Azione}
+	
+	% Esempio di utilizzo della macro riutilizzabile:
+	\cognitivetable{%
+		\textcolor{negativeRed}{Sì e no. L'utente deve capire che per aggiungere una domanda deve modificare il quiz (anche se è ancora vuoto).}%
+	}{%
+		Sì. Il bottone "modifica quiz" è ben visibile.%
+	}{%
+		\textcolor{negativeRed}{No. L'utente può non capire che deve selezionare "modifica quiz" essendo il quiz ancora vuoto.}%
+	}{%
+		Sì. Il sistema mostra la pagina di aggiunta delle domande.%
+	}
+	
+\end{document}
