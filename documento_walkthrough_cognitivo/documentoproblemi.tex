@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\graphicspath{{images/}} 
+
+\begin{document}
+	
+	\noindent
+	\begin{minipage}{\textwidth}
+		{\LARGE \textbf{Valutazione Euristica di Usabilità}} \\[0.5em]
+		\textbf{Valutatore:} Mario Rossi \hfill \textbf{Data:} \today
+	\end{minipage}
+	\vspace{1.5em}
+	\hrule
+	\vspace{1.5em}
+	
+	\newcommand{\tabellaProblemi}[6]{
+		\noindent
+		\begin{tabularx}{\textwidth}{|X|}
+			\hline
+			\begin{minipage}[t]{\linewidth}\raggedright
+				\vspace{4pt}
+				\textbf{Problema N\textsuperscript{o}:} #1 \hfill \textbf{Grado di Severità:} #5\\[4pt]
+				\textbf{Azione:} #2\\[6pt]
+				\textbf{Domanda:} \par
+				#3\\[6pt]
+				\textbf{Descrizione:} \par
+				#4
+				\vspace{6pt}
+			\end{minipage} \\ \hline
+			
+			\begin{minipage}[t]{\linewidth}\centering
+				\vspace{4pt}
+				\textbf{Screenshot:}
+				\vspace{0.6em}
+				
+				#6
+				\vspace{6pt}
+			\end{minipage} \\ \hline
+		\end{tabularx}
+		\vspace{1em}
+	}
+
+	\tabellaProblemi{
+		1 
+	}{
+		Il carrello non si aggiorna automaticamente dopo la modifica della quantità. 
+	}{
+		Il sistema fornisce un feedback visivo immediato sullo stato dell'applicazione? 
+	}{
+		Quando l'utente cambia la quantità di un articolo nel carrello da ``1'' a ``2'' e preme invio, il totale complessivo rimane invariato finché non si ricarica manualmente la pagina. Questo genera incertezza nell'utente circa la riuscita dell'operazione. 
+	}{
+		3 
+	}{
+		\textit{Nessuno screenshot allegato} 
+	}
+	
+\end{document}
