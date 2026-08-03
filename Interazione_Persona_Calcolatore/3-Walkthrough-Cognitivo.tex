@@ -12,6 +12,32 @@
 		\end{tabularx}
 	\end{center}
 }
+\newcommand{\tabellaProblemi}[6]{
+	\noindent
+	\begin{tabularx}{\textwidth}{|X|}
+		\hline
+		\begin{minipage}[t]{\linewidth}\raggedright
+			\vspace{4pt}
+			\textbf{Problema N\textsuperscript{o}:} #1 \hfill \textbf{Grado di Severità:} #5\\[4pt]
+			\textbf{Azione:} #2\\[6pt]
+			\textbf{Domanda:} \par
+			#3\\[6pt]
+			\textbf{Descrizione:} \par
+			#4
+			\vspace{6pt}
+		\end{minipage} \\ \hline
+		
+		\begin{minipage}[t]{\linewidth}\centering
+			\vspace{4pt}
+			\textbf{Screenshot:}
+			\vspace{0.6em}
+			
+			#6
+			\vspace{6pt}
+		\end{minipage} \\ \hline
+	\end{tabularx}
+	\vspace{1em}
+}
 
 \definecolor{negativeRed}{RGB}{180, 40, 40}
 \definecolor{orangino}{RGB}{205, 127, 50}
@@ -149,4 +175,61 @@ Di seguito, le tabelle per Fare un bonifico.
 }
 
 \subsection{Fase di Debriefing}
-Abbiamo stilato un documento unificato dei problemi individuati 
+Abbiamo stilato un documento unificato dei problemi individuati, qui riportati:
+
+\tabellaProblemi{
+	1 
+}{
+	Reimpostare Password - Confermare l'operazione (cambio password). 
+}{
+	Tutte.
+}{
+	Quando l'utente clicca su cambia password, il sistema non chiede conferma: se i dati sono corretti la cambia subito, se non sono corretti dà errore. 
+}{
+	4 
+}{
+	\textit{Nessuno screenshot allegato} 
+}
+
+\tabellaProblemi{
+	2 
+}{
+	Reimpostare Password - Andare nella sezione modifica password. 
+}{
+	L'utente può anche capire che quello è lo strumento giusto per fare ciò che vuol fare?
+}{
+	Presenti due tasti identici "Cambia Password", più dei tasti per la gestione delle domande di sicurezza confondibili (già visto nella valutazione euristica).
+}{
+	3 
+}{
+	\includegraphics[width=0.75\linewidth]{problema_14} 
+}
+
+\tabellaProblemi{
+	3 
+}{
+	Reimpostare Password - Andare nella sezione del profilo. 
+}{
+	L'utente sa cosa deve ottenere con l'azione? (sa cosa deve fare?)
+}{
+	Il tasto per andare nel profilo è chiaro, è da capire se l'utente può giungere facilmente alla conclusione "nel mio profilo potrò cambiare password".
+}{
+	1
+}{
+	\textit{Nessuno screenshot allegato} 
+}
+
+\tabellaProblemi{
+	4
+}{
+	Fare un bonifico - Inserire i dati del beneficiario
+}{
+	4
+}{
+	Dopo aver inserito i dati del destinatario l'utente ha un feedback praticamente inesistente 
+}{
+	2 
+}{
+	\includegraphics[width=0.8\textwidth]{problema_1_foto_1}
+	\includegraphics[width=0.8\textwidth]{problema_1_foto_2}
+}
