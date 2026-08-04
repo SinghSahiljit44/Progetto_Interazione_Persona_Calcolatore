@@ -105,3 +105,33 @@ pdfauthor=Riccardo Valtorta
 	\end{tabularx}
 	\vspace{1em}
 }
+
+\newcommand{\tabellaMockup}[6]{
+	\noindent
+	\begin{tabularx}{\textwidth}{|X|}
+		\hline
+		\begin{minipage}[t]{\linewidth}\raggedright
+			\vspace{4pt}
+			\textbf{Numero:} #1\\[6pt] 
+			\textbf{Posizione:} \par 
+			#2\\[6pt]
+			\textbf{Problema/i Risolto/i:} \par
+			#3\\[6pt]
+			\textbf{Descrizione:} \par
+			#4\\[6pt]
+			\textbf{Pattern Adottato/i:} \par
+			#5
+			\vspace{6pt}
+		\end{minipage} \\ \hline
+		
+		\begin{minipage}[t]{\linewidth}\centering
+			\vspace{4pt}
+			\textbf{Screenshot del Mockup:}
+			\vspace{0.6em}
+			
+			#6
+			\vspace{6pt}
+		\end{minipage} \\ \hline
+	\end{tabularx}
+	\vspace{1em}
+}
