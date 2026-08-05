@@ -45,7 +45,6 @@ Andremo a utilizzare il seguente schema:\\
 }{
 	\begin{itemize}
 		\item \textbf{Center Stage};
-		\item \textbf{Isolation Effect} per il tasto accedi, rendendolo evidente nella pagina;
 		\item \textbf{Limited Choice}.
 	\end{itemize} 
 }{
@@ -82,7 +81,6 @@ Andremo a utilizzare il seguente schema:\\
 		\item \textbf{Visual Framework};
 		\item \textbf{Button Groups};
 		\item \textbf{Breadcrumbs} grazie al Dashboard;
-		\item \textbf{Recognition over Recall}.
 	\end{itemize} 
 }{
 	\includegraphics[width=0.65\textwidth]{mockup-homecliente} 
@@ -101,7 +99,6 @@ Andremo a utilizzare il seguente schema:\\
 		\item \textbf{Input Prompt};
 		\item \textbf{Center Stage};
 		\item \textbf{Chunking};
-		\item \textbf{Tunnelling}.
 	\end{itemize} 
 }{
 	\includegraphics[width=0.65\textwidth]{mockup-bonificocliente} 
@@ -177,7 +174,6 @@ Andremo a utilizzare il seguente schema:\\
 		\item \textbf{Grid of Equals};
 		\item \textbf{Breadcrumb};
 		\item \textbf{Visual framework};
-		\item \textbf{Recognition over Recall}.
 	\end{itemize} 
 }{
 	\includegraphics[width=0.65\textwidth]{mockup-dashboardemployee} 
@@ -276,20 +272,36 @@ Andremo a utilizzare il seguente schema:\\
 	\includegraphics[width=0.65\textwidth]{mockup-associazioni} 
 }
 
+\clearpage
 \subsubsection{Pattern HCI impiegati}
 In questa sezione andremo a riepilogare i pattern che sono stati utilizzati con maggiori dettagli rispetto alla sezione precedente che si concentrava maggiormente sui mockup.
-\subsubsection{Visual Framework}
-\subsubsection{Grid of Equals}
-\subsubsection{Breadcrumbs}
-\subsubsection{Feature, Search and Browse}
-\subsubsection{Input Prompt}
-\subsubsection{Recognition over Recall}
-\subsubsection{Button groups}
-\subsubsection{Center Stage}
-\subsubsection{Chunking}
-\subsubsection{Tunneling}
-\subsubsection{Limited Choice}
-\subsubsection{Isolation Effect}
+
+\paragraph{Visual Framework}
+Il pattern \textit{Visual Framework} è stato impiegato per garantire una struttura visiva coerente e prevedibile in tutte le pagine principali dell'applicazione (come la dashboard cliente, admin e le pagine di dettaglio). L'obiettivo è mantenere una forte coerenza spaziale e strutturale in modo da ridurre il carico cognitivo dell'utente durante la navigazione tra le diverse sezioni.
+
+\paragraph{Grid of Equals}
+Utilizzato principalmente nelle dashboard e nelle schermate di gestione (come la dashboard employee/admin e le associazioni). Il pattern facilita molto la scansione visiva.
+
+\paragraph{Breadcrumbs}
+Il pattern (\textit{Breadcrumbs}) è stato impiegato per indicare chiaramente la posizione corrente dell'utente all'interno della gerarchia del sistema (ad esempio nelle pagine di transazioni, estratto conto e profili). Questo consente di orientarsi rapidamente e di effettuare un salto all'indietro nei livelli superiori senza dover passare obbligatoriamente per il tasto "indietro" del browser.
+
+\paragraph{Feature, Search and Browse}
+Implementato nelle sezioni di ricerca avanzata e gestione (come il recupero credenziali, la gestione utenti e la gestione transazioni). Questo pattern combina la ricerca mirata con la possibilità di navigare e filtrare gli elenchi, consentendo all'operatore o all'amministratore di individuare rapidamente le informazioni desiderate anche in presenza di grandi moli di dati.
+
+\paragraph{Input Prompt}
+Il pattern \textit{Input Prompt} è stato utilizzato in tutti i form di immissione dati (login, bonifici, filtri dell'estratto conto e campi di ricerca).
+
+\paragraph{Button groups}
+I gruppi di pulsanti (\textit{Button Groups}) sono stati impiegati per aggregare azioni correlate (ad esempio i pulsanti "Filtra" e "Reset" nell'estratto conto o i comandi principali nelle schermate operative). Questi raggruppamenti dei pulsanti ha migliorato la leggibilità e velocità dell'interazione.
+
+\paragraph{Center Stage}
+Il pattern \textit{Center Stage} è stato sfruttato per dare massima visibilità e focalizzazione agli elementi cruciali dell'interfaccia, come il tasto di accesso principale in homepage, il modulo di login o il corpo centrale dei form di bonifico.
+
+\paragraph{Chunking}
+La suddivisione delle informazioni in blocchi gestibili (\textit{Chunking}) è stata applicata nelle schermate complesse (es: la schermata di conferma del bonifico o il dettaglio cliente) per ridurre la densità informativa percepita e rendere la lettura molto più fluida.
+
+\paragraph{Limited Choice}
+Il pattern \textit{Limited Choice} è stato adottato in homepage e nelle fasi di accesso, riducendo al minimo le distrazioni e focalizzando l'utente unicamente sulle opzioni realmente rilevanti.
 
 \subsection{Progettazione Fisica}
 Programma usato: figma credo
