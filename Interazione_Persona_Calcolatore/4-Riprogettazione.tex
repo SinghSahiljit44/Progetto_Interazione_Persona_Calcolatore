@@ -303,20 +303,50 @@ La suddivisione delle informazioni in blocchi gestibili (\textit{Chunking}) è s
 \paragraph{Limited Choice}
 Il pattern \textit{Limited Choice} è stato adottato in homepage e nelle fasi di accesso, riducendo al minimo le distrazioni e focalizzando l'utente unicamente sulle opzioni realmente rilevanti.
 
+\clearpage
 \subsection{Progettazione Fisica}
-Programma usato: figma credo
+In questa sezione andremo a specificare le scelte effettuate per la progettazione fisica, in particolare riguardando la palette di colori per migliorare il contrasto e unificando gli elementi grafici utilizzati.
+
 \subsubsection{Layout}
-Per il layout si è scelta una griglia di tipo gerarchico, permettendo così flessibilità ma dando priorità ad alcune informazioni all'interno delle pagine.
+Per il layout si è scelta una griglia di tipo gerarchico, permettendo così flessibilità, ma dando priorità ad alcune informazioni all'interno delle pagine.
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{griglia_gerarchica}
+	\caption{Layout a griglia gerarchica nel mockup della dashboard cliente}
+	\label{fig:dashboard_palette}
+\end{figure}
+
+\clearpage
 \subsubsection{Colori}
-Si è scelta la seguente palette di colori:
-\begin{center}
-	\includegraphics[width=1\textwidth]{palette} 
-\end{center}
-assieme al bianco e il nero.
-\subsubsection{Elementi grafici}
-\subsubsection{Testo}
+Si è scelta la seguente palette di colori (Oltre al bianco e nero):
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{palette}
+	\caption{Palette di colori}
+	\label{fig:palette}
+\end{figure}
 
+\subsubsection{Elementi grafici}
+Per quanto riguarda le icone, abbiamo scelto di uniformarle in tutta l'applicazione per garantire che l'utente possa comprenderne immediatamente la funzione a colpo d'occhio. Questo approccio ha risolto alcuni problemi di usabilità emersi durante la valutazione euristica, fase in cui si riscontrava l'uso di icone differenti per la medesima azione.
+
+Inoltre, ai diversi pulsanti è stato associato un significato cromatico specifico, così da facilitare la scansione visiva dell'interfaccia. Per garantire la piena accessibilità e prevenire criticità per gli utenti affetti da daltonismo, il significato dei bottoni non è affidato esclusivamente al colore, ma viene veicolato attraverso una combinazione sinergica di colore, etichetta testuale e icona.
+
+Di seguito una tabella che riassume le icone utilizzate:
+
+Di seguito una tabella che riassume il significato dei colori impiegati nei vari bottoni:
+
+\subsubsection{Testo}
+Per quanto riguarda il la progettazione del testo abbiamo deciso di adottare il font "Segoe UI" che è un font senza grazie (sans serif) ed è a passo variabile. Questa decisione è stata presa per dare all'applicazione bancaria un look professionale, uniforme e minimalista; inoltre si è impiegato l'uso del bold per evidenziare il testo delle zone più importanti. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{esempio_bold_admin}
+	\caption{esempio di uso del testo in bold}
+	\label{fig: es_bold}
+\end{figure}
+
+\clearpage
 \subsection{Implementazione}
 Di seguito verranno mostrate le sezioni riprogettate facendo riferimento ai relativi mockup, seguendo lo stesso schema a tabella visto per quest'ultimi.
 
