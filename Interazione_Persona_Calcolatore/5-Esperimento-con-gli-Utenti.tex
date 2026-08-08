@@ -1,26 +1,120 @@
 \section{Esperimento con gli Utenti}
 
-\subsection{Tipologia di utente presa in esame}
-Si è deciso di concentrare l'esperimento esclusivamente sulla componente \textit{client} dell'applicazione, in quanto la maggior parte degli utenti finali interagirà prevalentemente con questa view. Tale scelta è dettata anche dalla natura fittizia del contesto applicativo: non disponendo di utenti reali con ruoli specifici di \textit{admin} o \textit{employee}, non è stato possibile coinvolgere profili professionali di questo tipo nella fase di test.
+\subsection{Tipologia di utenti presa in esame}
+Abbiamo effettuato l'esperimento controllato per tutte e 3 tipologie di clienti previste per il nostro sistema, però prima di procedere vorrei sottolineare 2 aspetti importanti:
+\begin{itemize}
+	\item Per quanto riguarda gli utenti clienti possiamo dire che sono un campione rappresentativo degli utenti finali in quanto la versione client dell'applicazione è stata costruita pensando alla popolazione generale
+	\item Per quanto riguarda gli utenti dipendenti (employee) e amministratori (admin), l'esperimento è stato comunque eseguito nonostante l'assenza di professionisti del settore. Poiché si tratta di un progetto universitario che implementa parzialmente le funzionalità di un'applicazione web bancaria, questa scelta è stata comunque ritenuta utile per ottenere indicazioni sull'usabilità del sistema.
+\end{itemize}
 
 \subsection{Distribuzione e numeri degli utenti}
-Per quanto riguarda gli utenti clienti della banca è stato facile recuperarli in quanto il target di riferimento coincide con la popolazione generale, trattandosi di un servizio potenzialmente utilizzato da qualsiasi individuo che faccia uso di applicazioni bancarie.
+Siamo riusciti a far eseguire l'esperimento controllato a \textbf{30} persone.
 \subsubsection{Distribuzione utenti per sesso}
 \subsubsection{Distribuzione utenti per età}
 \subsubsection{Distribuzione utenti per grado di istruzione}
 
-\subsection{Obiettivo}
-L'obiettivo di questo esperimento è quello di confrontare l'applicazione bancaria prima della riprogettazione con l'applicazione dopo riprogettazione 
-
-\subsection{Condizioni sperimentali}
-Inserire descrizione delle variabili di controllo, indipendenti e dipendenti + Ambiente
+\subsection{Variabili}
+\subsubsection{Variabili di controllo}
+Inserire descrizione di come si è stabilizzato l'ambiente + descrizione ambiente <- modifica qua!
+\subsubsection{Variabili indipendenti}
+L'obiettivo di questo esperimento è quello di confrontare l'applicazione bancaria prima della riprogettazione con l'applicazione dopo la riprogettazione per verificare se l'applicazione è migliorata in vari campi quali usabilità, efficienza d'uso e frequenza di errori.
+\subsubsection{Variabili dipendenti}
+Si è scelto di misurare:
+\begin{itemize}
+	\item Numero di click (grazie a uno script in python)
+	\item Tempo impiegato (misurato dallo sperimentatore con un cronometro)
+	\item Tasso di completamento 
+\end{itemize}
 
 \subsection{Approccio}
-Scegliere tra whitin/between
+Si è optato per un approccio \textbf{within-subjects} per massimizzare la quantità di dati raccolti a fronte di un numero limitato di partecipanti. Ci sarebbe piaciuto utilizzare l'approccio \textbf{between-subjects} però avendo 3 tipologie di utenti e 2 versioni da testare il numero di partecipanti necessari diventava almeno di 60 persone.
 
 \subsection{Progettazione temporale delle attività}
+Si è scelto di dividere il pool di 30 persone in 3 gruppi da 10:
+\begin{itemize}
+	\item Il primo gruppo rappresenta i clienti
+	\item Il secondo gruppo rappresenta gli employee
+	\item Il terzo gruppo rappresenta gli admin
+\end{itemize} 
+
+\noindent
+Ogni gruppo successivamente è stato diviso in 2 sottogruppi da 5 adottando la tecnica del \textbf{counterbalancing}:
+\begin{itemize}
+	\item Il primo sottogruppo andrà a utilizzare la versione dell'applicazione prima della riprogettazione e dopo alcuni giorni la versione dopo la riprogettazione
+	\item Il secondo sottogruppo andrà a utilizzare la versione dell'applicazione riprogettata e dopo alcuni giorni la versione non riprogettata
+\end{itemize}
 
 \subsection{Compiti}
-Scegliere tra lista di operazioni o descrizione 
+Si è deciso di far eseguire 5 compiti a ciascuna tipologia di utente in termini di difficoltà crescente, dove il primo compito è molto semplice e l'ultimo è il più difficile (l'utente percepisce di aver fatto qualcosa)
 
+\subsubsection{Compiti del cliente}
+\begin{itemize}
+	\item \textbf{Compito 1:} Cercare il numero del servizio clienti della banca;
+	\item \textbf{Compito 2:} Accedere con le proprie credenziali al sistema bancario;
+	\item \textbf{Compito 3:} Visualizzare il proprio estratto conto; 
+	\item \textbf{Compito 4:} Effettuare un bonifico con i seguenti dati: 
+		\begin{itemize}
+			\item Nome Beneficiario: Paolo Rossi
+			\item IBAN: IT14G0300203280386196996737
+			\item Importo: 25,30
+			\item Causale: Cena al ristorante 
+		\end{itemize}
+	\item \textbf{Compito 5:} Reimpostare la propria password con la seguente: 11tDk1wdfFtcOcjV; 
+\end{itemize}
+
+\subsubsection{Compiti dell'employee}
+\begin{itemize}
+	\item \textbf{Compito 1:} Cercare il numero di servizio clienti della banca;
+	\item \textbf{Compito 2:} Accedere con le proprie credenziali al sistema bancario;
+	\item \textbf{Compito 3:} Recupera le credenziali (inserendo come motivo "credenziali perse") del seguente cliente:
+		\begin{itemize}
+			\item Nome: Laura
+			\item Cognome: Neri
+			\item Email: laura.neri@email.com 
+		\end{itemize}
+	\item \textbf{Compito 4:} Cambia il proprio numero di telefono al seguente numero: 1234567890;
+	\item \textbf{Compito 5:} Effettua un deposito di 300 euro (inserendo come causale "Deposito contanti") per il seguente cliente:
+		\begin{itemize}
+			\item Nome: Andrea
+			\item Cognome: Galli
+			\item Email: andrea.galli@email.com
+			\item Numero Conto: 1019167435
+		\end{itemize}
+\end{itemize}
+
+\subsubsection{Compiti dell'admin}
+\begin{itemize}
+	\item \textbf{Compito 1:} Accedere con le proprie credenziali al sistema bancario;
+	\item \textbf{Compito 2:} Visualizza i dettagli del seguente cliente:
+		\begin{itemize}
+			\item Nome: Giulia
+			\item Cognome: Bianchi
+			\item Email: giulia.bianchi@email.com
+			\item Numero conto: 1009077118
+		\end{itemize}
+	\item \textbf{Compito 3:} Blocca il conto del seguente cliente:
+		\begin{itemize}
+			\item Nome: Martina 
+			\item Cognome: Greco
+			\item Email: martina.greco@gmail.com
+			\item Numero Conto: 1072903403
+		\end{itemize}
+	\item \textbf{Compito 4:} Esegui la seguente associazione fra cliente e employee:
+		\begin{itemize}
+			\item Nome cliente: Lionel
+			\item Cognome cliente: Messi
+			\item Email cliente: lionel.messi@gmail.com
+			\item Numero Conto cliente: 1034378920
+			\item Identificativo employee: Anna Sportello
+		\end{itemize}
+	\item \textbf{Compito 5:} Elimina il seguente utente:
+		\begin{itemize}
+			\item Nome: Stefano 
+			\item Cognome: Ricci
+			\item Email: stefano.ricci@email.com
+			\item Numero Conto: 1049792788
+		\end{itemize}
+\end{itemize}
+
+\clearpage
 \subsection{Documentazione utilizzata}
