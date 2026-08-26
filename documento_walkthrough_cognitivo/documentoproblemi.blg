@@ -1,0 +1,5 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'documentoproblemi.blg'
+[47] biber:340> INFO - === Mon Aug  3, 2026, 19:33:04
+[125] Utils.pm:399> ERROR - Cannot find 'documentoproblemi.bcf'!
+[125] Biber.pm:136> INFO - ERRORS: 1

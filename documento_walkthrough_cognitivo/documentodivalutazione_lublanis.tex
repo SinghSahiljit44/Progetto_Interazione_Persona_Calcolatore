@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\definecolor{negativeRed}{RGB}{180, 40, 40}
+\definecolor{orangino}{RGB}{205, 127, 50}
+
+\newcommand{\cognitivetable}[4]{%
+	\begin{center}
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabularx}{\linewidth}{|X|X|}
+			\hline 
+			\textbf{Domanda} & \textbf{Osservazioni}
+			\\ \hline
+			\textbf{1. L'utente sa cosa deve ottenere con l'azione?} (sa cosa deve fare?) & #1 \\ \hline
+			\textbf{2. L'utente può individuare lo strumento di interazione?} & #2 \\ \hline
+			\textbf{3. L'utente può anche capire che quello è lo strumento giusto per fare ciò che vuol fare?} & #3 \\ \hline
+			\textbf{4. Dopo che l'azione è eseguita, l'utente capisce la risposta che ottiene?} & #4 \\ \hline
+		\end{tabularx}
+	\end{center}
+}
+
+\begin{document}
+	\section*{Documento di valutazione}
+	
+	\noindent
+	\textbf{Codice di valutazione:} 2 \\
+	\textbf{Valutatore:} Lublanis\\
+	\textbf{Data di valutazione:} 03/08/2026 \\
+	\textbf{Sistema da valutare:} Sito web Home Banking \\
+	\textbf{Scopo:} Analizzare le difficoltà dell'utente nell'utilizzare il sistema.\\
+	\textbf{Compito:} Reimpostare la password\\
+	
+	\subsection*{Valutazione Azione}
+	
+	\textbf{Andare nella sezione del profilo utente}
+	\cognitivetable{%
+		{Sì. L'utente sa \textcolor{negativeRed}{(forse)} che deve accedere alla sezione dedicata ai suoi dati per trovare le funzionalità relativa alla modifica della password.}%
+	}{%
+		Sì, il pulsante "Il Mio Profilo" è evidente, è uno dei primi elementi che compaiono a video quando accedo alla dashboard.
+	}{%
+		Sì, un pulsante giallo "Il Mio Profilo" è abbastanza autoesplicativo per poter comprendere che rimanda ai dettagli del proprio profilo.
+	}{%
+		Sì. Il sistema mostra la pagina relativa alle informazioni dell'utente, con le relative funzionalità associate.%
+	}
+	
+		\textbf{Andare nella sezione modifica password}
+	\cognitivetable{%
+		{Sì. Cliccando su modifica password sa che andrà a modificare la password.}%
+	}{%
+		Sì, il pulsante è molto visibile.
+	}{%
+		\textcolor{negativeRed}{No, il pulsante è ripetuto due volte e confondibile con un altro pulsante chiamato "Sicurezza".}
+	}{%
+		Sì. Il sistema mostra la pagina relativa alla modifica della password, con il form dedicato per l'inserimento dei dati (vecchia password, nuova password, conferma nuova password).%
+	}
+	
+	\textbf{Inserire la password}
+	\cognitivetable{%
+		Sì. L'utente sa che sta inserendo i dati (vecchia password, nuova password, conferma nuova password) sta andando a cambiare la sua password (titolo della sezione in alto).
+	}{%
+		Sì, il form è al centro della pagina.
+	}{%
+		Sì, il titolo del form è "Cambio password".
+	}{%
+		Sì, il sistema comunica eventuali errori o conferma dell'avvenuto cambiamento all'utente.%
+	}
+	
+	\textbf{Confermare l'operazione}
+	\cognitivetable{%
+		\textcolor{negativeRed}{No, il sistema non chiede conferma all'utente.}
+	}{%
+		\textcolor{negativeRed}{No, il sistema non chiede conferma all'utente.}
+	}{%
+		\textcolor{negativeRed}{No, il sistema non chiede conferma all'utente.}
+	}{%
+		\textcolor{negativeRed}{No, il sistema non chiede conferma all'utente.}
+	}
+	
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\definecolor{negativeRed}{RGB}{180, 40, 40}
+\definecolor{orangino}{RGB}{205, 127, 50}
+
+\newcommand{\cognitivetable}[4]{%
+	\begin{center}
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabularx}{\linewidth}{|X|X|}
+			\hline 
+			\textbf{Domanda} & \textbf{Osservazioni}
+			\\ \hline
+			\textbf{1. L'utente sa cosa deve ottenere con l'azione?} (sa cosa deve fare?) & #1 \\ \hline
+			\textbf{2. L'utente può individuare lo strumento di interazione?} & #2 \\ \hline
+			\textbf{3. L'utente può anche capire che quello è lo strumento giusto per fare ciò che vuol fare?} & #3 \\ \hline
+			\textbf{4. Dopo che l'azione è eseguita, l'utente capisce la risposta che ottiene?} & #4 \\ \hline
+		\end{tabularx}
+	\end{center}
+}
+
+\begin{document}
+	\section*{Documento di valutazione}
+	
+	\noindent
+	\textbf{Codice di valutazione:} 2 \\
+	\textbf{Valutatore:} Singh Sahiljit  \\
+	\textbf{Data di valutazione:} 03/08/2026 \\
+	\textbf{Sistema da valutare:} Sito web Home Banking \\
+	\textbf{Scopo:} Analizzare le difficoltà dell'utente nell' usare il sistema\\
+	\textbf{Compito:} Fare un bonifico\\
+	
+	\subsection*{Valutazione Azione}
+	
+	Azione 1: Passare alla sezione per fare un bonifico.
+	\cognitivetable{%
+		Sì è chiaro.
+	}{%
+		Sì il bottone "Bonifio" è chiaramente visibile %
+	}{%
+		Sì in quanto non ci sono ambiguità%
+	}{%
+		Sì. Il sistema mostra la pagina per eseguire il bonifico%
+	}
+	
+	\noindent
+	Azione 2: Inserire i dati del beneficiario.
+	\cognitivetable{%
+		Sì è chiaro.
+	}{%
+		Sì il forum per l'input è evidente%
+	}{%
+		Sì in quanto non ci sono ambiguità%
+	}{%
+		\textcolor{orangino}{Sì e no. Il testo che conferma la correttezza dei dati inseriti è illeggibile oppure non si nota}%
+	}
+
+	\clearpage
+	\noindent
+	Azione 3: Inserire l’importo e causale.
+	\cognitivetable{%
+		Sì è chiaro.
+	}{%
+		Sì il forum per l'input è evidente%
+	}{%
+		Sì in quanto non ci sono ambiguità%
+	}{%
+		Sì appare un elemento visivo che fa capire all'utente che ha svolto tutte le operazioni di inserimento correttamente%
+	}
+	
+	\noindent
+	Azione 4: Confermare o annullare il bonifico.
+	\cognitivetable{%
+		Sì è chiaro.
+	}{%
+		Sì il bottone per confermare diventa abilitato. Per quanto riguarda l'annullamento anche questo bottone è chiaramente visibile vicino al bottone di conferma con una certa spaziatura fra i due.%
+	}{%
+		Sì in quanto non ci sono ambiguità%
+	}{%
+		Sì appare una schermata che mostra che il bonifico è andato a buon fine%
+	}
+\end{document}
