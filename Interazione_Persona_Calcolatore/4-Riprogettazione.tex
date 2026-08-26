@@ -330,7 +330,6 @@ Si è scelta la seguente palette di colori (Oltre al bianco e nero):
 \subsubsection{Elementi grafici}
 Per quanto riguarda le icone, abbiamo scelto di uniformarle in tutta l'applicazione per garantire che l'utente possa comprenderne immediatamente la funzione a colpo d'occhio. Questo approccio ha risolto alcuni problemi di usabilità emersi durante la valutazione euristica, fase in cui si riscontrava l'uso di icone differenti per la medesima azione.
 
-Inoltre, ai diversi pulsanti è stato associato un significato cromatico specifico, così da facilitare la scansione visiva dell'interfaccia. Per garantire la piena accessibilità e prevenire criticità per gli utenti affetti da daltonismo, il significato dei bottoni non è affidato esclusivamente al colore, ma viene veicolato attraverso una combinazione sinergica di colore, etichetta testuale e icona.
 \noindent
 Di seguito una tabella che riassume le icone utilizzate:
 \begin{longtable}{|c|p{10cm}|}
@@ -409,17 +408,8 @@ Di seguito una tabella che riassume le icone utilizzate:
 	Usata per il bottone delle operazioni contanti di prelievo/deposito \\ \hline
 \end{longtable}
 
-Di seguito una tabella che riassume il significato dei colori impiegati nei vari bottoni:
-\begin{center}
-	\begin{tabular}{|c|p{10cm}|}
-		\hline
-		\textbf{Colore / Pulsante} & \textbf{Significato e Contesto d'Uso} \\ \hline
-		%\includegraphics[width=2cm]{percorso/al/file/bottone_verde.png} & \textbf{Verde (Conferma / Successo):} Utilizzato per azioni positive come salvare, completare un'operazione o procedere. \\ \hline
-	\end{tabular}
-\end{center}
-
 \subsubsection{Testo}
-Per quanto riguarda il la progettazione del testo abbiamo deciso di adottare il font "Segoe UI" che è un font senza grazie (sans serif) ed è a passo variabile. Questa decisione è stata presa per dare all'applicazione bancaria un look professionale, uniforme e minimalista; inoltre si è impiegato l'uso del bold per evidenziare il testo delle zone più importanti. 
+Per quanto riguarda la progettazione del testo abbiamo deciso di adottare il font "Segoe UI" che è un font senza grazie (sans serif) ed è a passo variabile. Questa decisione è stata presa per dare all'applicazione bancaria un look professionale, uniforme e minimalista; inoltre si è impiegato l'uso del bold per evidenziare il testo delle zone più importanti. 
 
 \begin{figure}[htbp]
 	\centering
@@ -430,13 +420,118 @@ Per quanto riguarda il la progettazione del testo abbiamo deciso di adottare il 
 
 \clearpage
 \subsection{Implementazione}
-Di seguito verranno mostrate le sezioni riprogettate facendo riferimento ai relativi mockup, seguendo lo stesso schema a tabella visto per quest'ultimi.
+Di seguito verranno mostrate le sezioni riprogettate facendo riferimento ai relativi mockup attraverso il campo "Numero" di quest'ultimi.
+\subsubsection{Implementazione dei mockup}
 
+NOTA: A volte gli screenshot non sono dell'intera pagina in quanto non si vedrebbe bene la parte riprogettata 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{home_page_r}
+	\caption{Home page - mockup 1}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{login_page_r}
+	\caption{Pagina di accedi - mockup 2}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{dashboard_cliente_r}
+	\caption{Dashboard cliente - mockup 3}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{bonifico_cliente_r}
+	\caption{Sezione "bonifico" cliente - mockup 4}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{conferma_bonifico_cliente_r}
+	\caption{Sezione "conferma bonifico" cliente - mockup 5}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{transazioni_cliente_r}
+	\caption{Sezione "estratto conto" cliente - mockup 6}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{il_mio_profilo_cliente_r}
+	\caption{Sezione "il mio profilo" cliente - mockup 7}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{dashboard_employee_r}
+	\caption{Dashboard employee - mockup 8}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{recupero_credenziali_employee_r}
+	\caption{Recupero credendiali employee - mockup 9}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{transazioni_employee_r}
+	\caption{Sezione "transazioni" employee/admin - mockup 10}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{dettagli_cliente_r}
+	\caption{Sezione "Dettagli cliente" employee/admin - mockup 11}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{dashboard_admin_r}
+	\caption{Dashboard admin - mockup 12}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{associazioni_admin_r}
+	\caption{Sezione "associazioni" admin - mockup 13}
+\end{figure}
+
+\clearpage
+\subsubsection{Altre sezioni riprogettate}
+Di seguito sono riportati gli screenshot di pagine secondarie e meno importanti di cui non abbiamo fatto i mockup, ma abbiamo deciso comunque di riprogettare
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{gestione_clienti_admin_r}
+	\caption{Sezione "Gestione clienti" admin}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{conti_admin_r}
+	\caption{Sezione "Conti" admin}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{transazioni_admin_r}
+	\caption{Sezione "Transazioni" admin}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{operazioni_universali_employee_r}
+	\caption{Sezione "Operazioni universali" employee}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{nuovo_cliente_r}
+	\caption{Sezione "Registra nuovo cliente" employee/admin}
+\end{figure}
