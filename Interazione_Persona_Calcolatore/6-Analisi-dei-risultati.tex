@@ -1,8 +1,212 @@
 \section{Analisi dei risultati}
 \subsection{Compiti}
-Verranno analizzati per ruolo utente e verranno presi in considerazione le due variabili tenute segnate (numero di click e tempo).
+Verranno analizzati per ruolo utente e verranno presi in considerazione le tre variabili tenute segnate (numero di click, tasso completamento). Il compito 1 per Cliente e Employee non è stato possibile eseguirlo (analizzarlo), in quanto nella prima versione il servizio clienti era bloccato dietro la schermata di accesso. 
 	\subsubsection{Cliente}
-
+	\begin{table}[h!]
+		\centering
+		\small
+		\begin{tabular}{lccccc}
+			\toprule
+			& \multicolumn{4}{c}{\textbf{Compito}} & \\
+			\cmidrule(lr){2-5}
+			\textbf{Metrica} & 2 & 3 & 4 & 5 & \textbf{Totale} \\
+			\midrule
+			Click pre (media)   & 4.90 & 1.00 & 8.30 & 8.70 & 22.90 \\
+			Click post (media)  & 5.40 & 1.00 & 7.10 & 8.30 & 21.80 \\
+			Variazione          & $+10.2\%$ & $0.0\%$ & $-14.5\%$ & $-4.6\%$ & $-4.8\%$ \\
+			\midrule
+			Tempo pre (media, s)  & 42.3 & 11.0 & 86.2 & 91.1 & 230.6 \\
+			Tempo post (media, s) & 40.9 & 10.0 & 76.9 & 71.5 & 199.4 \\
+			Variazione            & $-3.4\%$ & $-8.7\%$ & $-10.7\%$ & $-21.5\%$ & $-13.5\%$ \\
+			\bottomrule
+		\end{tabular}
+		\caption*{\small Medie su 10 partecipanti (ID 15--17, 24--30). Compito 1 escluso.
+			Tutti i compiti completati (S) in entrambe le versioni.}
+	\end{table}
+	
+	\paragraph{1. Confronto click}
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=15cm, height=7.2cm,
+				ybar=3pt,
+				bar width=18pt,
+				ymin=0, ymax=14,
+				ylabel={Click (media $\pm$ SEM)},
+				xlabel={Compito},
+				symbolic x coords={C2,C3,C4,C5},
+				xtick={C2,C3,C4,C5},
+				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
+				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+				ymajorgrids=true, grid style={dashed,gray!30},
+				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+				error bars/y dir=both, error bars/y explicit,
+				]
+				\addplot[fill=prec,draw=prec!70!black] coordinates {
+					(C2,4.9) +- (0,0.23) (C3,1.0) +- (0,0) (C4,8.3) +- (0,0.37) (C5,8.7) +- (0,1.54)};
+				\addplot[fill=postc,draw=postc!70!black] coordinates {
+					(C2,5.4) +- (0,1.05) (C3,1.0) +- (0,0) (C4,7.1) +- (0,0.31) (C5,8.3) +- (0,0.78)};
+				\legend{Pre-riprogettazione, Post-riprogettazione}
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	
+	\vspace{-3mm}
+	\noindent\small L'unica variazione significativa è la riduzione sul compito 4 ($-1.2$ click,
+	$t(9)=-2.88$, $\mathbf{p=0.0181}$). Il compito 3 richiede esattamente 1 click a tutti e dieci i
+	partecipanti in entrambe le versioni, quindi nessun test è definibile. Il compito 2 sale in media
+	($+0.5$) ma per effetto di due soli partecipanti che nella versione post passano da 5--6 a 11--12
+	click ($p=0.62$); il totale di sessione è praticamente invariato ($22.9 \to 21.8$, $p=0.57$).
+	
+	\newpage
+	\paragraph{2. Confronto tempi}
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=15cm, height=7.2cm,
+				ybar=3pt,
+				bar width=18pt,
+				ymin=0, ymax=145,
+				ylabel={Tempo (s), media $\pm$ SEM},
+				xlabel={Compito},
+				symbolic x coords={C2,C3,C4,C5},
+				xtick={C2,C3,C4,C5},
+				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
+				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+				ymajorgrids=true, grid style={dashed,gray!30},
+				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+				error bars/y dir=both, error bars/y explicit,
+				]
+				\addplot[fill=prec,draw=prec!70!black] coordinates {
+					(C2,42.3) +- (0,9.66) (C3,11.0) +- (0,3.76) (C4,86.2) +- (0,13.69) (C5,91.1) +- (0,21.11)};
+				\addplot[fill=postc,draw=postc!70!black] coordinates {
+					(C2,40.9) +- (0,7.77) (C3,10.0) +- (0,3.07) (C4,76.9) +- (0,16.21) (C5,71.5) +- (0,17.58)};
+				\legend{Pre-riprogettazione, Post-riprogettazione}
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	
+	\vspace{-2mm}
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=15cm, height=5.6cm,
+				ybar,
+				bar width=26pt,
+				bar shift=0pt,
+				ymin=-34, ymax=10,
+				ylabel={Variazione tempo (\%)},
+				symbolic x coords={C2,C3,C4,C5,TOT},
+				xtick={C2,C3,C4,C5,TOT},
+				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+				ymajorgrids=true, grid style={dashed,gray!30},
+				nodes near coords, nodes near coords style={font=\scriptsize},
+				point meta=explicit symbolic,
+				]
+				\addplot[fill=prec!70,draw=prec!70!black,
+				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
+					(C2,-3.4)[$-3.4\%$] (C3,-8.7)[$-8.7\%$] (C4,-10.7)[$-10.7\%$] (C5,-21.5)[$-21.5\%$]};
+				\addplot[fill=gray!45,draw=gray!70!black,
+				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {(TOT,-13.5)[$-13.5\%$]};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	
+	\vspace{-2mm}
+	\noindent\small Tutti i compiti migliorano, senza il peggioramento sui compiti finali osservato
+	nei profili Admin ed Employee. Il guadagno cresce lungo la sessione e si concentra sui due compiti
+	più lunghi (4 e 5).
+	
+	\newpage
+	\paragraph{3. Significatività statistica sui tempi}
+	
+	Test $t$ di Student\footnote{Il test di Student è un test statistico che serve per capire se la media di uno o due gruppi è diversa in modo significativo da un valore di riferimento o tra di loro} appaiato (post $-$ pre) su $n=10$ partecipanti. Data l'eterogeneità di scala
+	descritta in apertura, la tabella riporta sia il test sui valori grezzi sia quello sui tempi
+	log-trasformati, che confronta il rapporto post/pre (variazione percentuale) invece della
+	differenza in secondi.
+	
+	\begin{table}[h!]
+		\centering
+		\small
+		\begin{tabular}{lrrrrrr}
+			\toprule
+			& \multicolumn{3}{c}{\textbf{Scala originale (s)}} & \multicolumn{2}{c}{\textbf{Scala log}} & \\
+			\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+			\textbf{Confronto} & $\Delta$ medio & IC 95\% & $p$ & variazione & $p$ & $p$ (Wilcoxon) \\
+			\midrule
+			Compito 2 & $-1.5$  & $[-16.9,\ +14.0]$ & $0.8358$ & $-1.3\%$  & $0.9314$ & $0.9043$ \\
+			Compito 3 & $-1.0$  & $[-4.0,\ +2.1]$   & $0.4958$ & $+1.0\%$  & $0.9362$ & $1.0000$ \\
+			Compito 4 & $-9.2$  & $[-26.7,\ +8.2]$  & $0.2629$ & $-18.4\%$ & $0.0862$ & $0.1016$ \\
+			Compito 5 & $-19.6$ & $[-46.2,\ +7.0]$  & $0.1304$ & $-23.2\%$ & $\mathbf{0.0296}$ & $\mathbf{0.0469}$ \\
+			\midrule
+			\textbf{Tempo totale} & $-31.2$ & $[-65.8,\ +3.4]$ & $0.0717$ & $-16.2\%$ & $\mathbf{0.0173}$ & $0.0840$ \\
+			\bottomrule
+		\end{tabular}
+		\caption*{\small In grassetto i valori $p<0.05$. Il totale è la somma dei compiti 2--5 per
+			partecipante. La colonna ``variazione'' è il rapporto geometrico post/pre meno 1.}
+	\end{table}
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=15cm, height=6.8cm,
+				ybar=2pt,
+				bar width=15pt,
+				ymin=0, ymax=1.12,
+				ylabel={$p$-value (t-test appaiato sui tempi)},
+				symbolic x coords={C2,C3,C4,C5,TOT},
+				xtick={C2,C3,C4,C5,TOT},
+				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+				legend style={at={(0.98,0.98)},anchor=north east,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+				ymajorgrids=true, grid style={dashed,gray!30},
+				nodes near coords, nodes near coords style={font=\scriptsize},
+				every node near coord/.append style={anchor=south,yshift=2pt},
+				point meta=explicit symbolic,
+				]
+				\addplot[fill=gray!40,draw=gray!70!black] coordinates {
+					(C2,0.8358)[0.836] (C3,0.4958)[0.496] (C4,0.2629)[0.263] (C5,0.1304)[0.130] (TOT,0.0717)[0.072]};
+				\addplot[fill=logc!75,draw=logc!60!black] coordinates {
+					(C2,0.9314)[0.931] (C3,0.9362)[0.936] (C4,0.0862)[0.086] (C5,0.0296)[0.030] (TOT,0.0173)[0.017]};
+				\draw[dashed,thick,sigc] (axis cs:C2,0.05) -- (axis cs:TOT,0.05);
+				\node[font=\scriptsize\bfseries,sigc,anchor=south] at (rel axis cs:0.60,0.045) {$\alpha = 0.05$};
+				\legend{Scala originale (s), Scala logaritmica}
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	
+	\vspace{-3mm}
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=13cm, height=6cm,
+				xlabel={Differenza media dei tempi post $-$ pre (s), con IC 95\%},
+				ytick={1,2,3,4,5},
+				yticklabels={Totale,Compito 5,Compito 4,Compito 3,Compito 2},
+				ymin=0.4, ymax=5.6,
+				xmin=-50, xmax=25,
+				xmajorgrids=true, grid style={dashed,gray!30},
+				every axis plot/.append style={thick},
+				]
+				\addplot[only marks,mark=*,mark size=2.6pt,color=prec,
+				error bars/x dir=both,error bars/x explicit]
+				coordinates {
+					(-1.45,5) +- (15.42,15.42)
+					(-0.95,4) +- (3.04,3.04)
+					(-9.22,3) +- (17.46,17.46)
+					(-19.56,2) +- (26.59,26.59)
+				};
+				\addplot[only marks,mark=square*,mark size=2.6pt,color=black,
+				error bars/x dir=both,error bars/x explicit]
+				coordinates {(-7.80,1) +- (8.65,8.65)};
+				\draw[dashed,gray] (axis cs:0,0.4) -- (axis cs:0,5.6);
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\newpage
 	\subsubsection{Employee}	
 	\begin{table}[h!]
 		\centering
@@ -202,28 +406,31 @@ Verranno analizzati per ruolo utente e verranno presi in considerazione le due v
 		\end{tikzpicture}
 	\end{center}
 	
-	
-	\subsubsection{Admin}
-	\begin{table}[h!]
-		\centering
-		\small
-		\begin{tabular}{lcccccc}
-			\toprule
-			& \multicolumn{5}{c}{\textbf{Compito}} & \\
-			\cmidrule(lr){2-6}
-			\textbf{Metrica} & 1 & 2 & 3 & 4 & 5 & \textbf{Totale} \\
-			\midrule
-			Click pre (media)   & 6.60 & 7.30 & 6.90 & 9.80 & 7.40 & 38.00 \\
-			Click post (media)  & 3.30 & 4.80 & 4.90 & 12.00 & 14.30 & 39.30 \\
-			Variazione          & $-50.0\%$ & $-34.2\%$ & $-29.0\%$ & $+22.4\%$ & $+93.2\%$ & $+3.4\%$ \\
-			\midrule
-			Tempo pre (media, s)  & 46.0 & 36.6 & 43.2 & 44.6 & 30.2 & 200.6 \\
-			Tempo post (media, s) & 18.4 & 22.4 & 18.4 & 57.0 & 65.8 & 182.0 \\
-			Variazione            & $-60.0\%$ & $-38.8\%$ & $-57.4\%$ & $+27.8\%$ & $+117.9\%$ & $-9.3\%$ \\
-			\bottomrule
-		\end{tabular}
-		\caption*{\small Medie su 10 partecipanti. Tutti i compiti sono stati completati (S) in entrambe le versioni.}
-	\end{table}
+\newpage
+\subsubsection{Admin}
+
+\vspace{0.5em}
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\small
+	\begin{tabular}{lcccccc}
+		\toprule
+		& \multicolumn{5}{c}{\textbf{Compito}} & \\
+		\cmidrule(lr){2-6}
+		\textbf{Metrica} & 1 & 2 & 3 & 4 & 5 & \textbf{Totale} \\
+		\midrule
+		Click pre (media)   & 6.60 & 7.30 & 6.90 & 9.80 & 7.40 & 38.00 \\
+		Click post (media)  & 3.30 & 4.80 & 4.90 & 12.00 & 14.30 & 39.30 \\
+		Variazione          & $-50.0\%$ & $-34.2\%$ & $-29.0\%$ & $+22.4\%$ & $+93.2\%$ & $+3.4\%$ \\
+		\midrule
+		Tempo pre (media, s)  & 46.0 & 36.6 & 43.2 & 44.6 & 30.2 & 200.6 \\
+		Tempo post (media, s) & 18.4 & 22.4 & 18.4 & 57.0 & 65.8 & 182.0 \\
+		Variazione            & $-60.0\%$ & $-38.8\%$ & $-57.4\%$ & $+27.8\%$ & $+117.9\%$ & $-9.3\%$ \\
+		\bottomrule
+	\end{tabular}
+	\captionof*{table}{\small Medie su 10 partecipanti. Tutti i compiti sono stati completati (S) in entrambe le versioni.}
+\end{minipage}
 	
 	\paragraph{1. Confronto click}
 	
@@ -411,15 +618,241 @@ Verranno analizzati per ruolo utente e verranno presi in considerazione le due v
 			\end{axis}
 		\end{tikzpicture}
 	\end{center}
+
 	
-	
+\subsection{Commenti sui dati}
+Prima di discutere sui dati, bisogna fare una premessa importante: soltanto la parte dei clienti poteva essere eseguita senza problemi, in quanto nessuno degli utenti intervistati ha mai utilizzato un terminale bancario per poter gestire flussi di denaro oppure rapporti clientelari. Per quanto comunque il sistema sia ancora rudimentale e semplice, a primo impatto risulta dispersivo dover eseguire operazioni di cui non si sa nulla prima d'ora: questo ha influenzato molto la differenza tra utilizzo della versione 1 e versione 2, in quanto un primo utilizzo ha fatto da "formazione" per gli utenti, permettendone un utilizzo più agile nel secondo esperimento (questo indipendentemente dalla versione). Si può ora analizzare i dati raccolti.
+
+In tutti e tre i gruppi si è notato un miglioramento del tempo medio richiesto, rendendo la nuova versione più veloce da usufruire. Questo non significa però che ogni operazione risulta più veloce, e il caso del Compito 5 per Admin ne è l'esempio: vi è un aumento del 117\% del tempo necessario a svolgere questa operazione. Questo aumento in un certo senso è voluto, in quanto è stato scelto volutamente di inserire il tasto di elimina utente all'interno di un menù a tendina all'interno della visualizzazione dati del profilo, in quanto così si evita quasi certamente click inavvertiti: questo fa contrasto però con l'avviso di conferma, che già di suo fa un gran lavoro a impedire all'utente di fare operazioni non volute, ma per questo si rimanda alla prossima sezione. Altre situazioni in cui è aumentato o rimasto identico il tempo sono: Compito 5 Employee, Compito 4 Admin; ma in questo caso può essere dovuto a una semplice questione di varianza. 
+
+Discorso simile si fa per il numero di click, il cui aumento netto si è notato per Compito 5 Admin. 
+
+Il tasso di completamento non è del 100\% per una semplice questione legata ai test che sono stati scelti: il primo compito per Clienti e Employee non è eseguibile nella prima versione in quanto bloccato dal login: solo 4 clienti su 20 utenti totali sono riusciti a trovare il servizio clienti nella prima versione.
+
+Infine, le parti la cui rilevanza statistica è degna di attenzione sono:
+\begin{itemize}
+	\item Login: la riduzione da due diverse sezioni ad una singola per il login ha reso il procedimento di accesso molto più fluido e comprensibile all'utente (\textit{"sono lavoratore vero?"} è stata una delle frasi più ripetute durante i test);
+	\item Tasto elimina utente: forzare l'utente a cercarlo l'ha reso sicuramente più complesso ma più sicuro, in quanto un utente non può cliccarlo per sbaglio mentre gira la lista degli utenti in Gestione Utenti ma deve proprio volere eseguire quell'azione;
+	\item Cambiare il proprio numero di telefono (Employee): togliere il doppio menù a tendina e renderlo sempre visibile ha reso più facile l'accesso ai dettagli del proprio profilo.
+\end{itemize}
+
 	
 \subsection{Commenti forniti dagli utenti}
-Durante lo svolgimento degli esperimenti, alcuni utenti hanno fatto presente alcune perplessità rispetto ad una scelta in particolare: il tasto elimina utente nascosto. Rendendo più complicato l'accesso a tale funzionalità, siamo riusciti nell'intento di non renderlo cliccabile per sbaglio, ma abbiamo reso molto più articolato il procedimento per eliminare un utente.
+Durante lo svolgimento degli esperimenti, alcuni utenti hanno fatto presente alcune perplessità rispetto ad una scelta in particolare: il tasto elimina utente nascosto. Rendendo più complicato l'accesso a tale funzionalità, siamo riusciti nell'intento di non renderlo cliccabile per sbaglio, ma abbiamo reso molto più articolato il procedimento per eliminare un utente. 
+
+Altro commento esposto è stato quello riguardante il breadcrumbing: per quanto affezionati ai vecchi forum, non possiamo che notare quanto le interfacce del mondo web e delle applicazioni software in generale siano cambiate, rendendo anche in questo caso una navbar molto più fruibile rispetto al breadcrumbing.
+
+\subsection{Questionario SUS}
+Altra premessa da fare: tutte le persone che hanno eseguito il test conoscono personalmente il tester, può essere che questo abbia influenzato la scelta delle risposte.
+\begin{center}
+	\includegraphics[width=10cm]{sus1}
+	\includegraphics[width=10cm]{sus2}
+	\includegraphics[width=10cm]{sus3}
+	\includegraphics[width=10cm]{sus4}
+	\includegraphics[width=10cm]{sus5}
+\end{center}
+\textbf{Punteggio.} I dieci item sono stati convertiti secondo la formula SUS standard: agli item
+dispari (formulati in positivo) si sottrae 1, agli item pari (formulati in negativo) si sottrae il
+valore da 5; la somma dei dieci contributi, ciascuno su scala 0--4, viene moltiplicata per 2.5,
+ottenendo un punteggio da 0 a 100. La coerenza interna dello strumento è adeguata in entrambe le
+versioni ($\alpha$ di Cronbach $=0.79$ pre e $0.81$ post).
+
+\textbf{Due coppie incomplete.} Gli ID 7 e 10 presentano entrambe le risposte marcate come ``versione 2'' e nessuna versione 1. I due ID sono perciò esclusi dall'analisi appaiata (i loro punteggi sono 87.5 e 97.5 per l'ID 7, 82.5 e 90.0 per l'ID 10). Come verifica, il confronto non appaiato su tutte e 60 le risposte porta alla stessa conclusione: versione 1 $75.0$ ($n=28$) contro versione 2 $82.1$ ($n=32$), $t$ di Welch $=2.07$, $p=0.044$.
+
+\paragraph{1. Risultato principale}
+
+\begin{table}[h!]
+	\centering
+	\small
+	\begin{tabular}{lrrrrrrr}
+		\toprule
+		\textbf{Gruppo} & $n$ & \textbf{SUS pre} & \textbf{SUS post} & $\Delta$ & IC 95\% & $p$ (t-test) & $p$ (Wilcoxon) \\
+		\midrule
+		\textbf{Tutti} & 28 & $75.00$ & $81.07$ & $+6.07$ & $[+2.57,\ +9.58]$ & $\mathbf{0.0014}$ & $\mathbf{0.0018}$ \\
+		\midrule
+		Admin    & 9  & $73.89$ & $76.39$ & $+2.50$ & $[-4.88,\ +9.88]$  & $0.4572$ & $0.5391$ \\
+		Employee & 9  & $79.44$ & $86.11$ & $+6.67$ & $[+0.74,\ +12.59]$ & $\mathbf{0.0318}$ & $\mathbf{0.0273}$ \\
+		Cliente  & 10 & $72.00$ & $80.75$ & $+8.75$ & $[+1.99,\ +15.51]$ & $\mathbf{0.0168}$ & $\mathbf{0.0156}$ \\
+		\bottomrule
+	\end{tabular}
+	\caption*{\small Test $t$ appaiato (post $-$ pre) e test dei ranghi segnati di Wilcoxon.
+		Deviazioni standard: pre $14.1$, post $12.6$ sul campione completo.}
+\end{table}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=15cm, height=7cm,
+			ybar=3pt,
+			bar width=18pt,
+			ymin=0, ymax=118,
+			ylabel={Punteggio SUS (media $\pm$ SEM)},
+			symbolic x coords={ALL,ADM,EMP,CLI},
+			xtick={ALL,ADM,EMP,CLI},
+			xticklabels={\textbf{Tutti} ($n=28$),Admin ($n=9$),Employee ($n=9$),Cliente ($n=10$)},
+			legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+			ymajorgrids=true, grid style={dashed,gray!30},
+			nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+			every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+			error bars/y dir=both, error bars/y explicit,
+			]
+			\addplot[fill=prec,draw=prec!70!black] coordinates {
+				(ALL,75.00) +- (0,2.67) (ADM,73.89) +- (0,4.29) (EMP,79.44) +- (0,1.85) (CLI,72.00) +- (0,6.27)};
+			\addplot[fill=postc,draw=postc!70!black] coordinates {
+				(ALL,81.07) +- (0,2.39) (ADM,76.39) +- (0,3.56) (EMP,86.11) +- (0,2.61) (CLI,80.75) +- (0,5.26)};
+			\draw[dashed,thick,logc] (axis cs:ALL,68) -- (axis cs:CLI,68);
+			\node[font=\scriptsize\bfseries,logc,anchor=south] at (rel axis cs:0.25,0.583) {$68$};
+			\legend{Pre-riprogettazione, Post-riprogettazione}
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{-3mm}
+\noindent\small Sulla curva di conversione di Sauro e Lewis il punteggio medio passa da \textbf{B}
+($75.0$) ad \textbf{A} ($81.1$), superando la soglia di $80.3$ che separa il ``buono'' dall'
+``eccellente''. Entrambe le versioni restano comunque sopra la media di riferimento di 68 punti, indicata dalla linea tratteggiata verde.
+
+\newpage
+\paragraph{2. Variazione individuale}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=15.5cm, height=6.5cm,
+			ybar, bar width=11pt, bar shift=0pt,
+			ymin=-17, ymax=32,
+			ylabel={$\Delta$ SUS (post $-$ pre)},
+			xlabel={Partecipanti, ordinati per variazione},
+			xtick=\empty,
+			xmin=0, xmax=29,
+			ymajorgrids=true, grid style={dashed,gray!30},
+			]
+			\addplot[fill=sigc!70,draw=sigc!60!black] coordinates {
+				(1,-12.5) (2,-5.0) (3,-5.0) (4,-2.5) (5,-2.5)};
+			\addplot[fill=gray!45,draw=gray!70!black] coordinates {
+				(6,0.0) (7,0.0) (8,0.0) (9,0.0)};
+			\addplot[fill=prec,draw=prec!70!black] coordinates {
+				(10,2.5) (11,2.5) (12,2.5) (13,5.0) (14,5.0) (15,5.0) (16,5.0) (17,5.0)
+				(18,7.5) (19,7.5) (20,10.0) (21,10.0) (22,12.5) (23,15.0) (24,15.0)
+				(25,20.0) (26,20.0) (27,20.0) (28,27.5)};
+			\draw[dashed,thick,black] (axis cs:0,6.07) -- (axis cs:29,6.07);
+			\node[font=\scriptsize\bfseries,anchor=south west] at (axis cs:0.3,6.4) {media $=+6.07$};
+			\legend{Peggiorati (5), Invariati (4), Migliorati (19)}
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{-3mm}
+\noindent\small Il miglioramento non è trainato da pochi casi estremi: 19 partecipanti su 28
+assegnano un punteggio più alto alla nuova versione, 4 lo lasciano identico e 5 lo abbassano, con
+un solo calo superiore ai 5 punti. I guadagni maggiori ($+20$ e $+27.5$) provengono dai
+partecipanti che partivano dai punteggi pre più bassi.
+
+\paragraph{3. Confronto item per item}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=15.5cm, height=7cm,
+			ybar=2pt, bar width=9pt,
+			ymin=0, ymax=5.3,
+			ylabel={Contributo SUS per item (0--4)},
+			xlabel={Item del questionario},
+			symbolic x coords={Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10},
+			xtick={Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10},
+			legend style={at={(0.5,1.15)},anchor=north,legend columns=2,draw=none},
+			ymajorgrids=true, grid style={dashed,gray!30},
+			nodes near coords, nodes near coords style={font=\tiny,/pgf/number format/fixed,/pgf/number format/precision=2},
+			every node near coord/.append style={rotate=90,anchor=west},
+			]
+			\addplot[fill=prec,draw=prec!70!black] coordinates {
+				(Q1,2.29) (Q2,2.93) (Q3,2.96) (Q4,3.57) (Q5,2.68) (Q6,2.71) (Q7,3.43) (Q8,2.75) (Q9,2.93) (Q10,3.75)};
+			\addplot[fill=postc,draw=postc!70!black] coordinates {
+				(Q1,2.64) (Q2,3.32) (Q3,3.25) (Q4,3.68) (Q5,2.86) (Q6,3.21) (Q7,3.50) (Q8,3.29) (Q9,2.89) (Q10,3.79)};
+			\legend{Pre-riprogettazione, Post-riprogettazione}
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\begin{tabular}{clrrrr}
+		\toprule
+		\textbf{Item} & \textbf{Formulazione (abbreviata)} & \textbf{Pre} & \textbf{Post} & $\Delta$ & $p$ \\
+		\midrule
+		Q1  & Mi piacerebbe usare il sistema frequentemente & 2.29 & 2.64 & $+0.36$ & $\mathbf{0.0302}$ \\
+		Q2  & Sistema complesso senza bisogno \textit{(inv.)} & 2.93 & 3.32 & $+0.39$ & $0.0857$ \\
+		Q3  & Sistema molto semplice da usare & 2.96 & 3.25 & $+0.29$ & $\mathbf{0.0432}$ \\
+		Q4  & Servirebbe il supporto di un esperto \textit{(inv.)} & 3.57 & 3.68 & $+0.11$ & $0.4153$ \\
+		Q5  & Funzionalità bene integrate & 2.68 & 2.86 & $+0.18$ & $0.1696$ \\
+		Q6  & Incoerenze fra le funzionalità \textit{(inv.)} & 2.71 & 3.21 & $+0.50$ & $\mathbf{0.0279}$ \\
+		Q7  & Facile da imparare per la maggior parte & 3.43 & 3.50 & $+0.07$ & $0.4895$ \\
+		Q8  & Sistema molto macchinoso \textit{(inv.)} & 2.75 & 3.29 & $+0.54$ & $\mathbf{0.0108}$ \\
+		Q9  & Molta confidenza durante l'uso & 2.93 & 2.89 & $-0.04$ & $0.8514$ \\
+		Q10 & Molti processi da imparare prima \textit{(inv.)} & 3.75 & 3.79 & $+0.04$ & $0.6629$ \\
+		\bottomrule
+	\end{tabular}
+	\caption*{\small Punteggi già convertiti sulla scala SUS 0--4, dove valori alti sono sempre
+		favorevoli. \textit{(inv.)} segnala gli item a polarità invertita.}
+\end{table}
+
+\newpage
+\paragraph{4. Sintesi}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=13cm, height=5.2cm,
+			xlabel={Differenza media del punteggio SUS post $-$ pre, con IC 95\%},
+			ytick={1,2,3,4},
+			yticklabels={Cliente,Employee,Admin,\textbf{Tutti}},
+			ymin=0.4, ymax=4.6,
+			xmin=-10, xmax=20,
+			xmajorgrids=true, grid style={dashed,gray!30},
+			every axis plot/.append style={thick},
+			]
+			\addplot[only marks,mark=square*,mark size=3pt,color=black,
+			error bars/x dir=both,error bars/x explicit]
+			coordinates {(6.07,4) +- (3.51,3.51)};
+			\addplot[only marks,mark=*,mark size=2.6pt,color=gray,
+			error bars/x dir=both,error bars/x explicit]
+			coordinates {(2.50,3) +- (7.38,7.38)};
+			\addplot[only marks,mark=*,mark size=2.6pt,color=prec,
+			error bars/x dir=both,error bars/x explicit]
+			coordinates {(6.67,2) +- (5.93,5.93) (8.75,1) +- (6.76,6.76)};
+			\draw[dashed,gray] (axis cs:0,0.4) -- (axis cs:0,4.6);
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent
+La riprogettazione produce un miglioramento della soddisfazione percepita di circa 6 punti SUS,
+solido sia al test parametrico ($p=0.0014$) sia a quello non parametrico ($p=0.0018$), con una
+dimensione dell'effetto media ($d_z=0.67$). Il guadagno si concentra sugli item che riguardano la
+\emph{coerenza} e la \emph{fluidità} dell'interfaccia — meno incoerenze percepite fra le
+funzionalità (Q6) e sistema meno macchinoso (Q8) — mentre gli item su apprendibilità e autonomia
+(Q4, Q7, Q10) erano già alti prima e restano invariati: la riprogettazione ha reso il sistema più
+scorrevole, non più facile da imparare. L'unico item che non si muove affatto è la confidenza
+percepita durante l'uso (Q9).
+
+La scomposizione per profilo è coerente con l'analisi dei compiti svolta sui moduli dello
+sperimentatore. Gli \textbf{Employee} ($+6.7$, $p=0.032$) e i \textbf{Clienti} ($+8.8$, $p=0.017$)
+migliorano in modo significativo, ed è nei loro compiti che si erano osservate le riduzioni di
+click e di tempo. Gli \textbf{Admin} sono l'unico profilo che non si muove ($+2.5$, $p=0.46$),
+ed è esattamente il profilo in cui i compiti di gestione erano peggiorati in modo significativo:
+il giudizio soggettivo replica quindi il risultato oggettivo, con i guadagni sulla consultazione
+compensati dalle perdite sulla gestione.
+
+
 \subsection{Riprogettazione Post-Esperimenti}
 Si propongono le seguenti soluzioni per i problemi riscontrati durante gli esperimenti:
 \begin{itemize}
 	\item Schermata di login più chiara: anche soltanto aggiungendo una freccia che indica verso il basso si può indirizzare l'utente;
 	\item Modifica profilo: togliere modifica profilo dalla gestione utenti e lasciare solo il visualizza, così da avere un percorso unificato (oppure, per un discorso di macro, vedere se ha senso ritornare alla soluzione pre-riprogettazione con tutte le azioni nella lista);
+	\item Fixare bug rimasti del sistema;
+	\item Trasformare il breadcrumbing in una navbar più esplicativa;
 	\item Sistemare gli errori in inglesi sfuggiti.
 \end{itemize}
