@@ -1,649 +1,837 @@
 \section{Analisi dei risultati}
 \subsection{Compiti}
-Verranno analizzati per ruolo utente e verranno presi in considerazione le tre variabili tenute segnate (numero di click, tasso completamento). Il compito 1 per Cliente e Employee non è stato possibile eseguirlo (analizzarlo), in quanto nella prima versione il servizio clienti era bloccato dietro la schermata di accesso. 
-	\subsubsection{Cliente}
-	\begin{table}[h!]
-		\centering
-		\small
-		\begin{tabular}{lccccc}
-			\toprule
-			& \multicolumn{4}{c}{\textbf{Compito}} & \\
-			\cmidrule(lr){2-5}
-			\textbf{Metrica} & 2 & 3 & 4 & 5 & \textbf{Totale} \\
-			\midrule
-			Click pre (media)   & 4.90 & 1.00 & 8.30 & 8.70 & 22.90 \\
-			Click post (media)  & 5.40 & 1.00 & 7.10 & 8.30 & 21.80 \\
-			Variazione          & $+10.2\%$ & $0.0\%$ & $-14.5\%$ & $-4.6\%$ & $-4.8\%$ \\
-			\midrule
-			Tempo pre (media, s)  & 42.3 & 11.0 & 86.2 & 91.1 & 230.6 \\
-			Tempo post (media, s) & 40.9 & 10.0 & 76.9 & 71.5 & 199.4 \\
-			Variazione            & $-3.4\%$ & $-8.7\%$ & $-10.7\%$ & $-21.5\%$ & $-13.5\%$ \\
-			\bottomrule
-		\end{tabular}
-		\caption*{\small Medie su 10 partecipanti (ID 15--17, 24--30). Compito 1 escluso.
-			Tutti i compiti completati (S) in entrambe le versioni.}
-	\end{table}
-	
-	\paragraph{1. Confronto click}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=7.2cm,
-				ybar=3pt,
-				bar width=18pt,
-				ymin=0, ymax=14,
-				ylabel={Click (media $\pm$ SEM)},
-				xlabel={Compito},
-				symbolic x coords={C2,C3,C4,C5},
-				xtick={C2,C3,C4,C5},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
-				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
-				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
-				error bars/y dir=both, error bars/y explicit,
-				]
-				\addplot[fill=prec,draw=prec!70!black] coordinates {
-					(C2,4.9) +- (0,0.23) (C3,1.0) +- (0,0) (C4,8.3) +- (0,0.37) (C5,8.7) +- (0,1.54)};
-				\addplot[fill=postc,draw=postc!70!black] coordinates {
-					(C2,5.4) +- (0,1.05) (C3,1.0) +- (0,0) (C4,7.1) +- (0,0.31) (C5,8.3) +- (0,0.78)};
-				\legend{Pre-riprogettazione, Post-riprogettazione}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-3mm}
-	\noindent\small L'unica variazione significativa è la riduzione sul compito 4 ($-1.2$ click,
-	$t(9)=-2.88$, $\mathbf{p=0.0181}$). Il compito 3 richiede esattamente 1 click a tutti e dieci i
-	partecipanti in entrambe le versioni, quindi nessun test è definibile. Il compito 2 sale in media
-	($+0.5$) ma per effetto di due soli partecipanti che nella versione post passano da 5--6 a 11--12
-	click ($p=0.62$); il totale di sessione è praticamente invariato ($22.9 \to 21.8$, $p=0.57$).
-	
-	\newpage
-	\paragraph{2. Confronto tempi}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=7.2cm,
-				ybar=3pt,
-				bar width=18pt,
-				ymin=0, ymax=145,
-				ylabel={Tempo (s), media $\pm$ SEM},
-				xlabel={Compito},
-				symbolic x coords={C2,C3,C4,C5},
-				xtick={C2,C3,C4,C5},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
-				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
-				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
-				error bars/y dir=both, error bars/y explicit,
-				]
-				\addplot[fill=prec,draw=prec!70!black] coordinates {
-					(C2,42.3) +- (0,9.66) (C3,11.0) +- (0,3.76) (C4,86.2) +- (0,13.69) (C5,91.1) +- (0,21.11)};
-				\addplot[fill=postc,draw=postc!70!black] coordinates {
-					(C2,40.9) +- (0,7.77) (C3,10.0) +- (0,3.07) (C4,76.9) +- (0,16.21) (C5,71.5) +- (0,17.58)};
-				\legend{Pre-riprogettazione, Post-riprogettazione}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-2mm}
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=5.6cm,
-				ybar,
-				bar width=26pt,
-				bar shift=0pt,
-				ymin=-34, ymax=10,
-				ylabel={Variazione tempo (\%)},
-				symbolic x coords={C2,C3,C4,C5,TOT},
-				xtick={C2,C3,C4,C5,TOT},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize},
-				point meta=explicit symbolic,
-				]
-				\addplot[fill=prec!70,draw=prec!70!black,
-				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
-					(C2,-3.4)[$-3.4\%$] (C3,-8.7)[$-8.7\%$] (C4,-10.7)[$-10.7\%$] (C5,-21.5)[$-21.5\%$]};
-				\addplot[fill=gray!45,draw=gray!70!black,
-				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {(TOT,-13.5)[$-13.5\%$]};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-2mm}
-	\noindent\small Tutti i compiti migliorano, senza il peggioramento sui compiti finali osservato
-	nei profili Admin ed Employee. Il guadagno cresce lungo la sessione e si concentra sui due compiti
-	più lunghi (4 e 5).
-	
-	\newpage
-	\paragraph{3. Significatività statistica sui tempi}
-	
-	Test $t$ di Student\footnote{Il test di Student è un test statistico che serve per capire se la media di uno o due gruppi è diversa in modo significativo da un valore di riferimento o tra di loro} appaiato (post $-$ pre) su $n=10$ partecipanti. Data l'eterogeneità di scala
-	descritta in apertura, la tabella riporta sia il test sui valori grezzi sia quello sui tempi
-	log-trasformati, che confronta il rapporto post/pre (variazione percentuale) invece della
-	differenza in secondi.
-	
-	\begin{table}[h!]
-		\centering
-		\small
-		\begin{tabular}{lrrrrrr}
-			\toprule
-			& \multicolumn{3}{c}{\textbf{Scala originale (s)}} & \multicolumn{2}{c}{\textbf{Scala log}} & \\
-			\cmidrule(lr){2-4}\cmidrule(lr){5-6}
-			\textbf{Confronto} & $\Delta$ medio & IC 95\% & $p$ & variazione & $p$ & $p$ (Wilcoxon) \\
-			\midrule
-			Compito 2 & $-1.5$  & $[-16.9,\ +14.0]$ & $0.8358$ & $-1.3\%$  & $0.9314$ & $0.9043$ \\
-			Compito 3 & $-1.0$  & $[-4.0,\ +2.1]$   & $0.4958$ & $+1.0\%$  & $0.9362$ & $1.0000$ \\
-			Compito 4 & $-9.2$  & $[-26.7,\ +8.2]$  & $0.2629$ & $-18.4\%$ & $0.0862$ & $0.1016$ \\
-			Compito 5 & $-19.6$ & $[-46.2,\ +7.0]$  & $0.1304$ & $-23.2\%$ & $\mathbf{0.0296}$ & $\mathbf{0.0469}$ \\
-			\midrule
-			\textbf{Tempo totale} & $-31.2$ & $[-65.8,\ +3.4]$ & $0.0717$ & $-16.2\%$ & $\mathbf{0.0173}$ & $0.0840$ \\
-			\bottomrule
-		\end{tabular}
-		\caption*{\small In grassetto i valori $p<0.05$. Il totale è la somma dei compiti 2--5 per
-			partecipante. La colonna ``variazione'' è il rapporto geometrico post/pre meno 1.}
-	\end{table}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=6.8cm,
-				ybar=2pt,
-				bar width=15pt,
-				ymin=0, ymax=1.12,
-				ylabel={$p$-value (t-test appaiato sui tempi)},
-				symbolic x coords={C2,C3,C4,C5,TOT},
-				xtick={C2,C3,C4,C5,TOT},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
-				legend style={at={(0.98,0.98)},anchor=north east,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize},
-				every node near coord/.append style={anchor=south,yshift=2pt},
-				point meta=explicit symbolic,
-				]
-				\addplot[fill=gray!40,draw=gray!70!black] coordinates {
-					(C2,0.8358)[0.836] (C3,0.4958)[0.496] (C4,0.2629)[0.263] (C5,0.1304)[0.130] (TOT,0.0717)[0.072]};
-				\addplot[fill=logc!75,draw=logc!60!black] coordinates {
-					(C2,0.9314)[0.931] (C3,0.9362)[0.936] (C4,0.0862)[0.086] (C5,0.0296)[0.030] (TOT,0.0173)[0.017]};
-				\draw[dashed,thick,sigc] (axis cs:C2,0.05) -- (axis cs:TOT,0.05);
-				\node[font=\scriptsize\bfseries,sigc,anchor=south] at (rel axis cs:0.60,0.045) {$\alpha = 0.05$};
-				\legend{Scala originale (s), Scala logaritmica}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-3mm}
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=13cm, height=6cm,
-				xlabel={Differenza media dei tempi post $-$ pre (s), con IC 95\%},
-				ytick={1,2,3,4,5},
-				yticklabels={Totale,Compito 5,Compito 4,Compito 3,Compito 2},
-				ymin=0.4, ymax=5.6,
-				xmin=-50, xmax=25,
-				xmajorgrids=true, grid style={dashed,gray!30},
-				every axis plot/.append style={thick},
-				]
-				\addplot[only marks,mark=*,mark size=2.6pt,color=prec,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {
-					(-1.45,5) +- (15.42,15.42)
-					(-0.95,4) +- (3.04,3.04)
-					(-9.22,3) +- (17.46,17.46)
-					(-19.56,2) +- (26.59,26.59)
-				};
-				\addplot[only marks,mark=square*,mark size=2.6pt,color=black,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {(-7.80,1) +- (8.65,8.65)};
-				\draw[dashed,gray] (axis cs:0,0.4) -- (axis cs:0,5.6);
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	\newpage
-	\subsubsection{Employee}	
-	\begin{table}[h!]
-		\centering
-		\small
-		\begin{tabular}{lccccc}
-			\toprule
-			& \multicolumn{4}{c}{\textbf{Compito}} & \\
-			\cmidrule(lr){2-5}
-			\textbf{Metrica} & 2 & 3 & 4 & 5 & \textbf{Totale} \\
-			\midrule
-			Click pre (media)   & 4.90 & 9.70 & 7.80 & 7.40 & 29.80 \\
-			Click post (media)  & 4.30 & 7.70 & 5.00 & 7.40 & 24.40 \\
-			Variazione          & $-12.2\%$ & $-20.6\%$ & $-35.9\%$ & $0.0\%$ & $-18.1\%$ \\
-			\midrule
-			Tempo pre (media, s)  & 33.3 & 41.2 & 39.9 & 31.1 & 145.5 \\
-			Tempo post (media, s) & 23.6 & 40.1 & 25.4 & 40.4 & 129.5 \\
-			Variazione            & $-29.1\%$ & $-2.7\%$ & $-36.3\%$ & $+29.9\%$ & $-11.0\%$ \\
-			\bottomrule
-		\end{tabular}
-		\caption*{\small Medie su 10 partecipanti (ID 8--13, 18, 21--23). Compito 1 escluso.}
-	\end{table}
-	
-	\paragraph{1. Confronto click}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=7.2cm,
-				ybar=3pt,
-				bar width=18pt,
-				ymin=0, ymax=14,
-				ylabel={Click (media $\pm$ SEM)},
-				xlabel={Compito},
-				symbolic x coords={C2,C3,C4,C5},
-				xtick={C2,C3,C4,C5},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
-				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
-				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
-				error bars/y dir=both, error bars/y explicit,
-				]
-				\addplot[fill=prec,draw=prec!70!black] coordinates {
-					(C2,4.9) +- (0,0.46) (C3,9.7) +- (0,0.70) (C4,7.8) +- (0,0.61) (C5,7.4) +- (0,0.27)};
-				\addplot[fill=postc,draw=postc!70!black] coordinates {
-					(C2,4.3) +- (0,0.54) (C3,7.7) +- (0,0.82) (C4,5.0) +- (0,0.21) (C5,7.4) +- (0,0.79)};
-				\legend{Pre-riprogettazione, Post-riprogettazione}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-3mm}
-	\noindent\small I click calano su tutti i compiti tranne il 5, dove restano identici. La riduzione
-	è netta sul compito 4 ($-2.8$ click, $t(9)=-3.93$, $p=0.0034$) e sul totale di sessione
-	($29.8 \to 24.4$, $-5.4$ click, $t(9)=-3.26$, $\mathbf{p=0.0098}$).
-	
-	\newpage
-	\paragraph{2. Confronto tempi}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=7.2cm,
-				ybar=3pt,
-				bar width=18pt,
-				ymin=0, ymax=62,
-				ylabel={Tempo (s), media $\pm$ SEM},
-				xlabel={Compito},
-				symbolic x coords={C2,C3,C4,C5},
-				xtick={C2,C3,C4,C5},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
-				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
-				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
-				error bars/y dir=both, error bars/y explicit,
-				]
-				\addplot[fill=prec,draw=prec!70!black] coordinates {
-					(C2,33.3) +- (0,2.83) (C3,41.2) +- (0,1.99) (C4,39.9) +- (0,5.35) (C5,31.1) +- (0,2.89)};
-				\addplot[fill=postc,draw=postc!70!black] coordinates {
-					(C2,23.6) +- (0,2.87) (C3,40.1) +- (0,6.79) (C4,25.4) +- (0,2.35) (C5,40.4) +- (0,5.21)};
-				\legend{Pre-riprogettazione, Post-riprogettazione}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-2mm}
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=5.6cm,
-				ybar,
-				bar width=26pt,
-				bar shift=0pt,
-				ymin=-55, ymax=48,
-				ylabel={Variazione tempo (\%)},
-				symbolic x coords={C2,C3,C4,C5,TOT},
-				xtick={C2,C3,C4,C5,TOT},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize},
-				point meta=explicit symbolic,
-				]
-				\addplot[fill=prec!70,draw=prec!70!black,
-				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
-					(C2,-29.1)[$-29.1\%$] (C3,-2.7)[$-2.7\%$] (C4,-36.3)[$-36.3\%$]};
-				\addplot[fill=sigc!70,draw=sigc!70!black,
-				every node near coord/.append style={anchor=south,yshift=2pt}] coordinates {
-					(C5,29.9)[$+29.9\%$]};
-				\addplot[fill=gray!45,draw=gray!70!black,
-				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {(TOT,-11.0)[$-11.0\%$]};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\newpage
-	\paragraph{3. Significatività statistica sui tempi}
-	
-	Test $t$ di Student appaiato (post $-$ pre) su $n=10$ partecipanti, con verifica non parametrica
-	tramite test dei ranghi segnati di Wilcoxon.
-	
-	\begin{table}[h!]
-		\centering
-		\small
-		\begin{tabular}{lrrrrrl}
-			\toprule
-			\textbf{Confronto} & $\Delta$ medio (s) & IC 95\% & $t(9)$ & $p$ (t-test) & $p$ (Wilcoxon) & $d_z$ \\
-			\midrule
-			Compito 2 & $-9.7$  & $[-15.7,\ -3.8]$  & $-3.689$ & $\mathbf{0.0050}$ & $\mathbf{0.0195}$ & $-1.17$ \\
-			Compito 3 & $-1.1$  & $[-15.6,\ +13.4]$ & $-0.171$ & $0.8678$ & $0.7422$ & $-0.05$ \\
-			Compito 4 & $-14.5$ & $[-27.9,\ -1.1]$  & $-2.445$ & $\mathbf{0.0370}$ & $0.0625$ & $-0.77$ \\
-			Compito 5 & $+9.3$  & $[-0.8,\ +19.4]$  & $2.084$  & $0.0668$ & $0.0703$ & $+0.66$ \\
-			\midrule
-			\textbf{Tempo totale} & $-16.0$ & $[-39.8,\ +7.8]$ & $-1.519$ & $0.1631$ & $0.1660$ & $-0.48$ \\
-			\bottomrule
-		\end{tabular}
-		\caption*{\small In grassetto i valori $p<0.05$. $d_z$ = dimensione dell'effetto per campioni appaiati.
-			Il totale è la somma dei compiti 2--5 per partecipante.}
-	\end{table}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=6.5cm,
-				ybar,
-				bar width=30pt,
-				bar shift=0pt,
-				ymin=0, ymax=1.0,
-				ylabel={$p$-value (t-test appaiato sui tempi)},
-				symbolic x coords={C2,C3,C4,C5,TOT},
-				xtick={C2,C3,C4,C5,TOT},
-				xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize},
-				point meta=explicit symbolic,
-				]
-				\addplot[fill=sigc!75,draw=sigc!60!black,
-				every node near coord/.append style={anchor=south,yshift=2pt,sigc,font=\scriptsize\bfseries}] coordinates {
-					(C2,0.0050)[$p=0.005$] (C4,0.0370)[$p=0.037$]};
-				\addplot[fill=gray!40,draw=gray!70!black,
-				every node near coord/.append style={anchor=south,yshift=2pt}] coordinates {
-					(C3,0.8678)[$p=0.868$] (C5,0.0668)[$p=0.067$] (TOT,0.1631)[$p=0.163$]};
-				\draw[dashed,thick,sigc] (axis cs:C2,0.05) -- (axis cs:TOT,0.05);
-				\node[font=\scriptsize\bfseries,sigc,anchor=south] at (rel axis cs:0.60,0.05) {$\alpha = 0.05$};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-3mm}
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=13cm, height=6cm,
-				xlabel={Differenza media dei tempi post $-$ pre (s), con IC 95\%},
-				ytick={1,2,3,4,5},
-				yticklabels={Totale,Compito 5,Compito 4,Compito 3,Compito 2},
-				ymin=0.4, ymax=5.6,
-				xmin=-35, xmax=25,
-				xmajorgrids=true, grid style={dashed,gray!30},
-				every axis plot/.append style={thick},
-				]
-				\addplot[only marks,mark=*,mark size=2.6pt,color=prec,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {
-					(-9.7,5) +- (5.95,5.95)
-					(-1.1,4) +- (14.53,14.53)
-					(-14.5,3) +- (13.41,13.41)
-				};
-				\addplot[only marks,mark=*,mark size=2.6pt,color=sigc,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {(9.3,2) +- (10.09,10.09)};
-				\addplot[only marks,mark=square*,mark size=2.6pt,color=black,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {(-4.0,1) +- (5.96,5.96)};
-				\draw[dashed,gray] (axis cs:0,0.4) -- (axis cs:0,5.6);
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-\newpage
-\subsubsection{Admin}
+Verranno analizzati per ruolo utente e verranno presi in considerazione le tre variabili tenute segnate (numero di click, tasso completamento e tempo impiegato). 
+Il compito 1 per Cliente e Employee non è stato possibile eseguirlo (analizzarlo), in quanto nella prima versione il servizio clienti era bloccato dietro la schermata di accesso (ovviamente prima di iniziare abbiamo chiesto agli utenti sperimentatori di eseguire un compito banale: 'leggere le informazioni generali della banca'). 
+L'analisi dei dati avrà la seguente struttura per tutte le tre tipologie di utenti:
+\begin{itemize}
+	\item Una tabella con medie e variazioni percentuali della media della versione nuova rispetto la versione vecchia
+	\item Confronto mediante istogramma del numero di click
+	\item Confronto mediante istogramma del tempo impiegato
+	\item Calcolo della significatività statistica 
+\end{itemize}
 
-\vspace{0.5em}
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\small
-	\begin{tabular}{lcccccc}
-		\toprule
-		& \multicolumn{5}{c}{\textbf{Compito}} & \\
-		\cmidrule(lr){2-6}
-		\textbf{Metrica} & 1 & 2 & 3 & 4 & 5 & \textbf{Totale} \\
-		\midrule
-		Click pre (media)   & 6.60 & 7.30 & 6.90 & 9.80 & 7.40 & 38.00 \\
-		Click post (media)  & 3.30 & 4.80 & 4.90 & 12.00 & 14.30 & 39.30 \\
-		Variazione          & $-50.0\%$ & $-34.2\%$ & $-29.0\%$ & $+22.4\%$ & $+93.2\%$ & $+3.4\%$ \\
-		\midrule
-		Tempo pre (media, s)  & 46.0 & 36.6 & 43.2 & 44.6 & 30.2 & 200.6 \\
-		Tempo post (media, s) & 18.4 & 22.4 & 18.4 & 57.0 & 65.8 & 182.0 \\
-		Variazione            & $-60.0\%$ & $-38.8\%$ & $-57.4\%$ & $+27.8\%$ & $+117.9\%$ & $-9.3\%$ \\
-		\bottomrule
-	\end{tabular}
-	\captionof*{table}{\small Medie su 10 partecipanti. Tutti i compiti sono stati completati (S) in entrambe le versioni.}
-\end{minipage}
-	
-	\paragraph{1. Confronto click}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=7.2cm,
-				ybar=3pt,
-				bar width=15pt,
-				ymin=0, ymax=24,
-				ylabel={Click (media $\pm$ SEM)},
-				xlabel={Compito},
-				symbolic x coords={C1,C2,C3,C4,C5},
-				xtick=data,
-				xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5},
-				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
-				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
-				error bars/y dir=both, error bars/y explicit,
-				]
-				\addplot[fill=prec,draw=prec!70!black] coordinates {
-					(C1,6.6) +- (0,1.15) (C2,7.3) +- (0,0.88) (C3,6.9) +- (0,0.79)
-					(C4,9.8) +- (0,1.55) (C5,7.4) +- (0,0.87)};
-				\addplot[fill=postc,draw=postc!70!black] coordinates {
-					(C1,3.3) +- (0,0.21) (C2,4.8) +- (0,0.66) (C3,4.9) +- (0,0.57)
-					(C4,12.0) +- (0,2.23) (C5,14.3) +- (0,2.37)};
-				\legend{Pre-riprogettazione, Post-riprogettazione}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-3mm}
-	\noindent\small I click calano in modo significativo nei compiti 1--3 (complessivamente $-7.8$ click,
-	$t(9)=-6.13$, $p=0.0002$) ma crescono nei compiti 4--5 ($+9.1$ click, $t(9)=3.43$, $p=0.0076$),
-	cosicché il totale per partecipante resta invariato ($38.0 \to 39.3$, $p=0.70$).
-	
-	\newpage
-	\paragraph{2. Confronto tempi}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=7.2cm,
-				ybar=3pt,
-				bar width=15pt,
-				ymin=0, ymax=95,
-				ylabel={Tempo (s), media $\pm$ SEM},
-				xlabel={Compito},
-				symbolic x coords={C1,C2,C3,C4,C5},
-				xtick=data,
-				xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5},
-				legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
-				every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
-				error bars/y dir=both, error bars/y explicit,
-				]
-				\addplot[fill=prec,draw=prec!70!black] coordinates {
-					(C1,46.0) +- (0,11.58) (C2,36.6) +- (0,7.03) (C3,43.2) +- (0,14.91)
-					(C4,44.6) +- (0,10.65) (C5,30.2) +- (0,4.44)};
-				\addplot[fill=postc,draw=postc!70!black] coordinates {
-					(C1,18.4) +- (0,2.94) (C2,22.4) +- (0,3.03) (C3,18.4) +- (0,3.55)
-					(C4,57.0) +- (0,9.63) (C5,65.8) +- (0,10.43)};
-				\legend{Pre-riprogettazione, Post-riprogettazione}
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-2mm}
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=5.6cm,
-				ybar,
-				bar width=26pt,
-				bar shift=0pt,
-				ymin=-85, ymax=140,
-				ylabel={Variazione tempo (\%)},
-				symbolic x coords={C1,C2,C3,C4,C5,TOT},
-				xtick={C1,C2,C3,C4,C5,TOT},
-				xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize},
-				point meta=explicit symbolic,
-				]
-				\addplot[fill=prec!70,draw=prec!70!black,
-				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
-					(C1,-60.0)[$-60.0\%$] (C2,-38.8)[$-38.8\%$] (C3,-57.4)[$-57.4\%$]};
-				\addplot[fill=sigc!70,draw=sigc!70!black,
-				every node near coord/.append style={anchor=south,yshift=2pt}] coordinates {
-					(C4,27.8)[$+27.8\%$] (C5,117.9)[$+117.9\%$]};
-				\addplot[fill=gray!45,draw=gray!70!black,
-				every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {(TOT,-9.3)[$-9.3\%$]};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\newpage
-	\paragraph{3. Significatività statistica sui tempi}
-	
-	Test $t$ di Student appaiato (post $-$ pre) su $n=10$ partecipanti, con verifica non parametrica
-	tramite test dei ranghi segnati di Wilcoxon.
-	
-	\begin{table}[h!]
-		\centering
-		\small
-		\begin{tabular}{lrrrrrl}
-			\toprule
-			\textbf{Confronto} & $\Delta$ medio (s) & IC 95\% & $t(9)$ & $p$ (t-test) & $p$ (Wilcoxon) & $d_z$ \\
-			\midrule
-			Compito 1 & $-27.6$ & $[-53.1,\ -2.1]$ & $-2.453$ & $\mathbf{0.0366}$ & $\mathbf{0.0039}$ & $-0.78$ \\
-			Compito 2 & $-14.2$ & $[-30.7,\ +2.3]$ & $-1.951$ & $0.0829$ & $0.1094$ & $-0.62$ \\
-			Compito 3 & $-24.8$ & $[-55.7,\ +6.1]$ & $-1.814$ & $0.1031$ & $\mathbf{0.0254}$ & $-0.57$ \\
-			Compito 4 & $+12.4$ & $[-18.8,\ +43.6]$ & $0.900$ & $0.3917$ & $0.4062$ & $+0.29$ \\
-			Compito 5 & $+35.6$ & $[+13.7,\ +57.5]$ & $3.675$ & $\mathbf{0.0051}$ & $\mathbf{0.0059}$ & $+1.16$ \\
-			\midrule
-			Compiti 1--3 & $-66.6$ & $[-121.3,\ -11.9]$ & $-2.753$ & $\mathbf{0.0224}$ & $\mathbf{0.0020}$ & $-0.87$ \\
-			Compiti 4--5 & $+48.0$ & $[+18.2,\ +77.8]$ & $3.643$ & $\mathbf{0.0054}$ & $\mathbf{0.0137}$ & $+1.15$ \\
-			\midrule
-			\textbf{Tempo totale} & $-18.6$ & $[-88.2,\ +51.0]$ & $-0.604$ & $0.5607$ & $0.8242$ & $-0.19$ \\
-			\bottomrule
-		\end{tabular}
-		\caption*{\small In grassetto i valori $p<0.05$. $d_z$ = dimensione dell'effetto per campioni appaiati.}
-	\end{table}
-	
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=15cm, height=6.5cm,
-				ybar,
-				bar width=26pt,
-				bar shift=0pt,
-				ymin=0, ymax=0.65,
-				ylabel={$p$-value (t-test appaiato sui tempi)},
-				symbolic x coords={C1,C2,C3,C4,C5,TOT},
-				xtick={C1,C2,C3,C4,C5,TOT},
-				xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
-				ymajorgrids=true, grid style={dashed,gray!30},
-				nodes near coords, nodes near coords style={font=\scriptsize},
-				point meta=explicit symbolic,
-				]
-				\addplot[fill=sigc!75,draw=sigc!60!black,
-				every node near coord/.append style={anchor=south,yshift=2pt,sigc,font=\scriptsize\bfseries}] coordinates {
-					(C1,0.0366)[$p=0.037$] (C5,0.0051)[$p=0.005$]};
-				\addplot[fill=gray!40,draw=gray!70!black,
-				every node near coord/.append style={anchor=south,yshift=2pt}] coordinates {
-					(C2,0.0829)[$p=0.083$] (C3,0.1031)[$p=0.103$] (C4,0.3917)[$p=0.392$] (TOT,0.5607)[$p=0.561$]};
-				\draw[dashed,thick,sigc] (axis cs:C1,0.05) -- (axis cs:TOT,0.05);
-				\node[font=\scriptsize\bfseries,sigc,anchor=south] at (rel axis cs:0.50,0.077) {$\alpha = 0.05$};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	
-	\vspace{-3mm}
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}[
-				width=13cm, height=6.5cm,
-				xlabel={Differenza media dei tempi post $-$ pre (s), con IC 95\%},
-				ytick={1,2,3,4,5,6},
-				yticklabels={Totale,Compito 5,Compito 4,Compito 3,Compito 2,Compito 1},
-				ymin=0.4, ymax=6.6,
-				xmin=-130, xmax=90,
-				xmajorgrids=true, grid style={dashed,gray!30},
-				every axis plot/.append style={thick},
-				]
-				\addplot[only marks,mark=*,mark size=2.6pt,color=prec,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {
-					(-27.6,6) +- (25.5,25.5)
-					(-14.2,5) +- (16.5,16.5)
-					(-24.8,4) +- (30.9,30.9)
-				};
-				\addplot[only marks,mark=*,mark size=2.6pt,color=sigc,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {
-					(12.4,3) +- (31.2,31.2)
-					(35.6,2) +- (21.9,21.9)
-				};
-				\addplot[only marks,mark=square*,mark size=2.6pt,color=black,
-				error bars/x dir=both,error bars/x explicit]
-				coordinates {(-3.7,1) +- (13.9,13.9)};
-				\draw[dashed,gray] (axis cs:0,0.4) -- (axis cs:0,6.6);
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
+In particolare, per verificare se i miglioramenti o peggioramenti osservati siano davvero dovuti alla nuova interfaccia e non al semplice caso, abbiamo condotto un'analisi statistica su campioni accoppiati ($N=10$). Ciò significa che gli stessi 10 utenti hanno provato sia la prima sia la seconda versione, permettendoci di confrontare direttamente i risultati ottenuti da ciascuna persona prima e dopo la riprogettazione.
 
-	
+\noindent
+La validità delle variazioni è stata valutata tramite il $p$-value, impostando la soglia di significatività standard al $5\%$ ($\alpha = 0.05$):
+
+\noindent
+Per garantire la massima affidabilità delle conclusioni, sono stati applicati due test complementari sui dati di ciascun utente:
+\begin{itemize}
+    \item \textbf{t-Test di Student accoppiato a due code}: test parametrico (assume normalità) 
+    \item \textbf{Test dei ranghi con segno di Wilcoxon:} test non parametrico (non assume normalità)
+\end{itemize}
+
+\clearpage
+\subsubsection{Cliente}
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccccc}
+        \toprule
+        & \multicolumn{4}{c}{\textbf{Compito}} & \\
+        \cmidrule(lr){2-5}
+        \textbf{Metrica} & 2 & 3 & 4 & 5 & \textbf{Totale} \\
+        \midrule
+        Click pre (media)   & 6.10 & 1.00 & 8.30 & 8.70 & 24.10 \\
+        Click post (media)  & 4.20 & 1.00 & 7.10 & 8.50 & 20.80 \\
+        Variazione          & $-31.1\%$ & $0.0\%$ & $-14.5\%$ & $-2.3\%$ & $-13.7\%$ \\
+        \midrule
+        Tempo pre (media, s)  & 47.8 & 10.9 & 86.2 & 90.1 & 235.0 \\
+        Tempo post (media, s) & 35.8 & 10.0 & 76.9 & 68.5 & 191.2 \\
+        Variazione            & $-25.1\%$ & $-8.3\%$ & $-10.8\%$ & $-24.0\%$ & $-18.6\%$ \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Medie su 10 partecipanti. Compito 1 escluso in quanto solo 4/10 partecipanti lo hanno completato nella versione pre.}
+\end{table}
+
+\paragraph{1. Confronto click}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=3pt,
+            bar width=18pt,
+            ymin=0, ymax=14,
+            ylabel={Click (media $\pm$ SEM)},
+            xlabel={Compito},
+            symbolic x coords={C2,C3,C4,C5},
+            xtick={C2,C3,C4,C5},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
+            legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+            every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+            error bars/y dir=both, error bars/y explicit,
+            ]
+            \addplot[fill=prec,draw=prec!70!black] coordinates {
+                (C2,6.1) +- (0,0.92) (C3,1.0) +- (0,0) (C4,8.3) +- (0,0.37) (C5,8.7) +- (0,1.54)};
+            \addplot[fill=postc,draw=postc!70!black] coordinates {
+                (C2,4.2) +- (0,0.33) (C3,1.0) +- (0,0) (C4,7.1) +- (0,0.31) (C5,8.5) +- (0,0.73)};
+            \legend{Pre-riprogettazione, Post-riprogettazione}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-3mm}
+\noindent\small I compiti mostrano una costante riduzione o stabilità del numero di click medi. Il compito 2 registra un calo significativo di click medi ($6.1 \to 4.2$, $-31.1\%$), seguito dal compito 4 ($-1.2$ click, $8.3 \to 7.1$). Il compito 3 richiede esattamente 1 click a tutti e dieci i partecipanti in entrambe le versioni. Complessivamente, il totale medio di sessione si riduce da $24.1$ a $20.8$ click ($-13.7\%$).
+
+\newpage
+\paragraph{2. Confronto tempi}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=3pt,
+            bar width=18pt,
+            ymin=0, ymax=145,
+            ylabel={Tempo (s), media $\pm$ SEM},
+            xlabel={Compito},
+            symbolic x coords={C2,C3,C4,C5},
+            xtick={C2,C3,C4,C5},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
+            legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+            every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+            error bars/y dir=both, error bars/y explicit,
+            ]
+            \addplot[fill=prec,draw=prec!70!black] coordinates {
+                (C2,47.8) +- (0,9.35) (C3,10.9) +- (0,3.73) (C4,86.2) +- (0,13.74) (C5,90.1) +- (0,21.21)};
+            \addplot[fill=postc,draw=postc!70!black] coordinates {
+                (C2,35.8) +- (0,7.72) (C3,10.0) +- (0,3.08) (C4,76.9) +- (0,16.22) (C5,68.5) +- (0,16.01)};
+            \legend{Pre-riprogettazione, Post-riprogettazione}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=5.6cm,
+            ybar,
+            bar width=26pt,
+            bar shift=0pt,
+            ymin=-34, ymax=10,
+            ylabel={Variazione tempo (\%)},
+            symbolic x coords={C2,C3,C4,C5,TOT},
+            xtick={C2,C3,C4,C5,TOT},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=prec!70,draw=prec!70!black,
+            every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
+                (C2,-25.1)[$-25.1\%$] (C3,-8.3)[$-8.3\%$] (C4,-10.8)[$-10.8\%$] (C5,-24.0)[$-24.0\%$]};
+            \addplot[fill=gray!45,draw=gray!70!black,
+            every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {(TOT,-18.6)[$-18.6\%$]};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small Tutti i compiti mostrano un miglioramento nei tempi di esecuzione. I guadagni più consistenti in percentuale si registrano sul compito 2 ($-25.1\%$) e sul compito 5 ($-24.0\%$), portando ad una riduzione complessiva del tempo medio totale di sessione pari al $-18.6\%$ ($235.0\text{ s} \to 191.2\text{ s}$).
+
+\newpage
+\paragraph{3. Significatività statistica dei click}\mbox{}\par\vspace{0.5ex}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Compito} & \textbf{$p$-value (t-Student)} & \textbf{$p$-value (Wilcoxon)} & \textbf{Significativo} \\
+        \midrule
+        Compito 2 & \textbf{0.032422} & \textbf{0.031250} & Sì \\
+        Compito 3 & 1.000000          & 1.000000          & No \\
+        Compito 4 & \textbf{0.018110} & \textbf{0.027344} & Sì \\
+        Compito 5 & 0.897639          & 0.533203          & No \\
+        \midrule
+        \textbf{Totale click} & \textbf{0.048352} & 0.050781 & Sì (t-Student) \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Livello di significatività $\alpha = 0.05$. Valori $p < 0.05$ in grassetto.}
+\end{table}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=2pt,
+            bar width=13pt,
+            ymin=0, ymax=1.15,
+            ylabel={$p$-value (Click)},
+            symbolic x coords={C2,C3,C4,C5,TOT},
+            xtick={C2,C3,C4,C5,TOT},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            legend style={
+                at={(0.5,1.02)},
+                anchor=south,
+                legend columns=-1,
+                draw=none,
+                fill=white,
+                fill opacity=0.85,
+                text opacity=1
+            },
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, 
+            nodes near coords style={font=\tiny\bfseries, rotate=90, anchor=west},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=blue!40,draw=blue!70!black] coordinates {
+                (C2,0.0324)[0.032] (C3,1.0000)[1.000] (C4,0.0181)[0.018] (C5,0.8976)[0.898] (TOT,0.0484)[0.048]};
+            \addplot[fill=orange!50,draw=orange!70!black] coordinates {
+                (C2,0.0313)[0.031] (C3,1.0000)[1.000] (C4,0.0273)[0.027] (C5,0.5332)[0.533] (TOT,0.0508)[0.051]};
+            
+            \draw[dashed,red!80!black,thick] (current axis.west |- {axis cs:C2,0.05}) -- (current axis.east |- {axis cs:C2,0.05});
+            
+            \legend{t-Student (accoppiato), Wilcoxon (signed-rank)}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small Per il ruolo Cliente, la riduzione del numero di click risulta statisticamente significativa nei Compiti 2 e 4 ($p < 0.05$ per entrambi i test parametrico e non parametrico). Anche la riduzione sul totale complessivo dei click raggiunge la significatività nel test t-Student ($p = 0.048$) e la sfiora nel test di Wilcoxon ($p = 0.051$), confermando un'efficace ottimizzazione dei percorsi di navigazione dell'utente finale.
+
+\clearpage
+\paragraph{4. Significatività statistica del tempo di esecuzione}\mbox{}\par\vspace{0.5ex}
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Compito} & \textbf{$p$-value (t-Student)} & \textbf{$p$-value (Wilcoxon)} & \textbf{Significativo} \\
+        \midrule
+        Compito 2 & 0.058403          & 0.080078          & No \\
+        Compito 3 & 0.539148          & 0.960938          & No \\
+        Compito 4 & 0.260793          & 0.121094          & No \\
+        Compito 5 & 0.069543          & \textbf{0.025391} & Sì (Wilcoxon) \\
+        \midrule
+        \textbf{Tempo totale} & \textbf{0.009164} & \textbf{0.005859} & Sì \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Livello di significatività $\alpha = 0.05$. Valori $p < 0.05$ in grassetto.}
+\end{table}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=2pt,
+            bar width=13pt,
+            ymin=0, ymax=1.15,
+            ylabel={$p$-value (Tempi)},
+            symbolic x coords={C2,C3,C4,C5,TOT},
+            xtick={C2,C3,C4,C5,TOT},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            legend style={
+                at={(0.5,1.02)},
+                anchor=south,
+                legend columns=-1,
+                draw=none,
+                fill=white,
+                fill opacity=0.85,
+                text opacity=1
+            },
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, 
+            nodes near coords style={font=\tiny\bfseries, rotate=90, anchor=west},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=blue!40,draw=blue!70!black] coordinates {
+                (C2,0.0584)[0.058] (C3,0.5391)[0.539] (C4,0.2608)[0.261] (C5,0.0695)[0.070] (TOT,0.0092)[0.009]};
+            \addplot[fill=orange!50,draw=orange!70!black] coordinates {
+                (C2,0.0801)[0.080] (C3,0.9609)[0.961] (C4,0.1211)[0.121] (C5,0.0254)[0.025] (TOT,0.0059)[0.006]};
+            
+            \draw[dashed,red!80!black,thick] (current axis.west |- {axis cs:C2,0.05}) -- (current axis.east |- {axis cs:C2,0.05});
+            
+            \legend{t-Student (accoppiato), Wilcoxon (signed-rank)}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small L'analisi dei tempi per il ruolo Cliente dimostra una forte significatività statistica sul tempo totale di esecuzione ($p = 0.009$ t-Student, $p = 0.006$ Wilcoxon), evidenziando l'impatto positivo cumulativo dell'interfaccia riprogettata. A livello dei singoli task, il Compito 5 mostra un miglioramento significativo secondo il test di Wilcoxon ($p = 0.025$).
+
+\clearpage
+\subsubsection{Dipendente}
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccccc}
+        \toprule
+        & \multicolumn{4}{c}{\textbf{Compito}} & \\
+        \cmidrule(lr){2-5}
+        \textbf{Metrica} & 2 & 3 & 4 & 5 & \textbf{Totale} \\
+        \midrule
+        Click pre (media)   & 4.9 & 9.7 & 7.8 & 7.4 & 29.8 \\
+        Click post (media)  & 4.3 & 7.7 & 5.0 & 7.4 & 24.4 \\
+        Variazione          & $-12.2\%$ & $-20.6\%$ & $-35.9\%$ & $0.0\%$ & $-18.1\%$ \\
+        \midrule
+        Tempo pre (media, s)  & 33.3 & 41.2 & 39.9 & 31.1 & 145.5 \\
+        Tempo post (media, s) & 23.6 & 40.1 & 25.4 & 40.4 & 129.5 \\
+        Variazione            & $-29.1\%$ & $-2.7\%$ & $-36.3\%$ & $+29.9\%$ & $-11.0\%$ \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Medie su 10 partecipanti. Compito 1 escluso in quanto nessuno dei partecipanti lo ha completato nella versione pre.}
+\end{table}
+
+\paragraph{1. Confronto click}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=3pt,
+            bar width=18pt,
+            ymin=0, ymax=14,
+            ylabel={Click (media $\pm$ SEM)},
+            xlabel={Compito},
+            symbolic x coords={C2,C3,C4,C5},
+            xtick={C2,C3,C4,C5},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
+            legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+            every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+            error bars/y dir=both, error bars/y explicit,
+            ]
+            \addplot[fill=prec,draw=prec!70!black] coordinates {
+                (C2,4.9) +- (0,0.46) 
+                (C3,9.7) +- (0,0.70) 
+                (C4,7.8) +- (0,0.61) 
+                (C5,7.4) +- (0,0.27)};
+            \addplot[fill=postc,draw=postc!70!black] coordinates {
+                (C2,4.3) +- (0,0.54) 
+                (C3,7.7) +- (0,0.82) 
+                (C4,5.0) +- (0,0.21) 
+                (C5,7.4) +- (0,0.79)};
+            \legend{Pre-riprogettazione, Post-riprogettazione}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-3mm}
+\noindent\small I dati relativi ai click per il ruolo Dipendente evidenziano una generalizzata riduzione delle interazioni necessarie. Il miglioramento più marcato si registra nel Compito 4 ($-35.9\%$, da 7.8 a 5.0 click) e nel Compito 3 ($-20.6\%$, da 9.7 a 7.7 click). Il Compito 2 mostra un calo contenuto del $-12.2\%$, mentre il Compito 5 rimane del tutto invariato a 7.4 click medi. Complessivamente, le interazioni totali medie di sessione diminuiscono del $-18.1\%$ (da 29.8 a 24.4 click).
+
+\newpage
+\paragraph{2. Confronto tempi}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=3pt,
+            bar width=18pt,
+            ymin=0, ymax=60,
+            ylabel={Tempo (s), media $\pm$ SEM},
+            xlabel={Compito},
+            symbolic x coords={C2,C3,C4,C5},
+            xtick={C2,C3,C4,C5},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5},
+            legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+            every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+            error bars/y dir=both, error bars/y explicit,
+            ]
+            \addplot[fill=prec,draw=prec!70!black] coordinates {
+                (C2,33.3) +- (0,2.83) 
+                (C3,41.2) +- (0,1.99) 
+                (C4,39.9) +- (0,5.35) 
+                (C5,31.1) +- (0,2.89)};
+            \addplot[fill=postc,draw=postc!70!black] coordinates {
+                (C2,23.6) +- (0,2.87) 
+                (C3,40.1) +- (0,6.79) 
+                (C4,25.4) +- (0,2.35) 
+                (C5,40.4) +- (0,5.21)};
+            \legend{Pre-riprogettazione, Post-riprogettazione}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=5.6cm,
+            ybar,
+            bar width=26pt,
+            bar shift=0pt,
+            ymin=-50, ymax=40,
+            ylabel={Variazione tempo (\%)},
+            symbolic x coords={C2,C3,C4,C5,TOT},
+            xtick={C2,C3,C4,C5,TOT},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=prec!70,draw=prec!70!black,
+            every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
+                (C2,-29.1)[$-29.1\%$] 
+                (C3,-2.7)[$-2.7\%$] 
+                (C4,-36.3)[$-36.3\%$] 
+                (C5,29.9)[$+29.9\%$]};
+            \addplot[fill=gray!45,draw=gray!70!black,
+            every node near coord/.append style={anchor=north,yshift=-3pt}] coordinates {
+                (TOT,-11.0)[$-11.0\%$]};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small I tempi di esecuzione per il ruolo Dipendente mostrano diminuzioni rilevanti nei Compiti 2 ($-29.1\%$) e 4 ($-36.3\%$). Il Compito 3 si mantiene essenzialmente stabile ($-2.7\%$), mentre il Compito 5 registra un aumento del $+29.9\%$ (da 31.1 s a 40.4 s) (non siamo riusciti a spiegarci questo comportamento in quanto questa parte è rimasta molto simile all'applicazione vecchia). Nel complesso, il tempo totale medio di completamento dell'intero percorso diminuisce del $-11.0\%$ (da 145.5 s a 129.5 s).
+
+\newpage
+\paragraph{3. Significatività statistica dei click}\mbox{}\par\vspace{0.5ex}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Compito} & \textbf{$p$-value (t-Student)} & \textbf{$p$-value (Wilcoxon)} & \textbf{Significativo} \\
+        \midrule
+        Compito 2 & 0.140453 & 0.234375 & No \\
+        Compito 3 & 0.082041 & 0.078125 & No \\
+        Compito 4 & \textbf{0.003439} & \textbf{0.007813} & Sì \\
+        Compito 5 & 1.000000 & 0.488281 & No \\
+        \midrule
+        \textbf{Totale click} & \textbf{0.009783} & \textbf{0.013672} & Sì \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Livello di significatività $\alpha = 0.05$. Valori $p < 0.05$ in grassetto.}
+\end{table}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=2pt,
+            bar width=13pt,
+            ymin=0, ymax=1.15,
+            ylabel={$p$-value (Click)},
+            symbolic x coords={C2,C3,C4,C5,TOT},
+            xtick={C2,C3,C4,C5,TOT},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            legend style={
+                at={(0.5,1.02)},
+                anchor=south,
+                legend columns=-1,
+                draw=none,
+                fill=white,
+                fill opacity=0.85,
+                text opacity=1
+            },
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, 
+            nodes near coords style={font=\tiny\bfseries, rotate=90, anchor=west},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=blue!40,draw=blue!70!black] coordinates {
+                (C2,0.140453)[0.140] 
+                (C3,0.082041)[0.082] 
+                (C4,0.003439)[0.003] 
+                (C5,1.000000)[1.000] 
+                (TOT,0.009783)[0.010]};
+            \addplot[fill=orange!50,draw=orange!70!black] coordinates {
+                (C2,0.234375)[0.234] 
+                (C3,0.078125)[0.078] 
+                (C4,0.007813)[0.008] 
+                (C5,0.488281)[0.488] 
+                (TOT,0.013672)[0.014]};
+            
+            \draw[dashed,red!80!black,thick] (current axis.west |- {axis cs:C2,0.05}) -- (current axis.east |- {axis cs:C2,0.05});
+            
+            \legend{t-Student (accoppiato), Wilcoxon (signed-rank)}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small Per il ruolo Dipendente, la riduzione del numero di click risulta fortemente significativa nel Compito 4 ($p < 0.01$ su entrambi i test) e nel totale di sessione ($p = 0.0098$ t-Student, $p = 0.0137$ Wilcoxon). Ciò valida l'efficacia della riprogettazione nell'abbattere il carico d'interazione complessivo dell'operatore. Per i Compiti 2, 3 e 5 le variazioni non sono statisticamente significative.
+
+\clearpage
+
+\paragraph{4. Significatività statistica dei tempi di esecuzione}\mbox{}\par\vspace{0.5ex}
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Compito} & \textbf{$p$-value (t-Student)} & \textbf{$p$-value (Wilcoxon)} & \textbf{Significativo} \\
+        \midrule
+        Compito 2 & \textbf{0.005002} & \textbf{0.019531} & Sì \\
+        Compito 3 & 0.867808 & 0.742188 & No \\
+        Compito 4 & \textbf{0.037040} & 0.062500 & Sì (t-Student) \\
+        Compito 5 & 0.066817 & 0.070313 & No \\
+        \midrule
+        \textbf{Tempo totale} & 0.163090 & 0.166016 & No \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Livello di significatività $\alpha = 0.05$. Valori $p < 0.05$ in grassetto.}
+\end{table}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=2pt,
+            bar width=13pt,
+            ymin=0, ymax=1.05,
+            ylabel={$p$-value (Tempi)},
+            symbolic x coords={C2,C3,C4,C5,TOT},
+            xtick={C2,C3,C4,C5,TOT},
+            xticklabels={Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            legend style={
+                at={(0.5,1.02)},
+                anchor=south,
+                legend columns=-1,
+                draw=none,
+                fill=white,
+                fill opacity=0.85,
+                text opacity=1
+            },
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, 
+            nodes near coords style={font=\tiny\bfseries, rotate=90, anchor=west},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=blue!40,draw=blue!70!black] coordinates {
+                (C2,0.005002)[0.005] 
+                (C3,0.867808)[0.868] 
+                (C4,0.037040)[0.037] 
+                (C5,0.066817)[0.067] 
+                (TOT,0.163090)[0.163]};
+            \addplot[fill=orange!50,draw=orange!70!black] coordinates {
+                (C2,0.019531)[0.020] 
+                (C3,0.742188)[0.742] 
+                (C4,0.062500)[0.063] 
+                (C5,0.070313)[0.070] 
+                (TOT,0.166016)[0.166]};
+            
+            \draw[dashed,red!80!black,thick] (current axis.west |- {axis cs:C2,0.05}) -- (current axis.east |- {axis cs:C2,0.05});
+            
+            \legend{t-Student (accoppiato), Wilcoxon (signed-rank)}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small L'analisi sui tempi per il Dipendente evidenzia un guadagno di velocità statisticamente significativo nel Compito 2 ($p = 0.005$ t-Student, $p = 0.020$ Wilcoxon) e nel Compito 4 per il test t-Student ($p = 0.037$, con Wilcoxon a $p = 0.063$). La variazione sul tempo totale di sessione non risulta statisticamente significativa ($p > 0.05$).
+
+\clearpage
+\subsubsection{Amministratore}
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lcccccc}
+        \toprule
+        & \multicolumn{5}{c}{\textbf{Compito}} & \\
+        \cmidrule(lr){2-6}
+        \textbf{Metrica} & 1 & 2 & 3 & 4 & 5 & \textbf{Totale} \\
+        \midrule
+        Click pre (media)   & 6.6 & 7.3 & 6.9 & 9.8 & 7.4 & 38.0 \\
+        Click post (media)  & 3.3 & 4.8 & 4.9 & 12.0 & 14.3 & 39.3 \\
+        Variazione          & $-50.0\%$ & $-34.2\%$ & $-29.0\%$ & $+22.4\%$ & $+93.2\%$ & $+3.4\%$ \\
+        \midrule
+        Tempo pre (media, s)  & 40.0 & 36.6 & 43.2 & 45.1 & 30.2 & 195.1 \\
+        Tempo post (media, s) & 18.4 & 23.4 & 18.4 & 57.0 & 65.8 & 183.0 \\
+        Variazione            & $-54.0\%$ & $-36.1\%$ & $-57.4\%$ & $+26.4\%$ & $+117.9\%$ & $-6.2\%$ \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Medie su 10 partecipanti.}
+\end{table}
+
+\paragraph{1. Confronto click}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=3pt,
+            bar width=15pt,
+            ymin=0, ymax=18,
+            ylabel={Click (media $\pm$ SEM)},
+            xlabel={Compito},
+            symbolic x coords={C1,C2,C3,C4,C5},
+            xtick={C1,C2,C3,C4,C5},
+            xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5},
+            legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+            every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+            error bars/y dir=both, error bars/y explicit,
+            ]
+            \addplot[fill=prec,draw=prec!70!black] coordinates {
+                (C1,6.6) +- (0,1.1) 
+                (C2,7.3) +- (0,0.9) 
+                (C3,6.9) +- (0,0.8) 
+                (C4,9.8) +- (0,1.5) 
+                (C5,7.4) +- (0,0.9)};
+            \addplot[fill=postc,draw=postc!70!black] coordinates {
+                (C1,3.3) +- (0,0.2) 
+                (C2,4.8) +- (0,0.7) 
+                (C3,4.9) +- (0,0.6) 
+                (C4,12.0) +- (0,2.2) 
+                (C5,14.3) +- (0,2.4)};
+            \legend{Pre-riprogettazione, Post-riprogettazione}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-3mm}
+\noindent\small Per il ruolo Amministratore, la riprogettazione mostra un comportamento differenziato: nei primi tre compiti si assiste ad una sensibile riduzione del numero medio di click (fino al $-50.0\%$ nel Compito 1). Viceversa, nei Compiti 4 e 5 si registra un incremento dei click ($+22.4\%$ e $+93.2\%$), molto probabilmente dovut al fatto che abbiamo reso più difficilmente raggiungibile l'opzione di eliminazione di un utente per evitare eliminazioni accidentali. Complessivamente, il totale dei click subisce una variazione contenuta del $+3.4\%$ (da 38.0 a 39.3 click).
+
+\newpage
+\paragraph{2. Confronto tempi}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=3pt,
+            bar width=15pt,
+            ymin=0, ymax=85,
+            ylabel={Tempo (s), media $\pm$ SEM},
+            xlabel={Compito},
+            symbolic x coords={C1,C2,C3,C4,C5},
+            xtick={C1,C2,C3,C4,C5},
+            xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5},
+            legend style={at={(0.02,0.98)},anchor=north west,legend columns=1,draw=none,fill=white,fill opacity=0.85,text opacity=1},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize\bfseries,/pgf/number format/fixed,/pgf/number format/precision=1},
+            every node near coord/.append style={anchor=north,yshift=-2pt,text=white},
+            error bars/y dir=both, error bars/y explicit,
+            ]
+            \addplot[fill=prec,draw=prec!70!black] coordinates {
+                (C1,40.0) +- (0,7.2) 
+                (C2,36.6) +- (0,7.0) 
+                (C3,43.2) +- (0,14.9) 
+                (C4,45.1) +- (0,10.8) 
+                (C5,30.2) +- (0,4.4)};
+            \addplot[fill=postc,draw=postc!70!black] coordinates {
+                (C1,18.4) +- (0,2.9) 
+                (C2,23.4) +- (0,2.7) 
+                (C3,18.4) +- (0,3.5) 
+                (C4,57.0) +- (0,9.6) 
+                (C5,65.8) +- (0,10.4)};
+            \legend{Pre-riprogettazione, Post-riprogettazione}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=5.6cm,
+            ybar,
+            bar width=22pt,
+            bar shift=0pt,
+            ymin=-70, ymax=135,
+            ylabel={Variazione tempo (\%)},
+            symbolic x coords={C1,C2,C3,C4,C5,TOT},
+            xtick={C1,C2,C3,C4,C5,TOT},
+            xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, nodes near coords style={font=\scriptsize},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=prec!70,draw=prec!70!black,
+            every node near coord/.append style={anchor=south,yshift=2pt}] coordinates {
+                (C1,-54.0)[$-54.0\%$] 
+                (C2,-36.1)[$-36.1\%$] 
+                (C3,-57.4)[$-57.4\%$] 
+                (C4,26.4)[$+26.4\%$] 
+                (C5,117.9)[$+117.9\%$]};
+            \addplot[fill=gray!45,draw=gray!70!black,
+            every node near coord/.append style={anchor=south,yshift=2pt}] coordinates {
+                (TOT,-6.2)[$-6.2\%$]};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small L'analisi dei tempi di esecuzione conferma la dinamica emersa nei click: l'efficienza  aumenta significativamente nei primi tre compiti, con riduzioni del tempo di completamento superiori al $50\%$ nei Compiti 1 ($-54.0\%$) e 3 ($-57.4\%$). Per contro, i Compiti 4 e 5 richiedono maggior tempo di esecuzione ($+26.4\%$ e $+117.9\%$) per gli stessi motvi di prima. Nel complesso, il tempo totale medio per portare a termine l'intero set di task diminuisce del $-6.2\%$ (da 195.1 s a 183.0 s).
+
+\newpage
+\paragraph{3. Significatività statistica dei click}\mbox{}\par\vspace{0.5ex}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Compito} & \textbf{$p$-value (t-Student)} & \textbf{$p$-value (Wilcoxon)} & \textbf{Significativo} \\
+        \midrule
+        Compito 1 & \textbf{0.010944} & \textbf{0.003906} & Sì \\
+        Compito 2 & \textbf{0.023934} & \textbf{0.013672} & Sì \\
+        Compito 3 & 0.052177 & 0.062500 & No \\
+        Compito 4 & 0.380216 & 0.439453 & No \\
+        Compito 5 & \textbf{0.032183} & \textbf{0.037109} & Sì \\
+        \midrule
+        \textbf{Totale click} & 0.750018 & 0.886719 & No \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Livello di significatività $\alpha = 0.05$. Valori $p < 0.05$ in grassetto.}
+\end{table}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=2pt,
+            bar width=11pt,
+            ymin=0, ymax=1.05,
+            ylabel={$p$-value (Click)},
+            symbolic x coords={C1,C2,C3,C4,C5,TOT},
+            xtick={C1,C2,C3,C4,C5,TOT},
+            xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            legend style={
+                at={(0.5,1.02)},
+                anchor=south,
+                legend columns=-1,
+                draw=none,
+                fill=white,
+                fill opacity=0.85,
+                text opacity=1
+            },
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, 
+            nodes near coords style={font=\tiny\bfseries, rotate=90, anchor=west},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=blue!40,draw=blue!70!black] coordinates {
+                (C1,0.010944)[0.011] 
+                (C2,0.023934)[0.024] 
+                (C3,0.052177)[0.052] 
+                (C4,0.380216)[0.380] 
+                (C5,0.032183)[0.032] 
+                (TOT,0.750018)[0.750]};
+            \addplot[fill=orange!50,draw=orange!70!black] coordinates {
+                (C1,0.003906)[0.004] 
+                (C2,0.013672)[0.014] 
+                (C3,0.062500)[0.063] 
+                (C4,0.439453)[0.439] 
+                (C5,0.037109)[0.037] 
+                (TOT,0.886719)[0.887]};
+            
+            \draw[dashed,red!80!black,thick] (current axis.west |- {axis cs:C1,0.05}) -- (current axis.east |- {axis cs:C1,0.05});
+            
+            \legend{t-Student (accoppiato), Wilcoxon (signed-rank)}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small Dall'analisi della significatività sui click, emerge una riduzione statisticamente significativa nei Compiti 1 e 2 ($p < 0.05$ su entrambi i test), confermando l'efficacia della semplificazione dell'interfaccia. Nel Compito 5, l'incremento di click risulta anch'esso statisticamente significativo ($p = 0.032$ t-Student, $p = 0.037$ Wilcoxon), sempre per i motivi espressi prima. Il Compito 3 sfiora la soglia di significatività ($p \approx 0.052$), mentre nel totale globale dei click non si evidenzia una differenza statisticamente significativa.
+
+\clearpage
+\paragraph{4. Significatività statistica dei tempi di esecuzione}\mbox{}\par\vspace{0.5ex}
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Compito} & \textbf{$p$-value (t-Student)} & \textbf{$p$-value (Wilcoxon)} & \textbf{Significativo} \\
+        \midrule
+        Compito 1 & \textbf{0.007390} & \textbf{0.003906} & Sì \\
+        Compito 2 & 0.114138 & \textbf{0.003906} & Sì (Wilcoxon) \\
+        Compito 3 & 0.103113 & \textbf{0.025391} & Sì (Wilcoxon) \\
+        Compito 4 & 0.407848 & 0.425781 & No \\
+        Compito 5 & \textbf{0.005116} & \textbf{0.005859} & Sì \\
+        \midrule
+        \textbf{Tempo totale} & 0.710768 & 0.597656 & No \\
+        \bottomrule
+    \end{tabular}
+    \caption*{\small Livello di significatività $\alpha = 0.05$. Valori $p < 0.05$ in grassetto.}
+\end{table}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14.2cm, height=7.2cm,
+            ybar=2pt,
+            bar width=11pt,
+            ymin=0, ymax=0.90,
+            ylabel={$p$-value (Tempi)},
+            symbolic x coords={C1,C2,C3,C4,C5,TOT},
+            xtick={C1,C2,C3,C4,C5,TOT},
+            xticklabels={Compito 1,Compito 2,Compito 3,Compito 4,Compito 5,\textbf{Totale}},
+            legend style={
+                at={(0.5,1.02)},
+                anchor=south,
+                legend columns=-1,
+                draw=none,
+                fill=white,
+                fill opacity=0.85,
+                text opacity=1
+            },
+            ymajorgrids=true, grid style={dashed,gray!30},
+            nodes near coords, 
+            nodes near coords style={font=\tiny\bfseries, rotate=90, anchor=west},
+            point meta=explicit symbolic,
+            ]
+            \addplot[fill=blue!40,draw=blue!70!black] coordinates {
+                (C1,0.007390)[0.007] 
+                (C2,0.114138)[0.114] 
+                (C3,0.103113)[0.103] 
+                (C4,0.407848)[0.408] 
+                (C5,0.005116)[0.005] 
+                (TOT,0.710768)[0.711]};
+            \addplot[fill=orange!50,draw=orange!70!black] coordinates {
+                (C1,0.003906)[0.004] 
+                (C2,0.003906)[0.004] 
+                (C3,0.025391)[0.025] 
+                (C4,0.425781)[0.426] 
+                (C5,0.005859)[0.006] 
+                (TOT,0.597656)[0.598]};
+            
+            \draw[dashed,red!80!black,thick] (current axis.west |- {axis cs:C1,0.05}) -- (current axis.east |- {axis cs:C1,0.05});
+            
+            \legend{t-Student (accoppiato), Wilcoxon (signed-rank)}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\vspace{-2mm}
+\noindent\small Per quanto riguarda i tempi di esecuzione, si osserva una forte significatività statistica nei Compiti 1 e 5 ($p < 0.01$ su entrambi i test), riflettendo lo stesso trend che abbiamo osservato lungo quest'analisi. Il tempo totale cumulato non presenta variazioni statisticamente significative ($p > 0.05$). Anche se i singoli compiti 1, 2, 3 e 5 mostrano significatività rispetto al test non parametrico di Wilcoxon.
+
+\clearpage
 \subsection{Commenti sui dati}
-Prima di discutere sui dati, bisogna fare una premessa importante: soltanto la parte dei clienti poteva essere eseguita senza problemi, in quanto nessuno degli utenti intervistati ha mai utilizzato un terminale bancario per poter gestire flussi di denaro oppure rapporti clientelari. Per quanto comunque il sistema sia ancora rudimentale e semplice, a primo impatto risulta dispersivo dover eseguire operazioni di cui non si sa nulla prima d'ora: questo ha influenzato molto la differenza tra utilizzo della versione 1 e versione 2, in quanto un primo utilizzo ha fatto da "formazione" per gli utenti, permettendone un utilizzo più agile nel secondo esperimento (questo indipendentemente dalla versione). Si può ora analizzare i dati raccolti.
+Prima di discutere dei dati, bisogna fare una premessa importante: soltanto la parte dei clienti poteva essere eseguita senza problemi, in quanto nessuno degli utenti intervistati ha mai utilizzato un terminale bancario per poter gestire flussi di denaro oppure rapporti clientelari. Per quanto comunque il sistema sia ancora rudimentale e semplice, a primo impatto risulta dispersivo (in quanto manca un modello mentale pregresso) dover eseguire operazioni di cui non si sa nulla prima d'ora: questo ha influenzato molto la differenza tra utilizzo della versione 1 e versione 2, in quanto un primo utilizzo ha fatto da "formazione" per gli utenti, permettendone un utilizzo più agile nel secondo esperimento (questo indipendentemente dalla versione).
 
-In tutti e tre i gruppi si è notato un miglioramento del tempo medio richiesto, rendendo la nuova versione più veloce da usufruire. Questo non significa però che ogni operazione risulta più veloce, e il caso del Compito 5 per Admin ne è l'esempio: vi è un aumento del 117\% del tempo necessario a svolgere questa operazione. Questo aumento in un certo senso è voluto, in quanto è stato scelto volutamente di inserire il tasto di elimina utente all'interno di un menù a tendina all'interno della visualizzazione dati del profilo, in quanto così si evita quasi certamente click inavvertiti: questo fa contrasto però con l'avviso di conferma, che già di suo fa un gran lavoro a impedire all'utente di fare operazioni non volute, ma per questo si rimanda alla prossima sezione. Altre situazioni in cui è aumentato o rimasto identico il tempo sono: Compito 5 Employee, Compito 4 Admin; ma in questo caso può essere dovuto a una semplice questione di varianza. 
+\noindent
+In tutti e tre i gruppi si è notato un miglioramento del tempo medio richiesto, rendendo la nuova versione più veloce da usufruire. Questo non significa però che ogni operazione risulta più veloce (il caso del Compito 5 per Admin ne è l'esempio: vi è un aumento del 117.9\% del tempo necessario a svolgere questa operazione).\\
+Altre situazioni in cui è aumentato o rimasto identico il tempo sono: Compito 5 Employee, Compito 4 Admin; ma in questo caso può essere dovuto a una semplice questione di varianza. Discorso simile si fa per il numero di click, il cui aumento netto si è notato per Compito 5 Admin. 
 
-Discorso simile si fa per il numero di click, il cui aumento netto si è notato per Compito 5 Admin. 
-
+\noindent
 Il tasso di completamento non è del 100\% per una semplice questione legata ai test che sono stati scelti: il primo compito per Clienti e Employee non è eseguibile nella prima versione in quanto bloccato dal login: solo 4 clienti su 20 utenti totali sono riusciti a trovare il servizio clienti nella prima versione.
 
+\noindent
 Infine, le parti la cui rilevanza statistica è degna di attenzione sono:
 \begin{itemize}
 	\item Login: la riduzione da due diverse sezioni ad una singola per il login ha reso il procedimento di accesso molto più fluido e comprensibile all'utente (\textit{"sono lavoratore vero?"} è stata una delle frasi più ripetute durante i test);
 	\item Tasto elimina utente: forzare l'utente a cercarlo l'ha reso sicuramente più complesso ma più sicuro, in quanto un utente non può cliccarlo per sbaglio mentre gira la lista degli utenti in Gestione Utenti ma deve proprio volere eseguire quell'azione;
-	\item Cambiare il proprio numero di telefono (Employee): togliere il doppio menù a tendina e renderlo sempre visibile ha reso più facile l'accesso ai dettagli del proprio profilo.
+	\item Icona del profilo: togliere il doppio menù a tendina e rendere sempre visibile l'icona ha reso più facile l'accesso ai dettagli del proprio profilo.
 \end{itemize}
 
-	
+\clearpage	
 \subsection{Commenti forniti dagli utenti}
 Durante lo svolgimento degli esperimenti, alcuni utenti hanno fatto presente alcune perplessità rispetto ad una scelta in particolare: il tasto elimina utente nascosto. Rendendo più complicato l'accesso a tale funzionalità, siamo riusciti nell'intento di non renderlo cliccabile per sbaglio, ma abbiamo reso molto più articolato il procedimento per eliminare un utente. 
-
-Altro commento esposto è stato quello riguardante il breadcrumbing: per quanto affezionati ai vecchi forum, non possiamo che notare quanto le interfacce del mondo web e delle applicazioni software in generale siano cambiate, rendendo anche in questo caso una navbar molto più fruibile rispetto al breadcrumbing.
+\\
+\noindent
+Altro commento è stato quello riguardante il breadcrumbing: ha mostrato limiti di usabilità, specialmente tra i soggetti abituati alla navigazione mobile. Molti utenti non hanno percepito i breadcrumb come elementi interattivi, preferendo ricorrere al logo  per tornare alla Home e re-instradarsi verso la Dashboard. Questo evidenzia una discrepanza tra la struttura di navigazione proposta e i modelli mentali contemporanei, maggiormente orientati a navigazione a navbar esplicite e pulsanti di ritorno contestuali
 
 \subsection{Questionario SUS}
-Altra premessa da fare: tutte le persone che hanno eseguito il test conoscono personalmente il tester, può essere che questo abbia influenzato la scelta delle risposte.
+Premessa: tutte le persone che hanno eseguito il test conoscono personalmente gli sperimentatori, di conseguenza questo potrebbe aver inserito della polarizzazione nelle rispste al questionario.
 \begin{center}
 	\includegraphics[width=10cm]{sus1}
 	\includegraphics[width=10cm]{sus2}
@@ -651,32 +839,31 @@ Altra premessa da fare: tutte le persone che hanno eseguito il test conoscono pe
 	\includegraphics[width=10cm]{sus4}
 	\includegraphics[width=10cm]{sus5}
 \end{center}
-\textbf{Punteggio.} I dieci item sono stati convertiti secondo la formula SUS standard: agli item
-dispari (formulati in positivo) si sottrae 1, agli item pari (formulati in negativo) si sottrae il
-valore da 5; la somma dei dieci contributi, ciascuno su scala 0--4, viene moltiplicata per 2.5,
-ottenendo un punteggio da 0 a 100. La coerenza interna dello strumento è adeguata in entrambe le
-versioni ($\alpha$ di Cronbach $=0.79$ pre e $0.81$ post).
 
-\textbf{Due coppie incomplete.} Gli ID 7 e 10 presentano entrambe le risposte marcate come ``versione 2'' e nessuna versione 1. I due ID sono perciò esclusi dall'analisi appaiata (i loro punteggi sono 87.5 e 97.5 per l'ID 7, 82.5 e 90.0 per l'ID 10). Come verifica, il confronto non appaiato su tutte e 60 le risposte porta alla stessa conclusione: versione 1 $75.0$ ($n=28$) contro versione 2 $82.1$ ($n=32$), $t$ di Welch $=2.07$, $p=0.044$.
+\subsubsection{Punteggio}
+NOTA: I questionari con ID 7 e 10 presentano entrambe le risposte alla versione marcate come ``versione 2'' e nessuna versione 1. I due ID sono perciò esclusi dall'analisi. \\
+Il punteggio è stato calcolato secondo la formula SUS standard:
+\begin{itemize}
+	\item Versione 1: \textbf{75.0} 
+	\item Versione 2: \textbf{81.1} 
+\end{itemize}
 
-\paragraph{1. Risultato principale}
-
+\noindent
+Da notare che il sistema sia pre-riprogettazione che post-riprogettazione ha superato la soglia di 68 punti, che rappresenta la media di riferimento. Inoltre rispetto alla versione precedente, il punteggio è aumentato di 6.1 punti.
 \begin{table}[h!]
-	\centering
-	\small
-	\begin{tabular}{lrrrrrrr}
-		\toprule
-		\textbf{Gruppo} & $n$ & \textbf{SUS pre} & \textbf{SUS post} & $\Delta$ & IC 95\% & $p$ (t-test) & $p$ (Wilcoxon) \\
-		\midrule
-		\textbf{Tutti} & 28 & $75.00$ & $81.07$ & $+6.07$ & $[+2.57,\ +9.58]$ & $\mathbf{0.0014}$ & $\mathbf{0.0018}$ \\
-		\midrule
-		Admin    & 9  & $73.89$ & $76.39$ & $+2.50$ & $[-4.88,\ +9.88]$  & $0.4572$ & $0.5391$ \\
-		Employee & 9  & $79.44$ & $86.11$ & $+6.67$ & $[+0.74,\ +12.59]$ & $\mathbf{0.0318}$ & $\mathbf{0.0273}$ \\
-		Cliente  & 10 & $72.00$ & $80.75$ & $+8.75$ & $[+1.99,\ +15.51]$ & $\mathbf{0.0168}$ & $\mathbf{0.0156}$ \\
-		\bottomrule
-	\end{tabular}
-	\caption*{\small Test $t$ appaiato (post $-$ pre) e test dei ranghi segnati di Wilcoxon.
-		Deviazioni standard: pre $14.1$, post $12.6$ sul campione completo.}
+    \centering
+    \small
+    \begin{tabular}{lrrrrr}
+        \toprule
+        \textbf{Gruppo} & $n$ & \textbf{SUS pre} & \textbf{SUS post} & $p$ (t-test) & $p$ (Wilcoxon) \\
+        \midrule
+        Admin    & 9  & $73.89$ & $76.39$ & $0.4572$ & $0.5391$ \\
+        Employee & 9  & $79.44$ & $86.11$ & $\mathbf{0.0318}$ & $\mathbf{0.0273}$ \\
+        Cliente  & 10 & $72.00$ & $80.75$ & $\mathbf{0.0168}$ & $\mathbf{0.0156}$ \\
+        \midrule
+        \textbf{Totale} & 28 & $75.00$ & $81.07$ & $\mathbf{0.0014}$ & $\mathbf{0.0018}$ \\
+        \bottomrule
+    \end{tabular}
 \end{table}
 
 \begin{center}
@@ -707,13 +894,16 @@ versioni ($\alpha$ di Cronbach $=0.79$ pre e $0.81$ post).
 	\end{tikzpicture}
 \end{center}
 
-\vspace{-3mm}
-\noindent\small Sulla curva di conversione di Sauro e Lewis il punteggio medio passa da \textbf{B}
-($75.0$) ad \textbf{A} ($81.1$), superando la soglia di $80.3$ che separa il ``buono'' dall'
-``eccellente''. Entrambe le versioni restano comunque sopra la media di riferimento di 68 punti, indicata dalla linea tratteggiata verde.
+\noindent
+Osservazioni:
+\begin{itemize}
+	\item Gli \textbf{Admin} migliorano di poco, ma non in modo significativo ($+2.5$, $p=0.46$);
+	\item Gli \textbf{Employee} migliorano in modo significativo ($+6.7$, $p=0.032$);
+	\item I \textbf{Clienti} migliorano in modo significativo ($+8.8$, $p=0.017$).
+\end{itemize}
 
 \newpage
-\paragraph{2. Variazione individuale}
+\subsubsection{Variazione individuale}
 
 \begin{center}
 	\begin{tikzpicture}
@@ -746,9 +936,9 @@ versioni ($\alpha$ di Cronbach $=0.79$ pre e $0.81$ post).
 \noindent\small Il miglioramento non è trainato da pochi casi estremi: 19 partecipanti su 28
 assegnano un punteggio più alto alla nuova versione, 4 lo lasciano identico e 5 lo abbassano, con
 un solo calo superiore ai 5 punti. I guadagni maggiori ($+20$ e $+27.5$) provengono dai
-partecipanti che partivano dai punteggi pre più bassi.
+partecipanti che partivano dai punteggi pre-riprogettazione più bassi.
 
-\paragraph{3. Confronto item per item}
+\subsubsection{Confronto domanda per domanda}
 
 \begin{center}
 	\begin{tikzpicture}
@@ -756,8 +946,8 @@ partecipanti che partivano dai punteggi pre più bassi.
 			width=15.5cm, height=7cm,
 			ybar=2pt, bar width=9pt,
 			ymin=0, ymax=5.3,
-			ylabel={Contributo SUS per item (0--4)},
-			xlabel={Item del questionario},
+			ylabel={Contributo SUS per domanda (0--4)},
+			xlabel={Domande del questionario},
 			symbolic x coords={Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10},
 			xtick={Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10},
 			legend style={at={(0.5,1.15)},anchor=north,legend columns=2,draw=none},
@@ -794,65 +984,19 @@ partecipanti che partivano dai punteggi pre più bassi.
 		Q10 & Molti processi da imparare prima \textit{(inv.)} & 3.75 & 3.79 & $+0.04$ & $0.6629$ \\
 		\bottomrule
 	\end{tabular}
-	\caption*{\small Punteggi già convertiti sulla scala SUS 0--4, dove valori alti sono sempre
-		favorevoli. \textit{(inv.)} segnala gli item a polarità invertita.}
+	\caption*{\small NOTA: I punteggi sono già convertiti sulla scala SUS 0--4, dove valori alti sono sempre favorevoli.\textbf{\textit{(inv.)}} segnala le domande a polarità invertita, cioè in cui un punteggio alto indica una valutazione negativa. In grassetto i valori $p<0.05$.}
 \end{table}
 
-\newpage
-\paragraph{4. Sintesi}
-
-\begin{center}
-	\begin{tikzpicture}
-		\begin{axis}[
-			width=13cm, height=5.2cm,
-			xlabel={Differenza media del punteggio SUS post $-$ pre, con IC 95\%},
-			ytick={1,2,3,4},
-			yticklabels={Cliente,Employee,Admin,\textbf{Tutti}},
-			ymin=0.4, ymax=4.6,
-			xmin=-10, xmax=20,
-			xmajorgrids=true, grid style={dashed,gray!30},
-			every axis plot/.append style={thick},
-			]
-			\addplot[only marks,mark=square*,mark size=3pt,color=black,
-			error bars/x dir=both,error bars/x explicit]
-			coordinates {(6.07,4) +- (3.51,3.51)};
-			\addplot[only marks,mark=*,mark size=2.6pt,color=gray,
-			error bars/x dir=both,error bars/x explicit]
-			coordinates {(2.50,3) +- (7.38,7.38)};
-			\addplot[only marks,mark=*,mark size=2.6pt,color=prec,
-			error bars/x dir=both,error bars/x explicit]
-			coordinates {(6.67,2) +- (5.93,5.93) (8.75,1) +- (6.76,6.76)};
-			\draw[dashed,gray] (axis cs:0,0.4) -- (axis cs:0,4.6);
-		\end{axis}
-	\end{tikzpicture}
-\end{center}
-
-\vspace{-2mm}
 \noindent
-La riprogettazione produce un miglioramento della soddisfazione percepita di circa 6 punti SUS,
-solido sia al test parametrico ($p=0.0014$) sia a quello non parametrico ($p=0.0018$), con una
-dimensione dell'effetto media ($d_z=0.67$). Il guadagno si concentra sugli item che riguardano la
-\emph{coerenza} e la \emph{fluidità} dell'interfaccia — meno incoerenze percepite fra le
-funzionalità (Q6) e sistema meno macchinoso (Q8) — mentre gli item su apprendibilità e autonomia
-(Q4, Q7, Q10) erano già alti prima e restano invariati: la riprogettazione ha reso il sistema più
-scorrevole, non più facile da imparare. L'unico item che non si muove affatto è la confidenza
-percepita durante l'uso (Q9).
-
-La scomposizione per profilo è coerente con l'analisi dei compiti svolta sui moduli dello
-sperimentatore. Gli \textbf{Employee} ($+6.7$, $p=0.032$) e i \textbf{Clienti} ($+8.8$, $p=0.017$)
-migliorano in modo significativo, ed è nei loro compiti che si erano osservate le riduzioni di
-click e di tempo. Gli \textbf{Admin} sono l'unico profilo che non si muove ($+2.5$, $p=0.46$),
-ed è esattamente il profilo in cui i compiti di gestione erano peggiorati in modo significativo:
-il giudizio soggettivo replica quindi il risultato oggettivo, con i guadagni sulla consultazione
-compensati dalle perdite sulla gestione.
-
+Il guadagno si concentra suglle domande che riguardano la \emph{coerenza} e la \emph{fluidità} dell'interfaccia:
+\begin{itemize}
+	\item Meno incoerenze percepite fra le funzionalità (Q6)
+	\item Sistema meno macchinoso (Q8)
+\end{itemize}
 
 \subsection{Riprogettazione Post-Esperimenti}
 Si propongono le seguenti soluzioni per i problemi riscontrati durante gli esperimenti:
 \begin{itemize}
-	\item Schermata di login più chiara: anche soltanto aggiungendo una freccia che indica verso il basso si può indirizzare l'utente;
-	\item Modifica profilo: togliere modifica profilo dalla gestione utenti e lasciare solo il visualizza, così da avere un percorso unificato (oppure, per un discorso di macro, vedere se ha senso ritornare alla soluzione pre-riprogettazione con tutte le azioni nella lista);
-	\item Fixare bug rimasti del sistema;
-	\item Trasformare il breadcrumbing in una navbar più esplicativa;
-	\item Sistemare gli errori in inglesi sfuggiti.
+	\item Rendere il servizio clienti più visibile, in quanto ora è molto difficile da trovare (nella prima versione era impossibile da trovare poichè nascosto dietro il login, mentre nella seconda versione è nascosto nel footer);
+	\item Trasformare il breadcrumbing in una navbar più esplicativa o in alternativa avere sempre a disposizione un tasto torna in dietro (come nella prima versione)
 \end{itemize}
